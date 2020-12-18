@@ -1,0 +1,9 @@
+C:\Users\Denis\source\repos\Hospital_System_Demo\bin\Debug\Hospital_System_Demo.exe.config
+C:\Users\Denis\source\repos\Hospital_System_Demo\bin\Debug\Hospital_System_Demo.exe
+C:\Users\Denis\source\repos\Hospital_System_Demo\bin\Debug\Hospital_System_Demo.pdb
+C:\Users\Denis\source\repos\Hospital_System_Demo\obj\Debug\Hospital_System_Demo.csprojAssemblyReference.cache
+C:\Users\Denis\source\repos\Hospital_System_Demo\obj\Debug\Hospital_System_Demo.Properties.Resources.resources
+C:\Users\Denis\source\repos\Hospital_System_Demo\obj\Debug\Hospital_System_Demo.csproj.GenerateResource.cache
+C:\Users\Denis\source\repos\Hospital_System_Demo\obj\Debug\Hospital_System_Demo.csproj.CoreCompileInputs.cache
+C:\Users\Denis\source\repos\Hospital_System_Demo\obj\Debug\Hospital_System_Demo.exe
+C:\Users\Denis\source\repos\Hospital_System_Demo\obj\Debug\Hospital_System_Demo.pdb
