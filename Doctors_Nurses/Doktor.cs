@@ -13,19 +13,21 @@ namespace Hospital_System_Demo.Doctors_Nurses
         public int ID { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string ImePrezime { get; set; }
         public string JMBG { get; set; }
         public string SifraLicence { get; set; }
         public string KorisnickoIme { get; set; }
+        public string DatumRodjenja { get; set; }
+        public string DatumZaposlenja { get; set; }
         public string Lozinka { get; set; }
         public byte[] Slika { get; set; }
         public virtual Titula Titula { get; set; }
+        public virtual Grad Grad { get; set; }
 
         public Doktor()
         {
-            ImePrezime = Ime + " " + Prezime;
+            //ImePrezime = Ime + " " + Prezime;
         }
 
-        public override string ToString()=>ImePrezime;
+        public override string ToString()=>Ime + " " + Prezime;
     }
 }

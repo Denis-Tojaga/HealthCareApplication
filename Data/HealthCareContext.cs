@@ -16,7 +16,7 @@ namespace Hospital_System_Demo
         public DbSet<Titula> Titule { get; set; }
         public DbSet<MedicinskaSestra> MedicinskeSestre { get; set; }
 
-        public HealthCareContext() : base("DatabasePath")
+        public HealthCareContext() : base("PutanjaDoBaze")
         {
 
         }
