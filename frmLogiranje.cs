@@ -93,9 +93,9 @@ namespace Hospital_System_Demo
             {
                 var pretragaDoktora = PretragaDoktora();
                 var pretragaSestre = PretragaMedSestre();
-                if ((pretragaDoktora as Doktor) != null)
+                if (pretragaDoktora != null)
                     OpenMainForm(pretragaDoktora);
-                else if ((pretragaSestre as MedicinskaSestra) != null)
+                else if (pretragaSestre != null)
                     OpenMainForm(pretragaSestre);
                 else
                     MessageBox.Show($"User not found!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);

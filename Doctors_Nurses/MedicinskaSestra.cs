@@ -16,7 +16,9 @@ namespace Hospital_System_Demo.Doctors_Nurses
         public string KorisnickoIme { get; set; }
         public string Lozinka { get; set; }
         public byte[] Slika { get; set; }
-
+        public string DatumRodjenja { get; set; }
+        public string DatumZaposlenja { get; set; }
+        public virtual Grad Grad { get; set; }
         public MedicinskaSestra()
         {
            
