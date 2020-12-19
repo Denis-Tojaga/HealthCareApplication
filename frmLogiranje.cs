@@ -16,20 +16,37 @@ namespace Hospital_System_Demo
     {
         private const string Warning = "This field is required!";
         HealthCareContext data = HealthCareDB.Base;
+        private Size pocetnaVelicina = new Size(372, 542);
+        private Size novaVelicina = new Size(718, 542);
         public frmLogiranje()
         {
             InitializeComponent();
         }
-
         private void frmLogiranje_Load(object sender, EventArgs e)
         {
-
+            HidePanelChildControls();
+            txtPotvrdaLozinke.Enabled = false;
+            btnSign.Enabled = false;
+            panel1.Visible=false;
+            Size = pocetnaVelicina;
+            lblMatchingMessage.Hide();
         }
+
+
+
 
         private void btnClose_Click(object sender, EventArgs e)
         {
             Close();
         }
+
+
+
+
+
+
+
+
 
 
         /// <summary>
@@ -72,21 +89,34 @@ namespace Hospital_System_Demo
                 txtPassword.PasswordChar = '*';
         }
 
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Search implemented by user credentials
+        /// </summary>
         private object PretragaDoktora() => data.Doktori.Where(x => x.KorisnickoIme == txtUsername.Text && x.Lozinka == txtPassword.Text).ToList();
         private object PretragaMedSestre() => data.MedicinskeSestre.Where(x => x.KorisnickoIme == txtUsername.Text && x.Lozinka == txtPassword.Text).ToList();
 
 
 
 
-        /// <summary>
-        /// Opens up main form in logged user mod
-        /// </summary>
-        private void OpenMainForm(object User)
-        {
-            frmAppMain mainForm = new frmAppMain(User);
-            mainForm.ShowDialog();
-        }
 
+
+
+
+
+        /// <summary>
+        /// Searches for doctor or nurse with those credentials in database, if it finds them opens up a new app form
+        /// </summary>
         private void btnLogin_Click(object sender, EventArgs e)
         {
             if (ValidirajUnos())
@@ -102,9 +132,79 @@ namespace Hospital_System_Demo
             }
         }
 
-        private bool ValidirajUnos()
+
+
+
+
+
+
+        /// <summary>
+        /// Opens up main form in logged user mod
+        /// </summary>
+        private void OpenMainForm(object User)
         {
-            return Validator.ValidirajPolje(txtUsername, err, Warning) && Validator.ValidirajPolje(txtPassword, err, Warning);
+            frmAppMain mainForm = new frmAppMain(User);
+            mainForm.ShowDialog();
+        }
+
+
+
+
+
+
+
+        //Validates the user inputs if something is missing or isn't valid
+        private bool ValidirajUnos() => Validator.ValidirajPolje(txtUsername, err, Warning) && Validator.ValidirajPolje(txtPassword, err, Warning);
+
+        private void cbTermsAndConditions_CheckedChanged(object sender, EventArgs e)
+        {
+            if(cbTermsAndConditions.Checked)
+                btnSign.Enabled = true;
+            else
+                btnSign.Enabled = false;
+        }
+        private void btnSignUp_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            Size = novaVelicina;
+        }
+        private void txtLozinka_TextChanged(object sender, EventArgs e)
+        {
+            txtPotvrdaLozinke.Enabled = true;
+            lblMatchingMessage.Show();
+        }
+        private void txtPotvrdaLozinke_TextChanged(object sender, EventArgs e)
+        {
+            if(txtLozinka.Text == txtPotvrdaLozinke.Text)
+            {
+                lblMatchingMessage.Text = "Passwords are matching!";
+                lblMatchingMessage.ForeColor = Color.FromArgb(4,145,7);
+            }
+        }
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Hides panel and all its controls
+        /// </summary>
+        private void HidePanelChildControls()
+        {
+            txtPotvrdaLozinke.Enabled = false;
+            btnSign.Enabled = false;
+            panel1.Hide();
+            lblMatchingMessage.Hide();
+        }
+
+        private void btnColapse_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            Size = pocetnaVelicina;
         }
     }
 }
