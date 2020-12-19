@@ -326,6 +326,14 @@ namespace Hospital_System_Demo
             }else
                 MessageBox.Show($"Please check your input fields!");
         }
+        
+        
+        
+        
+        
+        
+        //Validates all input fields
+        //Checks if passwords are the same
         private bool ValidirajPolja()
         {
             return lblMatchingMessage.Text == "Passwords are matching!" && Validator.ValidirajPolje(txtIme, err2, Warning)
