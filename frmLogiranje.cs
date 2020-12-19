@@ -121,9 +121,9 @@ namespace Hospital_System_Demo
             {
                 var pretragaDoktora = PretragaDoktora();
                 var pretragaSestre = PretragaMedSestre();
-                if (pretragaDoktora != null)
+                if (pretragaDoktora.ToString()!="0")
                     OpenMainForm(pretragaDoktora);
-                else if (pretragaSestre != null)
+                else if (pretragaSestre.ToString() != "0")
                     OpenMainForm(pretragaSestre);
                 else
                     MessageBox.Show($"User not found!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -322,9 +322,6 @@ namespace Hospital_System_Demo
             }else
                 MessageBox.Show($"Please check your input fields!");
         }
-
-
-
         private bool ValidirajPolja()
         {
             return lblMatchingMessage.Text == "Passwords are matching!" && Validator.ValidirajPolje(txtIme, err2, Warning)
