@@ -166,6 +166,9 @@ namespace Hospital_System_Demo
 
 
 
+
+
+
         //Enables the sign in button, otherwise user can't sign in
         private void cbTermsAndConditions_CheckedChanged(object sender, EventArgs e)
         {
@@ -284,7 +287,8 @@ namespace Hospital_System_Demo
 
 
         /// <summary>
-        /// Validates all input fields and makes a new Doctor or a Nurse in database with that data
+        /// Validates all input fields and makes a new Doctor or a Nurse in database with that data, if user selected doctor or nurse the app makes one and 
+        ///adds it to database
         /// Resets the form to the beginning format
         /// </summary>
         private void btnSign_Click(object sender, EventArgs e)
