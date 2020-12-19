@@ -15,6 +15,7 @@ namespace Hospital_System_Demo.Doctors_Nurses
         public string Prezime { get; set; }
         public string KorisnickoIme { get; set; }
         public string Lozinka { get; set; }
+        public string Email { get; set; }
         public byte[] Slika { get; set; }
         public string DatumRodjenja { get; set; }
         public string DatumZaposlenja { get; set; }

@@ -305,6 +305,20 @@ namespace Hospital_System_Demo
                     MessageBox.Show($"Your signing successfully done!","Sign up result",MessageBoxButtons.OK,MessageBoxIcon.Information);
                     ResetForm();
                 }
+                else
+                {
+                    var nurseUser = new MedicinskaSestra();
+                    nurseUser.Ime = txtIme.Text;
+                    nurseUser.Prezime = txtPrezime.Text;
+                    nurseUser.DatumZaposlenja = DateTime.Now.ToShortDateString();
+                    nurseUser.KorisnickoIme = txtIme.Text.ToLower();
+                    nurseUser.Lozinka = txtLozinka.Text;
+                    nurseUser.Email = txtEmail.Text;
+                    data.MedicinskeSestre.Add(nurseUser);
+                    data.SaveChanges();
+                    MessageBox.Show($"Your signing in successfully done!", "Sign up result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ResetForm();
+                }
             }else
                 MessageBox.Show($"Please check your input fields!");
         }
