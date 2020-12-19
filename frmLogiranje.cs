@@ -309,6 +309,8 @@ namespace Hospital_System_Demo
                 MessageBox.Show($"Please check your input fields!");
         }
 
+
+
         private bool ValidirajPolja()
         {
             return lblMatchingMessage.Text == "Passwords are matching!" && Validator.ValidirajPolje(txtIme, err2, Warning)
