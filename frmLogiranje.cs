@@ -98,8 +98,6 @@ namespace Hospital_System_Demo
 
 
 
-
-
         /// <summary>
         /// Search implemented by user credentials
         /// </summary>
@@ -136,8 +134,6 @@ namespace Hospital_System_Demo
 
 
 
-
-
         /// <summary>
         /// Opens up main form in logged user mod
         /// </summary>
@@ -148,14 +144,29 @@ namespace Hospital_System_Demo
         }
 
 
-
-
-
-
-
         //Validates the user inputs if something is missing or isn't valid
         private bool ValidirajUnos() => Validator.ValidirajPolje(txtUsername, err, Warning) && Validator.ValidirajPolje(txtPassword, err, Warning);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Panel part of code
+        /// </summary>
+
+
+
+        //Enables the sign in button, otherwise user can't sign in
         private void cbTermsAndConditions_CheckedChanged(object sender, EventArgs e)
         {
             if(cbTermsAndConditions.Checked)
@@ -163,25 +174,79 @@ namespace Hospital_System_Demo
             else
                 btnSign.Enabled = false;
         }
+        //makes form bigger and shows up panel for signing in
         private void btnSignUp_Click(object sender, EventArgs e)
         {
             panel1.Visible = true;
             Size = novaVelicina;
         }
+
+
+
+
+        /// <summary>
+        /// Tells the user if the passwords are matching, comparing the everytime he enters something new 
+        /// </summary>
         private void txtLozinka_TextChanged(object sender, EventArgs e)
         {
             txtPotvrdaLozinke.Enabled = true;
             lblMatchingMessage.Show();
+            char passcode = new char();
+            if (txtLozinka.PasswordChar == passcode)
+                txtLozinka.PasswordChar = '*';
         }
         private void txtPotvrdaLozinke_TextChanged(object sender, EventArgs e)
         {
-            if(txtLozinka.Text == txtPotvrdaLozinke.Text)
+            char passcode = new char();
+            if (txtPotvrdaLozinke.PasswordChar == passcode)
+                txtPotvrdaLozinke.PasswordChar = '*';
+            if (txtLozinka.Text == txtPotvrdaLozinke.Text && !PrazanTekst(txtLozinka,txtPotvrdaLozinke))
             {
                 lblMatchingMessage.Text = "Passwords are matching!";
                 lblMatchingMessage.ForeColor = Color.FromArgb(4,145,7);
             }
+            else
+            {
+                lblMatchingMessage.Text = "Passwords aren't matching!";
+                lblMatchingMessage.ForeColor = Color.Moccasin;
+            }
         }
+        private bool PrazanTekst(TextBox txtLozinka, TextBox txtPotvrdaLozinke)=> txtLozinka.Text == "" && txtPotvrdaLozinke.Text == "";
 
+
+
+
+
+
+
+        /// <summary>
+        /// Mouse click all text in textbox clears and user is ready to write, if its password textbox it sets the password char to "*"
+        /// </summary>
+        private void txtIme_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtIme.Text == "First Name")
+                txtIme.Text = "";
+        }
+        private void txtPrezime_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtPrezime.Text == "Last Name")
+                txtPrezime.Text = "";
+        }
+        private void txtEmail_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(txtEmail.Text=="Email")
+                txtEmail.Text = "";
+        }
+        private void txtLozinka_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtLozinka.Text == "Password")
+                txtLozinka.Text = "";
+        }
+        private void txtPotvrdaLozinke_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtPotvrdaLozinke.Text == "Re-Enter Password")
+                txtPotvrdaLozinke.Text = "";
+        }
 
 
 
@@ -200,11 +265,56 @@ namespace Hospital_System_Demo
             panel1.Hide();
             lblMatchingMessage.Hide();
         }
-
         private void btnColapse_Click(object sender, EventArgs e)
+        {
+            ResetForm();
+        }
+        //Resets the form to the start type
+        private void ResetForm()
         {
             panel1.Visible = false;
             Size = pocetnaVelicina;
+            txtUsername.Text = "Username";
+            txtPassword.Text = "Password";
+            txtPassword.PasswordChar = new char();
+        }
+
+
+
+
+
+        /// <summary>
+        /// Validates all input fields and makes a new Doctor or a Nurse in database with that data
+        /// Resets the form to the beginning format
+        /// </summary>
+        private void btnSign_Click(object sender, EventArgs e)
+        {
+            if (ValidirajPolja())
+            {
+                if (cbDoctorChecked.Checked)
+                {
+                    var doctorUser = new Doktor();
+                    doctorUser.Ime = txtIme.Text;
+                    doctorUser.Prezime = txtPrezime.Text;
+                    doctorUser.DatumZaposlenja = DateTime.Now.ToShortDateString();
+                    doctorUser.KorisnickoIme = txtIme.Text.ToLower();
+                    doctorUser.Lozinka = txtLozinka.Text;
+                    doctorUser.Email = txtEmail.Text;
+                    data.Doktori.Add(doctorUser);
+                    data.SaveChanges();
+                    MessageBox.Show($"Your signing successfully done!","Sign up result",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    ResetForm();
+                }
+            }else
+                MessageBox.Show($"Please check your input fields!");
+        }
+
+        private bool ValidirajPolja()
+        {
+            return lblMatchingMessage.Text == "Passwords are matching!" && Validator.ValidirajPolje(txtIme, err2, Warning)
+                && Validator.ValidirajPolje(txtPrezime, err2, Warning) && Validator.ValidirajPolje(txtEmail, err2, Warning)
+                && Validator.ValidirajPolje(txtLozinka, err2, Warning) && Validator.ValidirajPolje(txtPotvrdaLozinke, err2, Warning)
+                && (cbDoctorChecked.Checked || cbNurseChecked.Checked);
         }
     }
 }
