@@ -29,5 +29,10 @@ namespace Hospital_System_Demo
             else
                 _nurse = User as MedicinskaSestra;
         }
+
+        private void frmAppMain_Load(object sender, EventArgs e)
+        {
+            //this is something
+        }
     }
 }
