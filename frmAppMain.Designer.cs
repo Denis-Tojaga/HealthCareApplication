@@ -37,6 +37,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.panelChildForms = new System.Windows.Forms.Panel();
             this.panelTitle.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -49,7 +50,7 @@
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitle.Location = new System.Drawing.Point(0, 0);
             this.panelTitle.Name = "panelTitle";
-            this.panelTitle.Size = new System.Drawing.Size(1076, 106);
+            this.panelTitle.Size = new System.Drawing.Size(1076, 110);
             this.panelTitle.TabIndex = 1;
             // 
             // lblTitle
@@ -75,7 +76,7 @@
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
             this.btnClose.Location = new System.Drawing.Point(1023, 12);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(41, 36);
+            this.btnClose.Size = new System.Drawing.Size(41, 40);
             this.btnClose.TabIndex = 6;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -104,9 +105,9 @@
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnStaffView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 106);
+            this.panel1.Location = new System.Drawing.Point(0, 110);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(189, 511);
+            this.panel1.Size = new System.Drawing.Size(189, 507);
             this.panel1.TabIndex = 2;
             // 
             // button1
@@ -168,16 +169,24 @@
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Location = new System.Drawing.Point(0, 408);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(189, 102);
+            this.button4.Size = new System.Drawing.Size(189, 99);
             this.button4.TabIndex = 4;
             this.button4.Text = "User info";
             this.button4.UseVisualStyleBackColor = false;
+            // 
+            // panelChildForms
+            // 
+            this.panelChildForms.Location = new System.Drawing.Point(189, 110);
+            this.panelChildForms.Name = "panelChildForms";
+            this.panelChildForms.Size = new System.Drawing.Size(887, 507);
+            this.panelChildForms.TabIndex = 3;
             // 
             // frmAppMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1076, 617);
+            this.Controls.Add(this.panelChildForms);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -204,5 +213,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel panelChildForms;
     }
 }
