@@ -89,5 +89,15 @@ namespace Hospital_System_Demo.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap LokacijaBolnice {
+            get {
+                object obj = ResourceManager.GetObject("LokacijaBolnice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
