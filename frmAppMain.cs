@@ -1,4 +1,5 @@
-﻿using Hospital_System_Demo.Doctors_Nurses;
+﻿using Hospital_System_Demo.ChildForms;
+using Hospital_System_Demo.Doctors_Nurses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace Hospital_System_Demo
     {
         Doktor _doctor;
         MedicinskaSestra _nurse;
+        Form _aktivnaForma = null;
+        Button kliknutiTrenutno;
         public frmAppMain()
         {
             InitializeComponent();
@@ -33,6 +36,48 @@ namespace Hospital_System_Demo
         private void frmAppMain_Load(object sender, EventArgs e)
         {
             //this is something
+        }
+
+
+        /// <summary>
+        /// Disables and enables button on click for the current form
+        /// </summary>
+        private void DisableButton()
+        {
+            foreach (Control prosliButton in panelMeniButtons.Controls)
+                if (prosliButton.GetType() == typeof(Button))
+                    prosliButton.BackColor = Color.FromArgb(51, 51, 76);
+        }
+        private void AktivirajButton(object btnKliknuti)
+        {
+            if (btnKliknuti != null)
+                if (kliknutiTrenutno != (Button)btnKliknuti)
+                {
+                    DisableButton();
+                    kliknutiTrenutno = (Button)btnKliknuti;
+                }
+        }
+
+
+        ///Method which opens up a child forms on button click
+        private void OpenChildForm(Form childForma, object btnKliknuti)
+        {
+            _aktivnaForma?.Close();
+            AktivirajButton(btnKliknuti);
+            (btnKliknuti as Button).BackColor = Color.FromArgb(30, 115, 172);
+            _aktivnaForma = childForma;
+            childForma.TopLevel = false;
+            childForma.FormBorderStyle = FormBorderStyle.None;
+            childForma.Dock = DockStyle.Fill;
+            panelChildForms.Controls.Add(childForma);
+            panelChildForms.Tag = childForma;
+            childForma.BringToFront();
+            childForma.Show();
+        }
+
+        private void btnHospitalInfo_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new frmHospitalInfo(), sender);
         }
     }
 }

@@ -35,6 +35,7 @@
             this.cmsOpenInMaps = new System.Windows.Forms.ToolStripMenuItem();
             this.wbMaps = new System.Windows.Forms.WebBrowser();
             this.lblLink = new System.Windows.Forms.LinkLabel();
+            this.btnNavigate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -87,12 +88,27 @@
             this.lblLink.AutoSize = true;
             this.lblLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLink.LinkColor = System.Drawing.Color.White;
-            this.lblLink.Location = new System.Drawing.Point(126, 304);
+            this.lblLink.Location = new System.Drawing.Point(224, 289);
             this.lblLink.Name = "lblLink";
             this.lblLink.Size = new System.Drawing.Size(29, 13);
             this.lblLink.TabIndex = 4;
             this.lblLink.TabStop = true;
             this.lblLink.Text = "URL";
+            // 
+            // btnNavigate
+            // 
+            this.btnNavigate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnNavigate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnNavigate.FlatAppearance.BorderSize = 2;
+            this.btnNavigate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNavigate.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btnNavigate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnNavigate.Location = new System.Drawing.Point(151, 305);
+            this.btnNavigate.Name = "btnNavigate";
+            this.btnNavigate.Size = new System.Drawing.Size(175, 37);
+            this.btnNavigate.TabIndex = 5;
+            this.btnNavigate.Text = "Navigate";
+            this.btnNavigate.UseVisualStyleBackColor = false;
             // 
             // frmHospitalInfo
             // 
@@ -100,6 +116,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(887, 556);
+            this.Controls.Add(this.btnNavigate);
             this.Controls.Add(this.lblLink);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblTitle);
@@ -123,5 +140,6 @@
         private System.Windows.Forms.ToolStripMenuItem cmsOpenInMaps;
         private System.Windows.Forms.WebBrowser wbMaps;
         private System.Windows.Forms.LinkLabel lblLink;
+        private System.Windows.Forms.Button btnNavigate;
     }
 }

@@ -18,9 +18,12 @@ namespace Hospital_System_Demo.ChildForms
             InitializeComponent();
         }
 
+
+        // Navigates to the URL in the address box when 
+        // the Go button is clicked.
         private void cmsOpenInMaps_Click(object sender, EventArgs e)
         {
-            
+            Navigate(Link);
         }
 
         private void frmHospitalInfo_Load(object sender, EventArgs e)
@@ -29,15 +32,10 @@ namespace Hospital_System_Demo.ChildForms
         }
 
 
+     
+       
 
-        // Navigates to the URL in the address box when 
-        // the Go button is clicked.
-        private void goButton_Click(object sender, EventArgs e)
-        {
-            Navigate(Link);
-        }
-
-        // Navigates to the given URL if it is valid.
+        // Navigates to the given URL if it is valid, if its not in valid format it corrects it
         private void Navigate(string address)
         {
             if (string.IsNullOrEmpty(address)) return;
@@ -62,5 +60,6 @@ namespace Hospital_System_Demo.ChildForms
         {
             lblLink.Text = wbMaps.Url.ToString();
         }
+
     }
 }

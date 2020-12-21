@@ -31,15 +31,15 @@
             this.panelTitle = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnStaffView = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHospitalInfo = new System.Windows.Forms.Button();
+            this.panelMeniButtons = new System.Windows.Forms.Panel();
+            this.btnUserInfo = new System.Windows.Forms.Button();
+            this.btnMedicineOrders = new System.Windows.Forms.Button();
+            this.btnExaminations = new System.Windows.Forms.Button();
+            this.btnPatients = new System.Windows.Forms.Button();
             this.panelChildForms = new System.Windows.Forms.Panel();
             this.panelTitle.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panelMeniButtons.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelTitle
@@ -81,98 +81,99 @@
             this.lblTitle.Text = "HEALTH CARE APP";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnStaffView
+            // btnHospitalInfo
             // 
-            this.btnStaffView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.btnStaffView.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnStaffView.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.btnStaffView.FlatAppearance.BorderSize = 6;
-            this.btnStaffView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnStaffView.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStaffView.ForeColor = System.Drawing.Color.White;
-            this.btnStaffView.Location = new System.Drawing.Point(0, 0);
-            this.btnStaffView.Name = "btnStaffView";
-            this.btnStaffView.Size = new System.Drawing.Size(189, 112);
-            this.btnStaffView.TabIndex = 0;
-            this.btnStaffView.Text = "Hospital info";
-            this.btnStaffView.UseVisualStyleBackColor = false;
+            this.btnHospitalInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnHospitalInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnHospitalInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnHospitalInfo.FlatAppearance.BorderSize = 6;
+            this.btnHospitalInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHospitalInfo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHospitalInfo.ForeColor = System.Drawing.Color.White;
+            this.btnHospitalInfo.Location = new System.Drawing.Point(0, 0);
+            this.btnHospitalInfo.Name = "btnHospitalInfo";
+            this.btnHospitalInfo.Size = new System.Drawing.Size(189, 112);
+            this.btnHospitalInfo.TabIndex = 0;
+            this.btnHospitalInfo.Text = "Hospital info";
+            this.btnHospitalInfo.UseVisualStyleBackColor = false;
+            this.btnHospitalInfo.Click += new System.EventHandler(this.btnHospitalInfo_Click);
             // 
-            // panel1
+            // panelMeniButtons
             // 
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnStaffView);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 110);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(189, 556);
-            this.panel1.TabIndex = 2;
+            this.panelMeniButtons.Controls.Add(this.btnUserInfo);
+            this.panelMeniButtons.Controls.Add(this.btnMedicineOrders);
+            this.panelMeniButtons.Controls.Add(this.btnExaminations);
+            this.panelMeniButtons.Controls.Add(this.btnPatients);
+            this.panelMeniButtons.Controls.Add(this.btnHospitalInfo);
+            this.panelMeniButtons.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelMeniButtons.Location = new System.Drawing.Point(0, 110);
+            this.panelMeniButtons.Name = "panelMeniButtons";
+            this.panelMeniButtons.Size = new System.Drawing.Size(189, 556);
+            this.panelMeniButtons.TabIndex = 2;
             // 
-            // button4
+            // btnUserInfo
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button4.FlatAppearance.BorderSize = 6;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(0, 447);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(189, 109);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "User info";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnUserInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnUserInfo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUserInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnUserInfo.FlatAppearance.BorderSize = 6;
+            this.btnUserInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btnUserInfo.ForeColor = System.Drawing.Color.White;
+            this.btnUserInfo.Location = new System.Drawing.Point(0, 447);
+            this.btnUserInfo.Name = "btnUserInfo";
+            this.btnUserInfo.Size = new System.Drawing.Size(189, 109);
+            this.btnUserInfo.TabIndex = 4;
+            this.btnUserInfo.Text = "User info";
+            this.btnUserInfo.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnMedicineOrders
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button3.FlatAppearance.BorderSize = 6;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(0, 331);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(189, 116);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Medicine orders";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnMedicineOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnMedicineOrders.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMedicineOrders.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnMedicineOrders.FlatAppearance.BorderSize = 6;
+            this.btnMedicineOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMedicineOrders.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMedicineOrders.ForeColor = System.Drawing.Color.White;
+            this.btnMedicineOrders.Location = new System.Drawing.Point(0, 331);
+            this.btnMedicineOrders.Name = "btnMedicineOrders";
+            this.btnMedicineOrders.Size = new System.Drawing.Size(189, 116);
+            this.btnMedicineOrders.TabIndex = 3;
+            this.btnMedicineOrders.Text = "Medicine orders";
+            this.btnMedicineOrders.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // btnExaminations
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button2.FlatAppearance.BorderSize = 6;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(0, 219);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(189, 112);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Examinations";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnExaminations.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnExaminations.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnExaminations.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnExaminations.FlatAppearance.BorderSize = 6;
+            this.btnExaminations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExaminations.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.btnExaminations.ForeColor = System.Drawing.Color.White;
+            this.btnExaminations.Location = new System.Drawing.Point(0, 219);
+            this.btnExaminations.Name = "btnExaminations";
+            this.btnExaminations.Size = new System.Drawing.Size(189, 112);
+            this.btnExaminations.TabIndex = 2;
+            this.btnExaminations.Text = "Examinations";
+            this.btnExaminations.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnPatients
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button1.FlatAppearance.BorderSize = 6;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(0, 112);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(189, 107);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Patients";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnPatients.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnPatients.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnPatients.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnPatients.FlatAppearance.BorderSize = 6;
+            this.btnPatients.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPatients.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPatients.ForeColor = System.Drawing.Color.White;
+            this.btnPatients.Location = new System.Drawing.Point(0, 112);
+            this.btnPatients.Name = "btnPatients";
+            this.btnPatients.Size = new System.Drawing.Size(189, 107);
+            this.btnPatients.TabIndex = 1;
+            this.btnPatients.Text = "Patients";
+            this.btnPatients.UseVisualStyleBackColor = false;
             // 
             // panelChildForms
             // 
@@ -187,7 +188,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1076, 666);
             this.Controls.Add(this.panelChildForms);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelMeniButtons);
             this.Controls.Add(this.panelTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
@@ -198,7 +199,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAppMain_Load);
             this.panelTitle.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.panelMeniButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -207,12 +208,12 @@
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnStaffView;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnHospitalInfo;
+        private System.Windows.Forms.Panel panelMeniButtons;
+        private System.Windows.Forms.Button btnUserInfo;
+        private System.Windows.Forms.Button btnMedicineOrders;
+        private System.Windows.Forms.Button btnExaminations;
+        private System.Windows.Forms.Button btnPatients;
         private System.Windows.Forms.Panel panelChildForms;
     }
 }
