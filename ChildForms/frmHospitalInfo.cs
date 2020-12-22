@@ -67,5 +67,17 @@ namespace Hospital_System_Demo.ChildForms
             ProcessStartInfo sInfo = new ProcessStartInfo(lblLink.Text);
             Process.Start(sInfo);
         }
+
+        private void btnNavigate_MouseHover(object sender, EventArgs e)
+        {
+            btnNavigate.BackColor = Color.FromArgb(245, 83, 20);
+            btnNavigate.ForeColor = Color.FromArgb(5, 25, 30);
+        }
+
+        private void btnNavigate_MouseLeave(object sender, EventArgs e)
+        {
+            btnNavigate.BackColor = Color.FromArgb(5,25,30);
+            btnNavigate.ForeColor = Color.FromArgb(245, 83, 20);
+        }
     }
 }

@@ -122,9 +122,15 @@ namespace Hospital_System_Demo
                 var pretragaDoktora = PretragaDoktora();
                 var pretragaSestre = PretragaMedSestre();
                 if (pretragaDoktora.ToString()!="0")
+                {
                     OpenMainForm(pretragaDoktora);
+                    this.Close();
+                }
                 else if (pretragaSestre.ToString() != "0")
+                {
                     OpenMainForm(pretragaSestre);
+                    this.Close();
+                }
                 else
                     MessageBox.Show($"User not found!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

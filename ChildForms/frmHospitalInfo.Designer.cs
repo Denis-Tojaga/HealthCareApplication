@@ -44,7 +44,7 @@
             // 
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold);
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.lblTitle.Location = new System.Drawing.Point(643, 9);
+            this.lblTitle.Location = new System.Drawing.Point(576, 9);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(232, 50);
             this.lblTitle.TabIndex = 1;
@@ -61,6 +61,7 @@
             // 
             // wbMaps
             // 
+            this.wbMaps.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.wbMaps.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wbMaps.Location = new System.Drawing.Point(0, 0);
             this.wbMaps.MinimumSize = new System.Drawing.Size(20, 20);
@@ -109,9 +110,12 @@
             this.btnNavigate.Text = "Open in browser";
             this.btnNavigate.UseVisualStyleBackColor = false;
             this.btnNavigate.Click += new System.EventHandler(this.btnNavigate_Click);
+            this.btnNavigate.MouseLeave += new System.EventHandler(this.btnNavigate_MouseLeave);
+            this.btnNavigate.MouseHover += new System.EventHandler(this.btnNavigate_MouseHover);
             // 
             // frmHospitalInfo
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));

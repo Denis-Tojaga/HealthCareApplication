@@ -42,20 +42,10 @@ namespace Hospital_System_Demo
         /// <summary>
         /// Disables and enables button on click for the current form
         /// </summary>
-        private void DisableButton()
-        {
-            foreach (Control prosliButton in panelMeniButtons.Controls)
-                if (prosliButton.GetType() == typeof(Button))
-                    prosliButton.BackColor = Color.FromArgb(51, 51, 76);
-        }
         private void AktivirajButton(object btnKliknuti)
         {
-            if (btnKliknuti != null)
-                if (kliknutiTrenutno != (Button)btnKliknuti)
-                {
-                    DisableButton();
+            if (btnKliknuti != null && kliknutiTrenutno != (Button)btnKliknuti)
                     kliknutiTrenutno = (Button)btnKliknuti;
-                }
         }
 
 
@@ -64,7 +54,6 @@ namespace Hospital_System_Demo
         {
             _aktivnaForma?.Close();
             AktivirajButton(btnKliknuti);
-            (btnKliknuti as Button).BackColor = Color.FromArgb(30, 115, 172);
             _aktivnaForma = childForma;
             childForma.TopLevel = false;
             childForma.FormBorderStyle = FormBorderStyle.None;
@@ -78,6 +67,11 @@ namespace Hospital_System_Demo
         private void btnHospitalInfo_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmHospitalInfo(), sender);
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

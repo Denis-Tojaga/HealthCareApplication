@@ -42,6 +42,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.err = new System.Windows.Forms.ErrorProvider(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbNurseChecked = new System.Windows.Forms.CheckBox();
+            this.cbDoctorChecked = new System.Windows.Forms.CheckBox();
+            this.btnColapse = new System.Windows.Forms.Button();
             this.lblMatchingMessage = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -57,9 +60,6 @@
             this.txtIme = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnColapse = new System.Windows.Forms.Button();
-            this.cbDoctorChecked = new System.Windows.Forms.CheckBox();
-            this.cbNurseChecked = new System.Windows.Forms.CheckBox();
             this.err2 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -163,7 +163,7 @@
             this.btnLogin.Location = new System.Drawing.Point(96, 421);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(175, 36);
-            this.btnLogin.TabIndex = 3;
+            this.btnLogin.TabIndex = 2;
             this.btnLogin.Text = "Login";
             this.btnLogin.UseVisualStyleBackColor = false;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
@@ -179,7 +179,7 @@
             this.btnSignUp.Location = new System.Drawing.Point(96, 463);
             this.btnSignUp.Name = "btnSignUp";
             this.btnSignUp.Size = new System.Drawing.Size(175, 37);
-            this.btnSignUp.TabIndex = 4;
+            this.btnSignUp.TabIndex = 3;
             this.btnSignUp.Text = "Sign up";
             this.btnSignUp.UseVisualStyleBackColor = false;
             this.btnSignUp.Click += new System.EventHandler(this.btnSignUp_Click);
@@ -194,7 +194,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(105, 368);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(166, 20);
-            this.linkLabel1.TabIndex = 2;
+            this.linkLabel1.TabIndex = 4;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Forgot your password?";
             // 
@@ -239,6 +239,45 @@
             this.panel1.Size = new System.Drawing.Size(346, 542);
             this.panel1.TabIndex = 13;
             // 
+            // cbNurseChecked
+            // 
+            this.cbNurseChecked.AutoSize = true;
+            this.cbNurseChecked.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.cbNurseChecked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.cbNurseChecked.Location = new System.Drawing.Point(186, 368);
+            this.cbNurseChecked.Name = "cbNurseChecked";
+            this.cbNurseChecked.Size = new System.Drawing.Size(88, 34);
+            this.cbNurseChecked.TabIndex = 6;
+            this.cbNurseChecked.Text = "Nurse";
+            this.cbNurseChecked.UseVisualStyleBackColor = true;
+            // 
+            // cbDoctorChecked
+            // 
+            this.cbDoctorChecked.AutoSize = true;
+            this.cbDoctorChecked.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
+            this.cbDoctorChecked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.cbDoctorChecked.Location = new System.Drawing.Point(81, 368);
+            this.cbDoctorChecked.Name = "cbDoctorChecked";
+            this.cbDoctorChecked.Size = new System.Drawing.Size(99, 34);
+            this.cbDoctorChecked.TabIndex = 5;
+            this.cbDoctorChecked.Text = "Doctor";
+            this.cbDoctorChecked.UseVisualStyleBackColor = true;
+            // 
+            // btnColapse
+            // 
+            this.btnColapse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnColapse.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnColapse.FlatAppearance.BorderSize = 2;
+            this.btnColapse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnColapse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
+            this.btnColapse.Location = new System.Drawing.Point(303, 12);
+            this.btnColapse.Name = "btnColapse";
+            this.btnColapse.Size = new System.Drawing.Size(31, 31);
+            this.btnColapse.TabIndex = 9;
+            this.btnColapse.Text = "<";
+            this.btnColapse.UseVisualStyleBackColor = false;
+            this.btnColapse.Click += new System.EventHandler(this.btnColapse_Click);
+            // 
             // lblMatchingMessage
             // 
             this.lblMatchingMessage.AutoSize = true;
@@ -281,7 +320,7 @@
             this.btnSign.Location = new System.Drawing.Point(72, 463);
             this.btnSign.Name = "btnSign";
             this.btnSign.Size = new System.Drawing.Size(210, 36);
-            this.btnSign.TabIndex = 14;
+            this.btnSign.TabIndex = 8;
             this.btnSign.Text = "Sign up";
             this.btnSign.UseVisualStyleBackColor = false;
             this.btnSign.Click += new System.EventHandler(this.btnSign_Click);
@@ -294,7 +333,7 @@
             this.cbTermsAndConditions.Location = new System.Drawing.Point(41, 430);
             this.cbTermsAndConditions.Name = "cbTermsAndConditions";
             this.cbTermsAndConditions.Size = new System.Drawing.Size(282, 27);
-            this.cbTermsAndConditions.TabIndex = 24;
+            this.cbTermsAndConditions.TabIndex = 7;
             this.cbTermsAndConditions.Text = "I Accept the Terms and Conditions";
             this.cbTermsAndConditions.UseVisualStyleBackColor = true;
             this.cbTermsAndConditions.CheckedChanged += new System.EventHandler(this.cbTermsAndConditions_CheckedChanged);
@@ -316,7 +355,7 @@
             this.txtPotvrdaLozinke.Location = new System.Drawing.Point(29, 288);
             this.txtPotvrdaLozinke.Name = "txtPotvrdaLozinke";
             this.txtPotvrdaLozinke.Size = new System.Drawing.Size(294, 25);
-            this.txtPotvrdaLozinke.TabIndex = 22;
+            this.txtPotvrdaLozinke.TabIndex = 4;
             this.txtPotvrdaLozinke.Text = "Re-Enter Password";
             this.txtPotvrdaLozinke.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPotvrdaLozinke_MouseClick);
             this.txtPotvrdaLozinke.TextChanged += new System.EventHandler(this.txtPotvrdaLozinke_TextChanged);
@@ -338,7 +377,7 @@
             this.txtLozinka.Location = new System.Drawing.Point(29, 223);
             this.txtLozinka.Name = "txtLozinka";
             this.txtLozinka.Size = new System.Drawing.Size(294, 25);
-            this.txtLozinka.TabIndex = 20;
+            this.txtLozinka.TabIndex = 3;
             this.txtLozinka.Text = "Password";
             this.txtLozinka.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtLozinka_MouseClick);
             this.txtLozinka.TextChanged += new System.EventHandler(this.txtLozinka_TextChanged);
@@ -352,7 +391,7 @@
             this.txtPrezime.Location = new System.Drawing.Point(206, 100);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(117, 25);
-            this.txtPrezime.TabIndex = 18;
+            this.txtPrezime.TabIndex = 1;
             this.txtPrezime.Text = "Last Name";
             this.txtPrezime.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPrezime_MouseClick);
             // 
@@ -383,7 +422,7 @@
             this.txtIme.Location = new System.Drawing.Point(29, 100);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(117, 25);
-            this.txtIme.TabIndex = 14;
+            this.txtIme.TabIndex = 0;
             this.txtIme.Text = "First Name";
             this.txtIme.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtIme_MouseClick);
             // 
@@ -396,7 +435,7 @@
             this.txtEmail.Location = new System.Drawing.Point(29, 164);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(294, 25);
-            this.txtEmail.TabIndex = 15;
+            this.txtEmail.TabIndex = 2;
             this.txtEmail.Text = "Email";
             this.txtEmail.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtEmail_MouseClick);
             // 
@@ -409,45 +448,6 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 2);
             this.label4.TabIndex = 16;
-            // 
-            // btnColapse
-            // 
-            this.btnColapse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.btnColapse.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnColapse.FlatAppearance.BorderSize = 2;
-            this.btnColapse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnColapse.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold);
-            this.btnColapse.Location = new System.Drawing.Point(303, 12);
-            this.btnColapse.Name = "btnColapse";
-            this.btnColapse.Size = new System.Drawing.Size(31, 31);
-            this.btnColapse.TabIndex = 27;
-            this.btnColapse.Text = "<";
-            this.btnColapse.UseVisualStyleBackColor = false;
-            this.btnColapse.Click += new System.EventHandler(this.btnColapse_Click);
-            // 
-            // cbDoctorChecked
-            // 
-            this.cbDoctorChecked.AutoSize = true;
-            this.cbDoctorChecked.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.cbDoctorChecked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.cbDoctorChecked.Location = new System.Drawing.Point(81, 368);
-            this.cbDoctorChecked.Name = "cbDoctorChecked";
-            this.cbDoctorChecked.Size = new System.Drawing.Size(99, 34);
-            this.cbDoctorChecked.TabIndex = 28;
-            this.cbDoctorChecked.Text = "Doctor";
-            this.cbDoctorChecked.UseVisualStyleBackColor = true;
-            // 
-            // cbNurseChecked
-            // 
-            this.cbNurseChecked.AutoSize = true;
-            this.cbNurseChecked.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold);
-            this.cbNurseChecked.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.cbNurseChecked.Location = new System.Drawing.Point(186, 368);
-            this.cbNurseChecked.Name = "cbNurseChecked";
-            this.cbNurseChecked.Size = new System.Drawing.Size(88, 34);
-            this.cbNurseChecked.TabIndex = 29;
-            this.cbNurseChecked.Text = "Nurse";
-            this.cbNurseChecked.UseVisualStyleBackColor = true;
             // 
             // err2
             // 
