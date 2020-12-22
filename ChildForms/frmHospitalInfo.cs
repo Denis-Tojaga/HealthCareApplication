@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,21 +20,16 @@ namespace Hospital_System_Demo.ChildForms
         }
 
 
-        // Navigates to the URL in the address box when 
-        // the Go button is clicked.
-        private void cmsOpenInMaps_Click(object sender, EventArgs e)
-        {
-            Navigate(Link);
-        }
 
         private void frmHospitalInfo_Load(object sender, EventArgs e)
         {
-
+            lblLink.Hide();
+            Navigate(Link);
         }
 
 
-     
-       
+
+
 
         // Navigates to the given URL if it is valid, if its not in valid format it corrects it
         private void Navigate(string address)
@@ -61,5 +57,15 @@ namespace Hospital_System_Demo.ChildForms
             lblLink.Text = wbMaps.Url.ToString();
         }
 
+
+
+
+        // Opens the URL in the browser 
+        // the Navigate button is clicked.
+        private void btnNavigate_Click(object sender, EventArgs e)
+        {
+            ProcessStartInfo sInfo = new ProcessStartInfo(lblLink.Text);
+            Process.Start(sInfo);
+        }
     }
 }

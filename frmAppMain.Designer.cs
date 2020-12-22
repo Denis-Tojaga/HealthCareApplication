@@ -196,7 +196,6 @@
             this.Name = "frmAppMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAppMain";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAppMain_Load);
             this.panelTitle.ResumeLayout(false);
             this.panelMeniButtons.ResumeLayout(false);

@@ -31,9 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.wbMaps = new System.Windows.Forms.WebBrowser();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmsOpenInMaps = new System.Windows.Forms.ToolStripMenuItem();
-            this.wbMaps = new System.Windows.Forms.WebBrowser();
             this.lblLink = new System.Windows.Forms.LinkLabel();
             this.btnNavigate = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -59,6 +59,16 @@
             this.panel1.Size = new System.Drawing.Size(442, 274);
             this.panel1.TabIndex = 2;
             // 
+            // wbMaps
+            // 
+            this.wbMaps.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wbMaps.Location = new System.Drawing.Point(0, 0);
+            this.wbMaps.MinimumSize = new System.Drawing.Size(20, 20);
+            this.wbMaps.Name = "wbMaps";
+            this.wbMaps.Size = new System.Drawing.Size(442, 274);
+            this.wbMaps.TabIndex = 4;
+            this.wbMaps.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.wbMaps_Navigated);
+            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -71,24 +81,13 @@
             this.cmsOpenInMaps.Name = "cmsOpenInMaps";
             this.cmsOpenInMaps.Size = new System.Drawing.Size(148, 22);
             this.cmsOpenInMaps.Text = "Open in Maps";
-            this.cmsOpenInMaps.Click += new System.EventHandler(this.cmsOpenInMaps_Click);
-            // 
-            // wbMaps
-            // 
-            this.wbMaps.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wbMaps.Location = new System.Drawing.Point(0, 0);
-            this.wbMaps.MinimumSize = new System.Drawing.Size(20, 20);
-            this.wbMaps.Name = "wbMaps";
-            this.wbMaps.Size = new System.Drawing.Size(442, 274);
-            this.wbMaps.TabIndex = 4;
-            this.wbMaps.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.wbMaps_Navigated);
             // 
             // lblLink
             // 
             this.lblLink.AutoSize = true;
             this.lblLink.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lblLink.LinkColor = System.Drawing.Color.White;
-            this.lblLink.Location = new System.Drawing.Point(224, 289);
+            this.lblLink.Location = new System.Drawing.Point(485, 12);
             this.lblLink.Name = "lblLink";
             this.lblLink.Size = new System.Drawing.Size(29, 13);
             this.lblLink.TabIndex = 4;
@@ -103,12 +102,13 @@
             this.btnNavigate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNavigate.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.btnNavigate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.btnNavigate.Location = new System.Drawing.Point(151, 305);
+            this.btnNavigate.Location = new System.Drawing.Point(122, 292);
             this.btnNavigate.Name = "btnNavigate";
-            this.btnNavigate.Size = new System.Drawing.Size(175, 37);
+            this.btnNavigate.Size = new System.Drawing.Size(244, 37);
             this.btnNavigate.TabIndex = 5;
-            this.btnNavigate.Text = "Navigate";
+            this.btnNavigate.Text = "Open in browser";
             this.btnNavigate.UseVisualStyleBackColor = false;
+            this.btnNavigate.Click += new System.EventHandler(this.btnNavigate_Click);
             // 
             // frmHospitalInfo
             // 
