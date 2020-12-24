@@ -61,6 +61,9 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
+
+
+
         // Opens the URL in the browser 
         // the Navigate button is clicked.
         private void btnNavigate_Click(object sender, EventArgs e)
