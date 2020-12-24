@@ -18,9 +18,6 @@ namespace Hospital_System_Demo.ChildForms
         {
             InitializeComponent();
         }
-
-
-
         private void frmHospitalInfo_Load(object sender, EventArgs e)
         {
             lblLink.Hide();
@@ -51,6 +48,10 @@ namespace Hospital_System_Demo.ChildForms
             }
         }
 
+
+
+
+
         // Updates the URL in TextBoxAddress upon navigation.
         private void wbMaps_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
@@ -68,12 +69,20 @@ namespace Hospital_System_Demo.ChildForms
             Process.Start(sInfo);
         }
 
+
+
+
+
+
+
+        /// <summary>
+        /// Changes the color of button on mouseHover and mouseLeave
+        /// </summary>
         private void btnNavigate_MouseHover(object sender, EventArgs e)
         {
             btnNavigate.BackColor = Color.FromArgb(245, 83, 20);
             btnNavigate.ForeColor = Color.FromArgb(5, 25, 30);
         }
-
         private void btnNavigate_MouseLeave(object sender, EventArgs e)
         {
             btnNavigate.BackColor = Color.FromArgb(5,25,30);
