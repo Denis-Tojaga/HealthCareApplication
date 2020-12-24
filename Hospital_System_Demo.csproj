@@ -109,6 +109,8 @@
     </Compile>
     <Compile Include="Grad.cs" />
     <Compile Include="Data\HealthCareContext.cs" />
+    <Compile Include="Patients\KrvnaGrupa.cs" />
+    <Compile Include="Patients\Patient.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
