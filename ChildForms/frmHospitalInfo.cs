@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Hospital_System_Demo.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace Hospital_System_Demo.ChildForms
     public partial class frmHospitalInfo : Form
     {
         private const string Link = "https://www.google.com/maps/@43.3249463,17.8197502,16.12z?hl=hr";
+        private HealthCareContext baza = HealthCareDB.Base;
         public frmHospitalInfo()
         {
             InitializeComponent();
@@ -22,6 +24,14 @@ namespace Hospital_System_Demo.ChildForms
         {
             lblLink.Hide();
             Navigate(Link);
+            UcitajPodatkeOPanelima();
+        }
+
+        private void UcitajPodatkeOPanelima()
+        {
+            lblDoctorNumber.Text = baza.Doktori.Count().ToString();
+            lblNurseNumber.Text = baza.MedicinskeSestre.Count().ToString();
+            lblPatientNumber.Text = baza.Pacijenti.Count().ToString();
         }
 
 

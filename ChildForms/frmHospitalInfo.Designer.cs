@@ -364,7 +364,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.Transparent;
-            this.panel4.BackgroundImage = global::Hospital_System_Demo.Properties.Resources.doktor4;
+            this.panel4.BackgroundImage = global::Hospital_System_Demo.Properties.Resources.doktor;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(154, 0);

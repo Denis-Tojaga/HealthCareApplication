@@ -87,3 +87,4 @@ C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\bin\Debug\ru\Microsoft.Re
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmHospitalInfo.resources
+C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmPatients.resources

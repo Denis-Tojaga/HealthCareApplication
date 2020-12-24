@@ -91,6 +91,12 @@
     <Compile Include="ChildForms\frmHospitalInfo.Designer.cs">
       <DependentUpon>frmHospitalInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\frmPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\frmPatients.Designer.cs">
+      <DependentUpon>frmPatients.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\HealthCareDB.cs" />
     <Compile Include="Doctors_Nurses\Doktor.cs" />
     <Compile Include="Doctors_Nurses\MedicinskaSestra.cs" />
@@ -118,6 +124,9 @@
     <Compile Include="Validator.cs" />
     <EmbeddedResource Include="ChildForms\frmHospitalInfo.resx">
       <DependentUpon>frmHospitalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\frmPatients.resx">
+      <DependentUpon>frmPatients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAppMain.resx">
       <DependentUpon>frmAppMain.cs</DependentUpon>
@@ -165,6 +174,7 @@
     <None Include="Resources\LokacijaBolnice.png" />
     <None Include="Resources\nurseLogo2.png" />
     <None Include="Resources\patient-icon-9244.png" />
+    <None Include="Resources\doktor.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
