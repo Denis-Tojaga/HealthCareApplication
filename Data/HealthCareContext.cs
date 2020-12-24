@@ -1,4 +1,5 @@
 ﻿using Hospital_System_Demo.Doctors_Nurses;
+using Hospital_System_Demo.Patients;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -12,9 +13,12 @@ namespace Hospital_System_Demo
     public class HealthCareContext : DbContext
     {
         public DbSet<Grad> Gradovi { get; set; }
+        public DbSet<Spol> Spolovi { get; set; }
         public DbSet<Titula> Titule { get; set; }
+        public DbSet<KrvnaGrupa> KrvneGrupe { get; set; }
         public DbSet<Doktor> Doktori { get; set; }
         public DbSet<MedicinskaSestra> MedicinskeSestre { get; set; }
+        public DbSet<Pacijent> Pacijenti { get; set; }
 
         public HealthCareContext() : base("PutanjaDoBaze")
         {
