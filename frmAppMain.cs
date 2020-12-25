@@ -45,7 +45,17 @@ namespace Hospital_System_Demo
         private void AktivirajButton(object btnKliknuti)
         {
             if (btnKliknuti != null && kliknutiTrenutno != (Button)btnKliknuti)
-                    kliknutiTrenutno = (Button)btnKliknuti;
+            {
+                if (kliknutiTrenutno != null)
+                {
+                    kliknutiTrenutno.Enabled = true;
+                    kliknutiTrenutno.ForeColor = Color.White;
+                }
+
+                kliknutiTrenutno = (Button)btnKliknuti;
+                kliknutiTrenutno.Enabled = false;
+                kliknutiTrenutno.ForeColor = Color.Silver;
+            }
         }
 
 
@@ -54,6 +64,7 @@ namespace Hospital_System_Demo
         {
             _aktivnaForma?.Close();
             AktivirajButton(btnKliknuti);
+            
             _aktivnaForma = childForma;
             childForma.TopLevel = false;
             childForma.FormBorderStyle = FormBorderStyle.None;
@@ -63,15 +74,23 @@ namespace Hospital_System_Demo
             childForma.BringToFront();
             childForma.Show();
         }
+        /// <summary>
+        /// Closes the current form
+        /// </summary>
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
         private void btnHospitalInfo_Click(object sender, EventArgs e)
         {
             OpenChildForm(new frmHospitalInfo(), sender);
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+
+        private void btnPatients_Click(object sender, EventArgs e)
         {
-            this.Close();
+            OpenChildForm(new frmPatients(), sender);
         }
     }
 }
