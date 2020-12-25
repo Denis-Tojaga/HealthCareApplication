@@ -175,6 +175,9 @@
     <None Include="Resources\nurseLogo2.png" />
     <None Include="Resources\patient-icon-9244.png" />
     <None Include="Resources\doktor.png" />
+    <None Include="Resources\Add_patient.png" />
+    <None Include="Resources\viewDetailsPatient.png" />
+    <None Include="Resources\pregled4.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
