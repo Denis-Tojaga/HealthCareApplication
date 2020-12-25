@@ -1,4 +1,5 @@
 ﻿using Hospital_System_Demo.Data;
+using Hospital_System_Demo.Doctors_Nurses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,16 +17,33 @@ namespace Hospital_System_Demo.ChildForms
     {
         private const string Link = "https://www.google.com/maps/@43.3249463,17.8197502,16.12z?hl=hr";
         private HealthCareContext baza = HealthCareDB.Base;
+        private Doktor _loggedDoctor;
+        private MedicinskaSestra _loggedNurse;
         public frmHospitalInfo()
         {
             InitializeComponent();
+            _loggedDoctor = new Doktor();
+            _loggedNurse = new MedicinskaSestra();
         }
+        public frmHospitalInfo(Doktor doktor): this()
+        {
+            _loggedDoctor = doktor;
+        }
+        public frmHospitalInfo(MedicinskaSestra sestra) : this()
+        {
+            _loggedNurse = sestra;
+        }
+
+
+
         private void frmHospitalInfo_Load(object sender, EventArgs e)
         {
             lblLink.Hide();
             Navigate(Link);
             UcitajPodatkeOPanelima();
         }
+
+      
 
         private void UcitajPodatkeOPanelima()
         {

@@ -66,8 +66,9 @@ namespace Hospital_System_Demo
         {
             if (e.KeyCode == Keys.Enter)
             {
-                var pretragaDoktora = PretragaDoktora();
-                var pretragaSestre = PretragaMedSestre();
+                e.SuppressKeyPress = true;
+                var pretragaDoktora = PretragaDoktora() as Doktor;
+                var pretragaSestre = PretragaMedSestre() as MedicinskaSestra;
                 if (pretragaDoktora != null)
                 {
                     OpenMainForm(pretragaDoktora);
@@ -101,8 +102,8 @@ namespace Hospital_System_Demo
         /// <summary>
         /// Search implemented by user credentials
         /// </summary>
-        private object PretragaDoktora() => data.Doktori.Where(x => x.KorisnickoIme == txtUsername.Text && x.Lozinka == txtPassword.Text).ToList();
-        private object PretragaMedSestre() => data.MedicinskeSestre.Where(x => x.KorisnickoIme == txtUsername.Text && x.Lozinka == txtPassword.Text).ToList();
+        private object PretragaDoktora() => data.Doktori.Where(x => x.KorisnickoIme == txtUsername.Text && x.Lozinka == txtPassword.Text).FirstOrDefault();
+        private object PretragaMedSestre() => data.MedicinskeSestre.Where(x => x.KorisnickoIme == txtUsername.Text && x.Lozinka == txtPassword.Text).FirstOrDefault();
 
 
 
@@ -119,14 +120,14 @@ namespace Hospital_System_Demo
         {
             if (ValidirajUnos())
             {
-                var pretragaDoktora = PretragaDoktora();
-                var pretragaSestre = PretragaMedSestre();
-                if (pretragaDoktora.ToString()!="0")
+                var pretragaDoktora = PretragaDoktora() as Doktor;
+                var pretragaSestre = PretragaMedSestre() as MedicinskaSestra;
+                if ((pretragaDoktora as Doktor)!=null)
                 {
                     OpenMainForm(pretragaDoktora);
                     this.Close();
                 }
-                else if (pretragaSestre.ToString() != "0")
+                else if (pretragaSestre!= null)
                 {
                     OpenMainForm(pretragaSestre);
                     this.Close();
@@ -143,7 +144,14 @@ namespace Hospital_System_Demo
         /// <summary>
         /// Opens up main form in logged user mod
         /// </summary>
-        private void OpenMainForm(object User)
+        private void OpenMainForm(Doktor User)
+        {
+            frmAppMain mainForm = new frmAppMain(User);
+            mainForm.ShowDialog();
+        }
+
+
+        private void OpenMainForm(MedicinskaSestra User)
         {
             frmAppMain mainForm = new frmAppMain(User);
             mainForm.ShowDialog();
@@ -278,6 +286,9 @@ namespace Hospital_System_Demo
         {
             ResetForm();
         }
+
+
+
         //Resets the form to the start type
         private void ResetForm()
         {

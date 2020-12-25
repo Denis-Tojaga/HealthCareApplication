@@ -16,6 +16,7 @@ namespace Hospital_System_Demo
     {
         Doktor _doctor;
         MedicinskaSestra _nurse;
+        bool doctorMode = false;
         Form _aktivnaForma = null;
         Button kliknutiTrenutno;
         public frmAppMain()
@@ -25,12 +26,14 @@ namespace Hospital_System_Demo
             _doctor = new Doktor();
         }
 
-        public frmAppMain(object User) : this()
+        public frmAppMain(Doktor User) : this()
         {
-            if (User is Doktor)
-                _doctor = User as Doktor;
-            else
-                _nurse = User as MedicinskaSestra;
+            _doctor = User;
+            doctorMode = true;
+        }
+        public frmAppMain(MedicinskaSestra User) : this()
+        {
+            _nurse = User;
         }
 
         private void frmAppMain_Load(object sender, EventArgs e)
@@ -74,6 +77,10 @@ namespace Hospital_System_Demo
             childForma.BringToFront();
             childForma.Show();
         }
+
+
+
+
         /// <summary>
         /// Closes the current form
         /// </summary>
@@ -82,15 +89,24 @@ namespace Hospital_System_Demo
             this.Close();
         }
 
+
+
+        /// <summary>
+        /// Determines if the logged user is doctor or nurse, depending on that it opens up a new form with collection of their data
+        /// </summary>
         private void btnHospitalInfo_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmHospitalInfo(), sender);
+            if(doctorMode)
+                OpenChildForm(new frmHospitalInfo(_doctor), sender);
+            else
+                OpenChildForm(new frmHospitalInfo(_nurse), sender);
         }
-
-
         private void btnPatients_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new frmPatients(), sender);
+            if (doctorMode)
+                OpenChildForm(new frmPatients(_doctor), sender);
+            else                 
+                OpenChildForm(new frmPatients(_nurse), sender);
         }
     }
 }
