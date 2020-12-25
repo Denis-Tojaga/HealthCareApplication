@@ -68,13 +68,13 @@ namespace Hospital_System_Demo
             {
                 var pretragaDoktora = PretragaDoktora();
                 var pretragaSestre = PretragaMedSestre();
-                if ((pretragaDoktora as Doktor) != null)
+                if (pretragaDoktora != null)
                 {
                     OpenMainForm(pretragaDoktora);
                     //doesn't produce beep sound after main form opens up
                     e.SuppressKeyPress = true;
                 }
-                else if((pretragaSestre as MedicinskaSestra)!=null)
+                else if(pretragaSestre !=null)
                 {
                     OpenMainForm(pretragaSestre);
                     e.SuppressKeyPress = true;
