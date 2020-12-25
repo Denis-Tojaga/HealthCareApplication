@@ -121,11 +121,17 @@
   <data name="LokacijaBolnice" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\LokacijaBolnice.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add_patient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add_patient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="hospitalLogo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hospitalLogo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="key2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\key2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="doktor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\doktor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="doktor4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doktor4.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,7 +142,7 @@
   <data name="patient-icon-9244" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\patient-icon-9244.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="doktor" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doktor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="viewDetailsPatient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\viewDetailsPatient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
