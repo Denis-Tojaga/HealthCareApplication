@@ -61,7 +61,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnPreviousDate = new System.Windows.Forms.Button();
             this.panelRaspored.SuspendLayout();
             this.panel10.SuspendLayout();
             this.pnl9.SuspendLayout();
@@ -79,7 +79,7 @@
             // 
             this.lblTrenutniDatum.Font = new System.Drawing.Font("Segoe UI", 23.2F, System.Drawing.FontStyle.Bold);
             this.lblTrenutniDatum.ForeColor = System.Drawing.Color.Silver;
-            this.lblTrenutniDatum.Location = new System.Drawing.Point(144, 28);
+            this.lblTrenutniDatum.Location = new System.Drawing.Point(144, 36);
             this.lblTrenutniDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTrenutniDatum.Name = "lblTrenutniDatum";
             this.lblTrenutniDatum.Size = new System.Drawing.Size(225, 46);
@@ -91,7 +91,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 23.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(437, 20);
+            this.label1.Location = new System.Drawing.Point(437, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(389, 63);
@@ -477,21 +477,21 @@
             this.button1.Text = "Daily review";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnPreviousDate
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button3.Location = new System.Drawing.Point(71, 28);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(49, 46);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "<";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnPreviousDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnPreviousDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnPreviousDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPreviousDate.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Bold);
+            this.btnPreviousDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnPreviousDate.Location = new System.Drawing.Point(71, 36);
+            this.btnPreviousDate.Margin = new System.Windows.Forms.Padding(0);
+            this.btnPreviousDate.Name = "btnPreviousDate";
+            this.btnPreviousDate.Size = new System.Drawing.Size(49, 46);
+            this.btnPreviousDate.TabIndex = 40;
+            this.btnPreviousDate.Text = "<";
+            this.btnPreviousDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnPreviousDate.UseVisualStyleBackColor = false;
             // 
             // frmExaminations
             // 
@@ -499,7 +499,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(887, 556);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnPreviousDate);
             this.Controls.Add(this.lblTrenutniDatum);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelRaspored);
@@ -557,6 +557,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnPreviousDate;
     }
 }
