@@ -1,12 +1,14 @@
 ﻿using Hospital_System_Demo.Doctors_Nurses;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Hospital_System_Demo.Patients
 {
+    [Table("Pregled")]
     public class Pregled
     {
         public int Id { get; set; }
@@ -14,7 +16,7 @@ namespace Hospital_System_Demo.Patients
         public virtual Doktor Doktor { get; set; }
         public virtual Dijagnoza Dijagnoza { get; set; }
         public string Datum { get; set; }
-        public string OpisTrenutnogStanja { get; set; }
+        public string OpisStanja { get; set; }
         public bool AktivanPregled { get; set; }
         public string ZakljucakDoktora { get; set; }
 

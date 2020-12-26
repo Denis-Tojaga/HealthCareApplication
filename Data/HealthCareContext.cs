@@ -19,6 +19,9 @@ namespace Hospital_System_Demo
         public DbSet<Doktor> Doktori { get; set; }
         public DbSet<MedicinskaSestra> MedicinskeSestre { get; set; }
         public DbSet<Pacijent> Pacijenti { get; set; }
+        public DbSet<Pregled> Pregledi { get; set; }
+        public DbSet<Dijagnoza> Dijagnoze { get; set; }
+        public DbSet<Raspored> Rasporedi { get; set; }
 
         public HealthCareContext() : base("PutanjaDoBaze")
         {
