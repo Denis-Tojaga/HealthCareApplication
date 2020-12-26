@@ -23,10 +23,11 @@ namespace Hospital_System_Demo.Doctors_Nurses
         public byte[] Slika { get; set; }
         public virtual Titula Titula { get; set; }
         public virtual Grad Grad { get; set; }
+        public virtual List<Raspored> RasporediDoktora { get; set; }
 
         public Doktor()
         {
-            //ImePrezime = Ime + " " + Prezime;
+            RasporediDoktora = new List<Raspored>();
         }
 
         public override string ToString()=>Ime + " " + Prezime;
