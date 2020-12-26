@@ -125,6 +125,7 @@
     <Compile Include="Helpers\ImageConverter.cs" />
     <Compile Include="Helpers\MboxHelper.cs" />
     <Compile Include="Patients\KrvnaGrupa.cs" />
+    <Compile Include="Patients\PacijentiDijagnoze.cs" />
     <Compile Include="Patients\Patient.cs" />
     <Compile Include="Patients\Pregled.cs" />
     <Compile Include="Program.cs" />

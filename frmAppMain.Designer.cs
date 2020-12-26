@@ -159,6 +159,7 @@
             this.btnExaminations.TabIndex = 2;
             this.btnExaminations.Text = "Examinations";
             this.btnExaminations.UseVisualStyleBackColor = false;
+            this.btnExaminations.Click += new System.EventHandler(this.btnExaminations_Click);
             // 
             // btnPatients
             // 

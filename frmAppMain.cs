@@ -120,5 +120,13 @@ namespace Hospital_System_Demo
             else                 
                 OpenChildForm(new frmPatients(_nurse), sender);
         }
+
+        private void btnExaminations_Click(object sender, EventArgs e)
+        {
+            if (doctorMode)
+                OpenChildForm(new frmExaminations(_doctor), sender);
+            else
+                OpenChildForm(new frmExaminations(_nurse), sender);
+        }
     }
 }

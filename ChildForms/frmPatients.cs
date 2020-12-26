@@ -1,6 +1,7 @@
 ﻿using Hospital_System_Demo.Data;
 using Hospital_System_Demo.Doctors_Nurses;
 using Hospital_System_Demo.Helpers;
+using Hospital_System_Demo.Patients;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,6 +25,7 @@ namespace Hospital_System_Demo.ChildForms
             InitializeComponent();
             _loggedNurse = new MedicinskaSestra();
             _loggedDoctor = new Doktor();
+            dgvPacijenti.AutoGenerateColumns = false;
         }
 
         public frmPatients(Doktor doktor):this()
@@ -41,13 +43,19 @@ namespace Hospital_System_Demo.ChildForms
         {
             if (DoktorMode)
                 UcitajPodatkeODoktoru(_loggedDoctor);
+            LoadPatients();
+        }
+
+        private void LoadPatients(List<Pacijent> listaPacijenata = null)
+        {
+            dgvPacijenti.DataSource = null;
+            dgvPacijenti.DataSource = listaPacijenata ?? baza.Pacijenti.ToList();
         }
 
         private void UcitajPodatkeODoktoru(Doktor loggedDoctor)
         {
             try
             {
-                lblTrenutniDatum.Text = DateTime.Now.ToShortDateString();
                 lblTrenutniDoktor.Text = loggedDoctor.Titula.TipTitule + loggedDoctor.Ime + " " + loggedDoctor.Prezime;
             }
             catch (Exception ex)
