@@ -44,16 +44,16 @@
             this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Spol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panelRaspored.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacijenti)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -93,10 +93,12 @@
             // btnViewDetails
             // 
             this.btnViewDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(3)))));
+            this.btnViewDetails.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnViewDetails.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnViewDetails.FlatAppearance.BorderSize = 0;
             this.btnViewDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewDetails.Font = new System.Drawing.Font("Segoe UI Black", 22F, System.Drawing.FontStyle.Bold);
+            this.btnViewDetails.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.btnViewDetails.Location = new System.Drawing.Point(0, 0);
             this.btnViewDetails.Margin = new System.Windows.Forms.Padding(2);
             this.btnViewDetails.Name = "btnViewDetails";
@@ -104,6 +106,7 @@
             this.btnViewDetails.TabIndex = 0;
             this.btnViewDetails.Text = "View Details";
             this.btnViewDetails.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnViewDetails.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
             this.btnViewDetails.UseVisualStyleBackColor = false;
             this.btnViewDetails.Click += new System.EventHandler(this.btnViewDetails_Click);
             // 
@@ -232,20 +235,6 @@
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(3)))));
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox2.Image = global::Hospital_System_Demo.Properties.Resources.viewDetailsPatient;
-            this.pictureBox2.Location = new System.Drawing.Point(201, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Padding = new System.Windows.Forms.Padding(8);
-            this.pictureBox2.Size = new System.Drawing.Size(80, 132);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(3)))));
@@ -258,6 +247,19 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(211)))), ((int)(((byte)(3)))));
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox2.Image = global::Hospital_System_Demo.Properties.Resources.viewDetailsPatient;
+            this.pictureBox2.Location = new System.Drawing.Point(201, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(80, 132);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // frmPatients
             // 
@@ -282,8 +284,8 @@
             this.panelRaspored.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacijenti)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -294,7 +296,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAddPatient;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnViewDetails;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -308,5 +309,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumRodjenja;
         private System.Windows.Forms.DataGridViewTextBoxColumn JMBG;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spol;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
