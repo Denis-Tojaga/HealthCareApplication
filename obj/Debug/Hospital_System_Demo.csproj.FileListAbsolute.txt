@@ -89,3 +89,4 @@ C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\bin\Debug\zh-CHT\Microsof
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmHospitalInfo.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmPatients.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmExaminations.resources
+C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.Patients.frmPatientDetails.resources

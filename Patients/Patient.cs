@@ -17,9 +17,11 @@ namespace Hospital_System_Demo.Patients
         public string JMBG { get; set; }
         public virtual KrvnaGrupa KrvnaGrupa { get; set; }
         public virtual Spol Spol { get; set; }
-        public virtual List<Dijagnoza>  ListaDijagnoza { get; set; }
+        public virtual List<PacijentiDijagnoze> ListaDijagnoza { get; set; } = new List<PacijentiDijagnoze>();
         public string SifraPacijenta { get; set; }
         public byte[] ZdravstveniKartonSlika { get; set; }
-        public string ImePrezime { get { return Ime + " " + Prezime; } } 
+        public string ImePrezime { get { return Ime + " " + Prezime; } }
+
+        public override string ToString() => ImePrezime;
     }
 }

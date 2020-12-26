@@ -22,6 +22,7 @@ namespace Hospital_System_Demo
         public DbSet<Pregled> Pregledi { get; set; }
         public DbSet<Dijagnoza> Dijagnoze { get; set; }
         public DbSet<Raspored> Rasporedi { get; set; }
+        public DbSet<PacijentiDijagnoze> PacijentiDijagnoze { get; set; }
 
         public HealthCareContext() : base("PutanjaDoBaze")
         {

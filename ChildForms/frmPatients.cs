@@ -19,6 +19,7 @@ namespace Hospital_System_Demo.ChildForms
         private HealthCareContext baza = HealthCareDB.Base;
         private Doktor _loggedDoctor;
         private MedicinskaSestra _loggedNurse;
+        private Pacijent selected;
         private bool DoktorMode = false;
         public frmPatients()
         {
@@ -62,6 +63,19 @@ namespace Hospital_System_Demo.ChildForms
             {
                 MboxHelper.PrikaziGresku(ex);
             }
+        }
+
+        private void btnViewDetails_Click(object sender, EventArgs e)
+        {
+            if (selected != null)
+                new frmPatientDetails(selected).ShowDialog();
+            else
+                MboxHelper.PrikaziObavjestenje("You must first click on any patient from the list!");
+        }   
+
+        private void dgvPacijenti_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selected = dgvPacijenti.Rows[e.RowIndex].DataBoundItem as Pacijent;
         }
     }
 }

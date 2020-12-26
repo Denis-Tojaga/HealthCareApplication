@@ -17,5 +17,9 @@ namespace Hospital_System_Demo.Helpers
         {
             MessageBox.Show($"{greska.Message} \n {greska.InnerException?.Message}", "Information for user", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        public static void PrikaziObavjestenje(string message) 
+        {
+            MessageBox.Show(message);
+        }
     }
 }
