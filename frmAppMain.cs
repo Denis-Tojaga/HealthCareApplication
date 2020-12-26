@@ -25,7 +25,15 @@ namespace Hospital_System_Demo
             _nurse = new MedicinskaSestra();
             _doctor = new Doktor();
         }
+        private void frmAppMain_Load(object sender, EventArgs e)
+        {
+        }
 
+
+
+        /// <summary>
+        /// Constructors for logged user, either doctor or nurse 
+        /// </summary>
         public frmAppMain(Doktor User) : this()
         {
             _doctor = User;
@@ -36,10 +44,6 @@ namespace Hospital_System_Demo
             _nurse = User;
         }
 
-        private void frmAppMain_Load(object sender, EventArgs e)
-        {
-            //this is something
-        }
 
 
         /// <summary>
@@ -60,6 +64,10 @@ namespace Hospital_System_Demo
                 kliknutiTrenutno.ForeColor = Color.Silver;
             }
         }
+
+
+
+
 
 
         ///Method which opens up a child forms on button click
@@ -88,6 +96,10 @@ namespace Hospital_System_Demo
         {
             this.Close();
         }
+
+
+
+
 
 
 
