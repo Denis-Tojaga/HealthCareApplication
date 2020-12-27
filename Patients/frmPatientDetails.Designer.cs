@@ -34,7 +34,33 @@
             this.dgvDijagnozePacijenta = new System.Windows.Forms.DataGridView();
             this.Dijagnoza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatumOdredjivanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtIme = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtPrezime = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtJMBG = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtSifraPacijenta = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pbHealthCard = new System.Windows.Forms.PictureBox();
+            this.btnAddHC = new System.Windows.Forms.Button();
+            this.Gender = new System.Windows.Forms.Label();
+            this.cmbTitule = new System.Windows.Forms.ComboBox();
+            this.cmbSpol = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txtDatumEvidencije = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDijagnozePacijenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDijagnozePacijenta
@@ -106,11 +132,302 @@
             this.DatumOdredjivanja.HeaderText = "Date of record";
             this.DatumOdredjivanja.Name = "DatumOdredjivanja";
             // 
+            // txtIme
+            // 
+            this.txtIme.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.txtIme.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtIme.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.txtIme.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtIme.Location = new System.Drawing.Point(32, 58);
+            this.txtIme.Name = "txtIme";
+            this.txtIme.Size = new System.Drawing.Size(136, 25);
+            this.txtIme.TabIndex = 17;
+            // 
+            // label4
+            // 
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.DarkGray;
+            this.label4.Location = new System.Drawing.Point(32, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(136, 2);
+            this.label4.TabIndex = 18;
+            // 
+            // txtPrezime
+            // 
+            this.txtPrezime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.txtPrezime.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPrezime.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.txtPrezime.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtPrezime.Location = new System.Drawing.Point(215, 59);
+            this.txtPrezime.Name = "txtPrezime";
+            this.txtPrezime.Size = new System.Drawing.Size(136, 25);
+            this.txtPrezime.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.DarkGray;
+            this.label1.Location = new System.Drawing.Point(215, 87);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 2);
+            this.label1.TabIndex = 20;
+            // 
+            // txtJMBG
+            // 
+            this.txtJMBG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.txtJMBG.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtJMBG.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.txtJMBG.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtJMBG.Location = new System.Drawing.Point(405, 60);
+            this.txtJMBG.Name = "txtJMBG";
+            this.txtJMBG.Size = new System.Drawing.Size(136, 25);
+            this.txtJMBG.TabIndex = 21;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DarkGray;
+            this.label2.Location = new System.Drawing.Point(405, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 2);
+            this.label2.TabIndex = 22;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtEmail.Location = new System.Drawing.Point(32, 136);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(218, 25);
+            this.txtEmail.TabIndex = 23;
+            // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DarkGray;
+            this.label3.Location = new System.Drawing.Point(32, 164);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(218, 2);
+            this.label3.TabIndex = 24;
+            // 
+            // txtSifraPacijenta
+            // 
+            this.txtSifraPacijenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.txtSifraPacijenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtSifraPacijenta.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.txtSifraPacijenta.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtSifraPacijenta.Location = new System.Drawing.Point(312, 136);
+            this.txtSifraPacijenta.Name = "txtSifraPacijenta";
+            this.txtSifraPacijenta.Size = new System.Drawing.Size(229, 25);
+            this.txtSifraPacijenta.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.DarkGray;
+            this.label5.Location = new System.Drawing.Point(312, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(229, 2);
+            this.label5.TabIndex = 26;
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Silver;
+            this.label6.Location = new System.Drawing.Point(27, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(115, 30);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "First Name";
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Silver;
+            this.label7.Location = new System.Drawing.Point(210, 29);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 30);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Last Name";
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Silver;
+            this.label8.Location = new System.Drawing.Point(400, 29);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(115, 30);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "JMBG";
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Silver;
+            this.label9.Location = new System.Drawing.Point(27, 107);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(115, 30);
+            this.label9.TabIndex = 30;
+            this.label9.Text = "Email";
+            // 
+            // label10
+            // 
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Silver;
+            this.label10.Location = new System.Drawing.Point(307, 107);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(122, 30);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Patient code";
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.Silver;
+            this.label11.Location = new System.Drawing.Point(581, 29);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(278, 30);
+            this.label11.TabIndex = 32;
+            this.label11.Text = "All previous diagnosis";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // pbHealthCard
+            // 
+            this.pbHealthCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbHealthCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbHealthCard.Location = new System.Drawing.Point(32, 185);
+            this.pbHealthCard.Name = "pbHealthCard";
+            this.pbHealthCard.Size = new System.Drawing.Size(213, 225);
+            this.pbHealthCard.TabIndex = 33;
+            this.pbHealthCard.TabStop = false;
+            // 
+            // btnAddHC
+            // 
+            this.btnAddHC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAddHC.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnAddHC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddHC.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddHC.Location = new System.Drawing.Point(32, 417);
+            this.btnAddHC.Name = "btnAddHC";
+            this.btnAddHC.Size = new System.Drawing.Size(213, 32);
+            this.btnAddHC.TabIndex = 34;
+            this.btnAddHC.Text = "Add Health Card";
+            this.btnAddHC.UseVisualStyleBackColor = false;
+            // 
+            // Gender
+            // 
+            this.Gender.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.Gender.ForeColor = System.Drawing.Color.Silver;
+            this.Gender.Location = new System.Drawing.Point(307, 210);
+            this.Gender.Name = "Gender";
+            this.Gender.Size = new System.Drawing.Size(97, 30);
+            this.Gender.TabIndex = 37;
+            this.Gender.Text = "Gender";
+            // 
+            // cmbTitule
+            // 
+            this.cmbTitule.BackColor = System.Drawing.Color.Silver;
+            this.cmbTitule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTitule.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbTitule.ForeColor = System.Drawing.Color.Black;
+            this.cmbTitule.FormattingEnabled = true;
+            this.cmbTitule.Location = new System.Drawing.Point(410, 210);
+            this.cmbTitule.Name = "cmbTitule";
+            this.cmbTitule.Size = new System.Drawing.Size(131, 29);
+            this.cmbTitule.TabIndex = 38;
+            // 
+            // cmbSpol
+            // 
+            this.cmbSpol.BackColor = System.Drawing.Color.Silver;
+            this.cmbSpol.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbSpol.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSpol.ForeColor = System.Drawing.Color.Black;
+            this.cmbSpol.FormattingEnabled = true;
+            this.cmbSpol.Location = new System.Drawing.Point(472, 265);
+            this.cmbSpol.Name = "cmbSpol";
+            this.cmbSpol.Size = new System.Drawing.Size(69, 29);
+            this.cmbSpol.TabIndex = 40;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.Silver;
+            this.label12.Location = new System.Drawing.Point(307, 265);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(107, 30);
+            this.label12.TabIndex = 39;
+            this.label12.Text = "Blood type";
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label13.ForeColor = System.Drawing.Color.Silver;
+            this.label13.Location = new System.Drawing.Point(307, 314);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(234, 30);
+            this.label13.TabIndex = 43;
+            this.label13.Text = "Last visiting date";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtDatumEvidencije
+            // 
+            this.txtDatumEvidencije.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.txtDatumEvidencije.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDatumEvidencije.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.txtDatumEvidencije.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtDatumEvidencije.Location = new System.Drawing.Point(312, 347);
+            this.txtDatumEvidencije.Name = "txtDatumEvidencije";
+            this.txtDatumEvidencije.Size = new System.Drawing.Size(172, 25);
+            this.txtDatumEvidencije.TabIndex = 41;
+            // 
+            // label14
+            // 
+            this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.DarkGray;
+            this.label14.Location = new System.Drawing.Point(312, 375);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(172, 2);
+            this.label14.TabIndex = 42;
+            // 
             // frmPatientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(871, 517);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.txtDatumEvidencije);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.cmbSpol);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.cmbTitule);
+            this.Controls.Add(this.Gender);
+            this.Controls.Add(this.btnAddHC);
+            this.Controls.Add(this.pbHealthCard);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txtSifraPacijenta);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtJMBG);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtPrezime);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtIme);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.dgvDijagnozePacijenta);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmPatientDetails";
@@ -118,7 +435,9 @@
             this.Text = "Patient Details";
             this.Load += new System.EventHandler(this.frmPatientDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDijagnozePacijenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -127,5 +446,30 @@
         private System.Windows.Forms.DataGridView dgvDijagnozePacijenta;
         private System.Windows.Forms.DataGridViewTextBoxColumn Dijagnoza;
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumOdredjivanja;
+        private System.Windows.Forms.TextBox txtIme;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtPrezime;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtJMBG;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtSifraPacijenta;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pbHealthCard;
+        private System.Windows.Forms.Button btnAddHC;
+        private System.Windows.Forms.Label Gender;
+        private System.Windows.Forms.ComboBox cmbTitule;
+        private System.Windows.Forms.ComboBox cmbSpol;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtDatumEvidencije;
+        private System.Windows.Forms.Label label14;
     }
 }

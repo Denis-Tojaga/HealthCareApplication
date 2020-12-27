@@ -22,6 +22,21 @@ namespace Hospital_System_Demo.Patients
         public byte[] ZdravstveniKartonSlika { get; set; }
         public string ImePrezime { get { return Ime + " " + Prezime; } }
 
+        public Pacijent()
+        {
+            GenerisiPacijentKod();
+        }
+
+        private void GenerisiPacijentKod()
+        {
+            Random randomZnak = new Random();
+            string znakovi = @"qwert567uzh)(/skxv#$%!mhdaslp1234";
+            string kod = "";
+            for (int i = 0; i < 5; i++)
+                kod += znakovi[randomZnak.Next(0, znakovi.Length)];
+            SifraPacijenta = kod;
+        }
+
         public override string ToString() => ImePrezime;
     }
 }

@@ -75,7 +75,7 @@ namespace Hospital_System_Demo.ChildForms
 
         private void dgvPacijenti_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            selected = dgvPacijenti.Rows[e.RowIndex].DataBoundItem as Pacijent;
+            selected = dgvPacijenti.SelectedRows[0].DataBoundItem as Pacijent;
         }
     }
 }

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Hospital_System_Demo.Helpers
 {
-    public class ImageConverter
+    public class ImageHelper
     {
         public static byte[] FromImageToByte(Image slika)
         {
