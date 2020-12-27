@@ -53,8 +53,8 @@
             this.pbHealthCard = new System.Windows.Forms.PictureBox();
             this.btnAddHC = new System.Windows.Forms.Button();
             this.Gender = new System.Windows.Forms.Label();
-            this.cmbTitule = new System.Windows.Forms.ComboBox();
             this.cmbSpol = new System.Windows.Forms.ComboBox();
+            this.cmbKrvnaGrupa = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtDatumEvidencije = new System.Windows.Forms.TextBox();
@@ -331,18 +331,6 @@
             this.Gender.TabIndex = 37;
             this.Gender.Text = "Gender";
             // 
-            // cmbTitule
-            // 
-            this.cmbTitule.BackColor = System.Drawing.Color.Silver;
-            this.cmbTitule.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbTitule.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbTitule.ForeColor = System.Drawing.Color.Black;
-            this.cmbTitule.FormattingEnabled = true;
-            this.cmbTitule.Location = new System.Drawing.Point(410, 210);
-            this.cmbTitule.Name = "cmbTitule";
-            this.cmbTitule.Size = new System.Drawing.Size(131, 29);
-            this.cmbTitule.TabIndex = 38;
-            // 
             // cmbSpol
             // 
             this.cmbSpol.BackColor = System.Drawing.Color.Silver;
@@ -350,10 +338,22 @@
             this.cmbSpol.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSpol.ForeColor = System.Drawing.Color.Black;
             this.cmbSpol.FormattingEnabled = true;
-            this.cmbSpol.Location = new System.Drawing.Point(472, 265);
+            this.cmbSpol.Location = new System.Drawing.Point(410, 210);
             this.cmbSpol.Name = "cmbSpol";
-            this.cmbSpol.Size = new System.Drawing.Size(69, 29);
-            this.cmbSpol.TabIndex = 40;
+            this.cmbSpol.Size = new System.Drawing.Size(131, 29);
+            this.cmbSpol.TabIndex = 38;
+            // 
+            // cmbKrvnaGrupa
+            // 
+            this.cmbKrvnaGrupa.BackColor = System.Drawing.Color.Silver;
+            this.cmbKrvnaGrupa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKrvnaGrupa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbKrvnaGrupa.ForeColor = System.Drawing.Color.Black;
+            this.cmbKrvnaGrupa.FormattingEnabled = true;
+            this.cmbKrvnaGrupa.Location = new System.Drawing.Point(472, 265);
+            this.cmbKrvnaGrupa.Name = "cmbKrvnaGrupa";
+            this.cmbKrvnaGrupa.Size = new System.Drawing.Size(69, 29);
+            this.cmbKrvnaGrupa.TabIndex = 40;
             // 
             // label12
             // 
@@ -406,9 +406,9 @@
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtDatumEvidencije);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.cmbSpol);
+            this.Controls.Add(this.cmbKrvnaGrupa);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.cmbTitule);
+            this.Controls.Add(this.cmbSpol);
             this.Controls.Add(this.Gender);
             this.Controls.Add(this.btnAddHC);
             this.Controls.Add(this.pbHealthCard);
@@ -465,8 +465,8 @@
         private System.Windows.Forms.PictureBox pbHealthCard;
         private System.Windows.Forms.Button btnAddHC;
         private System.Windows.Forms.Label Gender;
-        private System.Windows.Forms.ComboBox cmbTitule;
         private System.Windows.Forms.ComboBox cmbSpol;
+        private System.Windows.Forms.ComboBox cmbKrvnaGrupa;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtDatumEvidencije;

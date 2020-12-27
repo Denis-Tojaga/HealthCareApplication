@@ -21,6 +21,36 @@ namespace Hospital_System_Demo.Patients
             InitializeComponent();
             _pacijent = new Pacijent();
             dgvDijagnozePacijenta.AutoGenerateColumns = false;
+            LoadGenders();
+            LoadBloodType();
+        }
+
+        private void LoadBloodType()
+        {
+            try
+            {
+                cmbKrvnaGrupa.DataSource = baza.KrvneGrupe.ToList();
+                cmbKrvnaGrupa.DisplayMember = "Oznaka";
+                cmbKrvnaGrupa.ValueMember = "Id";
+            }
+            catch (Exception ex)
+            {
+                MboxHelper.PrikaziGresku(ex);
+            }
+        }
+
+        private void LoadGenders()
+        {
+            try
+            {
+                cmbSpol.DataSource = baza.Spolovi.ToList();
+                cmbSpol.DisplayMember = "Naziv";
+                cmbSpol.ValueMember = "Id";
+            }
+            catch (Exception ex)
+            {
+                MboxHelper.PrikaziGresku(ex);
+            }
         }
 
         public frmPatientDetails(Pacijent pacijent) : this()
@@ -39,8 +69,8 @@ namespace Hospital_System_Demo.Patients
         {
             txtIme.Text = pacijent.Ime;
             txtPrezime.Text = pacijent.Prezime;
-            cmbSpol.SelectedItem = pacijent.KrvnaGrupa;
-            cmbSpol.SelectedItem = pacijent.Spol;
+            cmbKrvnaGrupa.SelectedItem = pacijent.KrvnaGrupa;
+            cmbKrvnaGrupa.SelectedItem = pacijent.Spol;
             var indeksZadnje = pacijent.ListaDijagnoza.Count();
             txtDatumEvidencije.Text = pacijent.ListaDijagnoza[indeksZadnje - 1].DatumOdredjivanja;
             if (pacijent.ZdravstveniKartonSlika != null)
