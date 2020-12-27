@@ -33,8 +33,8 @@ namespace Hospital_System_Demo.Patients
 
         private void LoadDiagnosis(Pacijent pacijent)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = pacijent.ListaDijagnoza;
+            dgvDijagnozePacijenta.DataSource = null;
+            dgvDijagnozePacijenta.DataSource = pacijent.ListaDijagnoza;
         }
     }
 }
