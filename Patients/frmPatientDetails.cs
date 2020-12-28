@@ -26,7 +26,30 @@ namespace Hospital_System_Demo.Patients
             LoadGenders();
             LoadBloodType();
         }
+        public frmPatientDetails(Pacijent pacijent) : this()
+        {
+            _pacijent = pacijent;
+        }
 
+
+
+        private void frmPatientDetails_Load(object sender, EventArgs e)
+        {
+            btnCancel.Hide();
+            lblCancel.Hide();
+            LockControls();
+            LoadData(_pacijent);
+            LoadDiagnosis(_pacijent.ListaDijagnoza);
+        }
+
+
+
+
+
+
+        /// <summary>
+        /// Loads all data from database to comboboxes
+        /// </summary>
         private void LoadBloodType()
         {
             try
@@ -40,7 +63,6 @@ namespace Hospital_System_Demo.Patients
                 MboxHelper.PrikaziGresku(ex);
             }
         }
-
         private void LoadGenders()
         {
             try
@@ -55,20 +77,14 @@ namespace Hospital_System_Demo.Patients
             }
         }
 
-        public frmPatientDetails(Pacijent pacijent) : this()
-        {
-            _pacijent = pacijent;
-        }
 
 
-        private void frmPatientDetails_Load(object sender, EventArgs e)
-        {
-            btnCancel.Hide();
-            lblCancel.Hide();
-            LockControls();
-            LoadData(_pacijent);
-            LoadDiagnosis(_pacijent.ListaDijagnoza);
-        }
+
+
+
+
+
+
 
 
         /// <summary>
@@ -101,6 +117,11 @@ namespace Hospital_System_Demo.Patients
 
 
 
+
+
+
+
+
         /// <summary>
         /// Loads data about patient and his diagnosis history
         /// </summary>
@@ -111,6 +132,7 @@ namespace Hospital_System_Demo.Patients
             cmbKrvnaGrupa.SelectedItem = pacijent.KrvnaGrupa;
             cmbSpol.SelectedItem = pacijent.Spol;
             txtEmail.Text = pacijent.Email ?? "";
+            txtJMBG.Text = pacijent.JMBG ?? "";
             var indeksZadnje = pacijent.ListaDijagnoza.Count();
             txtDatumEvidencije.Text = pacijent.ListaDijagnoza[indeksZadnje - 1].DatumOdredjivanja;
             if (pacijent.ZdravstveniKartonSlika != null)
@@ -127,14 +149,24 @@ namespace Hospital_System_Demo.Patients
 
 
 
+
+
+
+
+
+        /// <summary>
+        /// Enables edit mode and saves the data with current inputs 
+        /// </summary>
         private void btnEditDetails_Click(object sender, EventArgs e)
         {
             if (btnEditDetails.Text == "Save")
             {
-                SaveData();
-                LockControls();
-                lblCancel.Hide();
-                btnCancel.Hide();
+                if (SaveData())
+                {
+                    LockControls();
+                    lblCancel.Hide();
+                    btnCancel.Hide();
+                }
             }
             else
             {
@@ -143,9 +175,9 @@ namespace Hospital_System_Demo.Patients
                 btnCancel.Show();
             }
         }
-        private void SaveData()
+        private bool SaveData()
         {
-            if(ValidanUnos())
+            if (ValidanUnos())
             {
                 _pacijent.Ime = txtIme.Text;
                 _pacijent.Prezime = txtPrezime.Text;
@@ -160,8 +192,15 @@ namespace Hospital_System_Demo.Patients
                 baza.Entry(_pacijent).State = EntityState.Modified;
                 baza.SaveChanges();
                 MboxHelper.PrikaziObavjestenje("Edit successfull!");
+                return true;
             }
+            else
+                return false;
         }
+
+
+
+
 
 
 
@@ -178,6 +217,16 @@ namespace Hospital_System_Demo.Patients
                 && Validator.ValidirajPolje(pbHealthCard, err, Warning);
         }
 
+
+
+
+
+
+
+
+        /// <summary>
+        /// Cancels editing mode and loads default data about patient
+        /// </summary>
         private void btnCancel_Click(object sender, EventArgs e)
         {
             if (btnEditDetails.Text == "Save")
@@ -188,6 +237,11 @@ namespace Hospital_System_Demo.Patients
                 btnCancel.Hide();
                 lblCancel.Hide();
             }
+        }
+        private void btnAddHC_Click(object sender, EventArgs e)
+        {
+            if (ofdAddCard.ShowDialog() == DialogResult.OK)
+                pbHealthCard.Image = Image.FromFile(ofdAddCard.FileName);
         }
     }
 }

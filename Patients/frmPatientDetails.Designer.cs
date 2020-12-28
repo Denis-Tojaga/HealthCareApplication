@@ -64,6 +64,7 @@
             this.err = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblCancel = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.ofdAddCard = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDijagnozePacijenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
@@ -327,6 +328,7 @@
             this.btnAddHC.TabIndex = 34;
             this.btnAddHC.Text = "Click to add Health Card";
             this.btnAddHC.UseVisualStyleBackColor = false;
+            this.btnAddHC.Click += new System.EventHandler(this.btnAddHC_Click);
             // 
             // Gender
             // 
@@ -449,6 +451,10 @@
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // ofdAddCard
+            // 
+            this.ofdAddCard.FileName = "openFileDialog1";
+            // 
             // frmPatientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -531,5 +537,6 @@
         private System.Windows.Forms.ErrorProvider err;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblCancel;
+        private System.Windows.Forms.OpenFileDialog ofdAddCard;
     }
 }
