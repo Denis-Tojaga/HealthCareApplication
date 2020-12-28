@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvDijagnozePacijenta = new System.Windows.Forms.DataGridView();
             this.Dijagnoza = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatumOdredjivanja = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,44 +61,48 @@
             this.txtDatumEvidencije = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnEditDetails = new System.Windows.Forms.Button();
+            this.err = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblCancel = new System.Windows.Forms.Label();
+            this.btnCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDijagnozePacijenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvDijagnozePacijenta
             // 
             this.dgvDijagnozePacijenta.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.dgvDijagnozePacijenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.75F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.dgvDijagnozePacijenta.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDijagnozePacijenta.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.dgvDijagnozePacijenta.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvDijagnozePacijenta.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.dgvDijagnozePacijenta.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Silver;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDijagnozePacijenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Silver;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDijagnozePacijenta.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDijagnozePacijenta.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDijagnozePacijenta.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Dijagnoza,
             this.DatumOdredjivanja});
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDijagnozePacijenta.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDijagnozePacijenta.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDijagnozePacijenta.EnableHeadersVisualStyles = false;
             this.dgvDijagnozePacijenta.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.dgvDijagnozePacijenta.Location = new System.Drawing.Point(586, 62);
@@ -407,13 +412,42 @@
             this.btnEditDetails.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEditDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditDetails.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
-            this.btnEditDetails.Location = new System.Drawing.Point(415, 473);
+            this.btnEditDetails.Location = new System.Drawing.Point(414, 471);
             this.btnEditDetails.Name = "btnEditDetails";
-            this.btnEditDetails.Size = new System.Drawing.Size(160, 32);
+            this.btnEditDetails.Size = new System.Drawing.Size(161, 32);
             this.btnEditDetails.TabIndex = 44;
             this.btnEditDetails.Text = "Edit Details";
             this.btnEditDetails.UseVisualStyleBackColor = false;
             this.btnEditDetails.Click += new System.EventHandler(this.btnEditDetails_Click);
+            // 
+            // err
+            // 
+            this.err.BlinkRate = 150;
+            this.err.ContainerControl = this;
+            // 
+            // lblCancel
+            // 
+            this.lblCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.lblCancel.ForeColor = System.Drawing.Color.Silver;
+            this.lblCancel.Location = new System.Drawing.Point(409, 438);
+            this.lblCancel.Name = "lblCancel";
+            this.lblCancel.Size = new System.Drawing.Size(143, 30);
+            this.lblCancel.TabIndex = 45;
+            this.lblCancel.Text = "Cancel editing";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.Location = new System.Drawing.Point(541, 431);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(34, 34);
+            this.btnCancel.TabIndex = 46;
+            this.btnCancel.Text = "X";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmPatientDetails
             // 
@@ -421,6 +455,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(871, 517);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.lblCancel);
             this.Controls.Add(this.btnEditDetails);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtDatumEvidencije);
@@ -455,6 +491,7 @@
             this.Load += new System.EventHandler(this.frmPatientDetails_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDijagnozePacijenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -491,5 +528,8 @@
         private System.Windows.Forms.TextBox txtDatumEvidencije;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Button btnEditDetails;
+        private System.Windows.Forms.ErrorProvider err;
+        private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lblCancel;
     }
 }

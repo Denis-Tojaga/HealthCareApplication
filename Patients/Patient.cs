@@ -14,6 +14,7 @@ namespace Hospital_System_Demo.Patients
         public string Prezime { get; set; }
         public string DatumRodjenja { get; set; }
         public string DatumEvidencije { get; set; }
+        public string Email { get; set; }
         public string JMBG { get; set; }
         public virtual KrvnaGrupa KrvnaGrupa { get; set; }
         public virtual Spol Spol { get; set; }
