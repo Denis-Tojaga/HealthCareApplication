@@ -59,6 +59,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.txtDatumEvidencije = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.btnEditDetails = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDijagnozePacijenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
             this.SuspendLayout();
@@ -319,7 +320,7 @@
             this.btnAddHC.Name = "btnAddHC";
             this.btnAddHC.Size = new System.Drawing.Size(213, 32);
             this.btnAddHC.TabIndex = 34;
-            this.btnAddHC.Text = "Add Health Card";
+            this.btnAddHC.Text = "Click to add Health Card";
             this.btnAddHC.UseVisualStyleBackColor = false;
             // 
             // Gender
@@ -339,9 +340,9 @@
             this.cmbSpol.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSpol.ForeColor = System.Drawing.Color.Black;
             this.cmbSpol.FormattingEnabled = true;
-            this.cmbSpol.Location = new System.Drawing.Point(410, 210);
+            this.cmbSpol.Location = new System.Drawing.Point(454, 210);
             this.cmbSpol.Name = "cmbSpol";
-            this.cmbSpol.Size = new System.Drawing.Size(131, 29);
+            this.cmbSpol.Size = new System.Drawing.Size(121, 29);
             this.cmbSpol.TabIndex = 38;
             // 
             // cmbKrvnaGrupa
@@ -351,16 +352,16 @@
             this.cmbKrvnaGrupa.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbKrvnaGrupa.ForeColor = System.Drawing.Color.Black;
             this.cmbKrvnaGrupa.FormattingEnabled = true;
-            this.cmbKrvnaGrupa.Location = new System.Drawing.Point(472, 265);
+            this.cmbKrvnaGrupa.Location = new System.Drawing.Point(454, 262);
             this.cmbKrvnaGrupa.Name = "cmbKrvnaGrupa";
-            this.cmbKrvnaGrupa.Size = new System.Drawing.Size(69, 29);
+            this.cmbKrvnaGrupa.Size = new System.Drawing.Size(121, 29);
             this.cmbKrvnaGrupa.TabIndex = 40;
             // 
             // label12
             // 
             this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Silver;
-            this.label12.Location = new System.Drawing.Point(307, 265);
+            this.label12.Location = new System.Drawing.Point(307, 262);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(107, 30);
             this.label12.TabIndex = 39;
@@ -370,11 +371,11 @@
             // 
             this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Silver;
-            this.label13.Location = new System.Drawing.Point(307, 314);
+            this.label13.Location = new System.Drawing.Point(307, 302);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(234, 30);
+            this.label13.Size = new System.Drawing.Size(150, 30);
             this.label13.TabIndex = 43;
-            this.label13.Text = "Last visiting date";
+            this.label13.Text = "Last record date";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtDatumEvidencije
@@ -384,9 +385,9 @@
             this.txtDatumEvidencije.Enabled = false;
             this.txtDatumEvidencije.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
             this.txtDatumEvidencije.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtDatumEvidencije.Location = new System.Drawing.Point(312, 347);
+            this.txtDatumEvidencije.Location = new System.Drawing.Point(454, 302);
             this.txtDatumEvidencije.Name = "txtDatumEvidencije";
-            this.txtDatumEvidencije.Size = new System.Drawing.Size(172, 25);
+            this.txtDatumEvidencije.Size = new System.Drawing.Size(121, 25);
             this.txtDatumEvidencije.TabIndex = 41;
             this.txtDatumEvidencije.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -395,10 +396,24 @@
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkGray;
-            this.label14.Location = new System.Drawing.Point(312, 375);
+            this.label14.Location = new System.Drawing.Point(454, 330);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(172, 2);
+            this.label14.Size = new System.Drawing.Size(121, 2);
             this.label14.TabIndex = 42;
+            // 
+            // btnEditDetails
+            // 
+            this.btnEditDetails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnEditDetails.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btnEditDetails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditDetails.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.btnEditDetails.Location = new System.Drawing.Point(415, 473);
+            this.btnEditDetails.Name = "btnEditDetails";
+            this.btnEditDetails.Size = new System.Drawing.Size(160, 32);
+            this.btnEditDetails.TabIndex = 44;
+            this.btnEditDetails.Text = "Edit Details";
+            this.btnEditDetails.UseVisualStyleBackColor = false;
+            this.btnEditDetails.Click += new System.EventHandler(this.btnEditDetails_Click);
             // 
             // frmPatientDetails
             // 
@@ -406,6 +421,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(871, 517);
+            this.Controls.Add(this.btnEditDetails);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.txtDatumEvidencije);
             this.Controls.Add(this.label14);
@@ -474,5 +490,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox txtDatumEvidencije;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Button btnEditDetails;
     }
 }

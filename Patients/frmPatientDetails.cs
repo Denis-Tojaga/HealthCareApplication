@@ -61,8 +61,19 @@ namespace Hospital_System_Demo.Patients
 
         private void frmPatientDetails_Load(object sender, EventArgs e)
         {
+            LockControls();
             LoadData(_pacijent);
             LoadDiagnosis(_pacijent);
+        }
+
+        private void LockControls()
+        {
+            txtIme.Enabled = false;
+            txtPrezime.Enabled = false;
+            txtJMBG.Enabled = false;
+            txtEmail.Enabled = false;
+            btnAddHC.Enabled = false;
+            btnEditDetails.Text = "Edit details";
         }
 
         private void LoadData(Pacijent pacijent)
@@ -84,6 +95,25 @@ namespace Hospital_System_Demo.Patients
         {
             dgvDijagnozePacijenta.DataSource = null;
             dgvDijagnozePacijenta.DataSource = pacijent.ListaDijagnoza;
+        }
+
+        private void btnEditDetails_Click(object sender, EventArgs e)
+        {
+            if (btnEditDetails.Text == "Save")
+                LockControls();
+            else
+                UnlockControls();
+        }
+
+        private void UnlockControls()
+        {
+            txtIme.Enabled = true;
+            txtPrezime.Enabled = true;
+            txtJMBG.Enabled = true;
+            txtEmail.Enabled = true;
+            btnAddHC.Enabled = true;
+            txtDatumEvidencije.Enabled = true;
+            btnEditDetails.Text = "Save";
         }
     }
 }
