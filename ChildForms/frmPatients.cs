@@ -77,5 +77,12 @@ namespace Hospital_System_Demo.ChildForms
         {
             selected = dgvPacijenti.SelectedRows[0].DataBoundItem as Pacijent;
         }
+
+        private void btnAddPatient_Click(object sender, EventArgs e)
+        {
+            frmAddPatient noviPacijent = new frmAddPatient();
+            if (noviPacijent.ShowDialog() == DialogResult.OK)
+                LoadPatients();
+        }
     }
 }

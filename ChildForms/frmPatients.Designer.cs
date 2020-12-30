@@ -42,13 +42,13 @@
             this.btnRelease = new System.Windows.Forms.Button();
             this.panelRaspored = new System.Windows.Forms.Panel();
             this.dgvPacijenti = new System.Windows.Forms.DataGridView();
-            this.lblTrenutniDoktor = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ImePrezime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.KrvnaGrupa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DatumRodjenja = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.JMBG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Spol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTrenutniDoktor = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -96,6 +96,7 @@
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
             // panel1
             // 
@@ -245,30 +246,6 @@
             this.dgvPacijenti.TabIndex = 0;
             this.dgvPacijenti.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacijenti_CellContentClick);
             // 
-            // lblTrenutniDoktor
-            // 
-            this.lblTrenutniDoktor.Font = new System.Drawing.Font("Segoe UI", 20.2F, System.Drawing.FontStyle.Bold);
-            this.lblTrenutniDoktor.ForeColor = System.Drawing.Color.Silver;
-            this.lblTrenutniDoktor.Location = new System.Drawing.Point(581, 25);
-            this.lblTrenutniDoktor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblTrenutniDoktor.Name = "lblTrenutniDoktor";
-            this.lblTrenutniDoktor.Size = new System.Drawing.Size(280, 52);
-            this.lblTrenutniDoktor.TabIndex = 36;
-            this.lblTrenutniDoktor.Text = "prof.dr.Doktor";
-            this.lblTrenutniDoktor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.2F, System.Drawing.FontStyle.Bold);
-            this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(168, 25);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 52);
-            this.label1.TabIndex = 37;
-            this.label1.Text = "Current patients list";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // ImePrezime
             // 
             this.ImePrezime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -302,6 +279,30 @@
             this.Spol.DataPropertyName = "Spol";
             this.Spol.HeaderText = "Gender";
             this.Spol.Name = "Spol";
+            // 
+            // lblTrenutniDoktor
+            // 
+            this.lblTrenutniDoktor.Font = new System.Drawing.Font("Segoe UI", 20.2F, System.Drawing.FontStyle.Bold);
+            this.lblTrenutniDoktor.ForeColor = System.Drawing.Color.Silver;
+            this.lblTrenutniDoktor.Location = new System.Drawing.Point(581, 25);
+            this.lblTrenutniDoktor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTrenutniDoktor.Name = "lblTrenutniDoktor";
+            this.lblTrenutniDoktor.Size = new System.Drawing.Size(280, 52);
+            this.lblTrenutniDoktor.TabIndex = 36;
+            this.lblTrenutniDoktor.Text = "prof.dr.Doktor";
+            this.lblTrenutniDoktor.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.2F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Silver;
+            this.label1.Location = new System.Drawing.Point(168, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(278, 52);
+            this.label1.TabIndex = 37;
+            this.label1.Text = "Current patients list";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmPatients
             // 

@@ -124,6 +124,12 @@
     <Compile Include="Data\HealthCareContext.cs" />
     <Compile Include="Helpers\ImageConverter.cs" />
     <Compile Include="Helpers\MboxHelper.cs" />
+    <Compile Include="Patients\frmAddPatient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmAddPatient.Designer.cs">
+      <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patients\frmPatientDetails.cs">
       <SubType>Form</SubType>
     </Compile>
