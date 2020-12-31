@@ -72,6 +72,7 @@
             this.btnAddPatient.TabIndex = 71;
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.UseVisualStyleBackColor = false;
+            this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
             // 
             // cmbKrvnaGrupa
             // 

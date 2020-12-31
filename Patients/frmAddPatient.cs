@@ -34,6 +34,9 @@ namespace Hospital_System_Demo.Patients
         }
 
 
+
+
+
         /// <summary>
         /// Loads default data when creating a new user 
         /// </summary>
@@ -156,6 +159,19 @@ namespace Hospital_System_Demo.Patients
                 pbHealthCard.Image = Image.FromFile(ofdAddHealthCard.FileName);
                 lblAddingHC.Hide();
             }
+        }
+
+        private void btnAddPatient_Click(object sender, EventArgs e)
+        {
+            if(ValidirajPolja())
+            {
+
+            }
+        }
+
+        private bool ValidirajPolja()
+        {
+            throw new NotImplementedException();
         }
     }
 }
