@@ -121,5 +121,14 @@ namespace Hospital_System_Demo.Patients
         {
             GenerisiMail();
         }
+
+        private void pbHealthCard_Click(object sender, EventArgs e)
+        {
+            if (ofdAddHealthCard.ShowDialog() == DialogResult.OK)
+            {
+                pbHealthCard.Image = Image.FromFile(ofdAddHealthCard.FileName);
+                lblAddingHC.Hide();
+            }
+        }
     }
 }

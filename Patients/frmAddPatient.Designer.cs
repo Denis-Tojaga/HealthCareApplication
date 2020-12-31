@@ -53,9 +53,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtTrenutniDatum = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.lblAddingHC = new System.Windows.Forms.Label();
             this.lblAddedDoctor = new System.Windows.Forms.Label();
             this.pbHealthCard = new System.Windows.Forms.PictureBox();
+            this.ofdAddHealthCard = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
             this.SuspendLayout();
             // 
@@ -331,15 +332,15 @@
             this.label13.Size = new System.Drawing.Size(120, 2);
             this.label13.TabIndex = 87;
             // 
-            // label14
+            // lblAddingHC
             // 
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
-            this.label14.ForeColor = System.Drawing.Color.Silver;
-            this.label14.Location = new System.Drawing.Point(381, 370);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(216, 30);
-            this.label14.TabIndex = 90;
-            this.label14.Text = "Click to add HealthCard";
+            this.lblAddingHC.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.lblAddingHC.ForeColor = System.Drawing.Color.Silver;
+            this.lblAddingHC.Location = new System.Drawing.Point(381, 370);
+            this.lblAddingHC.Name = "lblAddingHC";
+            this.lblAddingHC.Size = new System.Drawing.Size(216, 30);
+            this.lblAddingHC.TabIndex = 90;
+            this.lblAddingHC.Text = "Click to add HealthCard";
             // 
             // lblAddedDoctor
             // 
@@ -361,6 +362,11 @@
             this.pbHealthCard.Size = new System.Drawing.Size(288, 280);
             this.pbHealthCard.TabIndex = 89;
             this.pbHealthCard.TabStop = false;
+            this.pbHealthCard.Click += new System.EventHandler(this.pbHealthCard_Click);
+            // 
+            // ofdAddHealthCard
+            // 
+            this.ofdAddHealthCard.FileName = "openFileDialog1";
             // 
             // frmAddPatient
             // 
@@ -369,7 +375,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(871, 436);
             this.Controls.Add(this.lblAddedDoctor);
-            this.Controls.Add(this.label14);
+            this.Controls.Add(this.lblAddingHC);
             this.Controls.Add(this.pbHealthCard);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtTrenutniDatum);
@@ -433,7 +439,8 @@
         private System.Windows.Forms.TextBox txtTrenutniDatum;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pbHealthCard;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label lblAddingHC;
         private System.Windows.Forms.Label lblAddedDoctor;
+        private System.Windows.Forms.OpenFileDialog ofdAddHealthCard;
     }
 }
