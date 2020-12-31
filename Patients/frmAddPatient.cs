@@ -52,7 +52,12 @@ namespace Hospital_System_Demo.Patients
             string moguciZnakovi = @"1q2w3e4r5t6z7u8i9o0pasvgdfjkxlmn#k/";
             string code = "";
             for (int i = 0; i < 5; i++)
-                code += moguciZnakovi[random.Next(0, moguciZnakovi.Length)];
+            {
+                if (i == 2)
+                    code += "-";
+                else
+                    code += moguciZnakovi[random.Next(0, moguciZnakovi.Length)];
+            }
             txtSifraPacijenta.Text = code;
         }
         private void GenerisiMail()

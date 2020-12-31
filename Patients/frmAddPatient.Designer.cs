@@ -265,6 +265,7 @@
             this.txtEmail.Size = new System.Drawing.Size(217, 20);
             this.txtEmail.TabIndex = 81;
             this.txtEmail.Text = "@healthCare.com";
+            this.txtEmail.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
@@ -396,6 +397,7 @@
             this.Controls.Add(this.txtIme);
             this.Controls.Add(this.label4);
             this.Name = "frmAddPatient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAddPatient";
             this.Load += new System.EventHandler(this.frmAddPatient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).EndInit();
