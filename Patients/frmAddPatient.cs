@@ -166,14 +166,33 @@ namespace Hospital_System_Demo.Patients
             if(ValidirajPolja())
             {
                 Validator.SveUredu(btnAddPatient, err, true);
-                MakePatient();
-
+                var newPatient = MakePatient();
+                baza.Pacijenti.Add(newPatient);
+                baza.SaveChanges();
+                MessageBox.Show($"Patient successfully added!");
+                DialogResult = DialogResult.OK;
+                Close();
             }
         }
 
-        private void MakePatient()
+        private Pacijent MakePatient()
         {
-            Pacijent noviPacijent
+            Pacijent noviPacijent = new Pacijent();
+            noviPacijent.Ime = txtIme.Text;
+            noviPacijent.Prezime = txtPrezime.Text;
+            noviPacijent.Email = txtEmail.Text;
+            noviPacijent.SifraPacijenta = txtSifraPacijenta.Text;
+            noviPacijent.DatumEvidencije = txtTrenutniDatum.Text;
+            noviPacijent.DatumRodjenja = dtmDatumRodjenja.Value.ToString();
+            noviPacijent.Spol = cmbSpol.SelectedItem as Spol;
+            noviPacijent.KrvnaGrupa = cmbKrvnaGrupa.SelectedItem as KrvnaGrupa;
+            noviPacijent.ListaDijagnoza.Add(new PacijentiDijagnoze()
+            {
+                Dijagnoza = cmbDijagnoze.SelectedItem as Dijagnoza,
+                DatumOdredjivanja = txtTrenutniDatum.Text
+            });
+            noviPacijent.ZdravstveniKartonSlika = ImageHelper.FromImageToByte(pbHealthCard.Image);
+            return noviPacijent;
         }
 
         private bool ValidirajPolja() => Validator.ValidirajPolje(txtIme, err, Validator.Warning) && Validator.ValidirajPolje(txtPrezime, err, Validator.Warning)

@@ -61,6 +61,9 @@
             this.ofdAddHealthCard = new System.Windows.Forms.OpenFileDialog();
             this.err = new System.Windows.Forms.ErrorProvider(this.components);
             this.validInputs = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label14 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.dtmDatumRodjenja = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.validInputs)).BeginInit();
@@ -386,12 +389,47 @@
             // 
             this.validInputs.ContainerControl = this;
             // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label14.ForeColor = System.Drawing.Color.Silver;
+            this.label14.Location = new System.Drawing.Point(25, 342);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(130, 30);
+            this.label14.TabIndex = 96;
+            this.label14.Text = "Date of birth:";
+            // 
+            // label16
+            // 
+            this.label16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DarkGray;
+            this.label16.Location = new System.Drawing.Point(161, 370);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(152, 2);
+            this.label16.TabIndex = 95;
+            // 
+            // dtmDatumRodjenja
+            // 
+            this.dtmDatumRodjenja.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.dtmDatumRodjenja.CalendarTrailingForeColor = System.Drawing.Color.White;
+            this.dtmDatumRodjenja.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtmDatumRodjenja.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtmDatumRodjenja.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtmDatumRodjenja.Location = new System.Drawing.Point(161, 342);
+            this.dtmDatumRodjenja.Name = "dtmDatumRodjenja";
+            this.dtmDatumRodjenja.Size = new System.Drawing.Size(152, 25);
+            this.dtmDatumRodjenja.TabIndex = 97;
+            // 
             // frmAddPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(871, 436);
+            this.Controls.Add(this.dtmDatumRodjenja);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.lblAddedDoctor);
             this.Controls.Add(this.lblAddingHC);
             this.Controls.Add(this.pbHealthCard);
@@ -464,5 +502,8 @@
         private System.Windows.Forms.OpenFileDialog ofdAddHealthCard;
         private System.Windows.Forms.ErrorProvider err;
         private System.Windows.Forms.ErrorProvider validInputs;
+        private System.Windows.Forms.DateTimePicker dtmDatumRodjenja;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label16;
     }
 }
