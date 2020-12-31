@@ -9,6 +9,7 @@ namespace Hospital_System_Demo
 {
     public class Validator
     {
+        public const string Warning = "This field is required!";
         public static bool ValidirajPolje(Control kontrola,ErrorProvider err,string Warning)
         {
             bool validno = true;
@@ -28,6 +29,13 @@ namespace Hospital_System_Demo
                 err.Clear();
                 return true;
             }
+        }
+
+
+        public static void SveUredu(Control kontrola,ErrorProvider err,bool JelValidno)
+        {
+            if(JelValidno)
+                err.SetError(kontrola, "All fields are okay!");
         }
     }
 }

@@ -165,13 +165,19 @@ namespace Hospital_System_Demo.Patients
         {
             if(ValidirajPolja())
             {
+                Validator.SveUredu(btnAddPatient, err, true);
+                MakePatient();
 
             }
         }
 
-        private bool ValidirajPolja()
+        private void MakePatient()
         {
-            throw new NotImplementedException();
+            Pacijent noviPacijent
         }
+
+        private bool ValidirajPolja() => Validator.ValidirajPolje(txtIme, err, Validator.Warning) && Validator.ValidirajPolje(txtPrezime, err, Validator.Warning)
+            && Validator.ValidirajPolje(txtJMBG, err, Validator.Warning) && Validator.ValidirajPolje(txtEmail, err, Validator.Warning)
+            && Validator.ValidirajPolje(pbHealthCard, err, Validator.Warning);
     }
 }

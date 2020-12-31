@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPatient));
             this.btnAddPatient = new System.Windows.Forms.Button();
             this.cmbKrvnaGrupa = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -57,7 +59,11 @@
             this.lblAddedDoctor = new System.Windows.Forms.Label();
             this.pbHealthCard = new System.Windows.Forms.PictureBox();
             this.ofdAddHealthCard = new System.Windows.Forms.OpenFileDialog();
+            this.err = new System.Windows.Forms.ErrorProvider(this.components);
+            this.validInputs = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validInputs)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddPatient
@@ -370,6 +376,16 @@
             // 
             this.ofdAddHealthCard.FileName = "openFileDialog1";
             // 
+            // err
+            // 
+            this.err.BlinkRate = 200;
+            this.err.ContainerControl = this;
+            this.err.Icon = ((System.Drawing.Icon)(resources.GetObject("err.Icon")));
+            // 
+            // validInputs
+            // 
+            this.validInputs.ContainerControl = this;
+            // 
             // frmAddPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -409,6 +425,8 @@
             this.Text = "frmAddPatient";
             this.Load += new System.EventHandler(this.frmAddPatient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.validInputs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -444,5 +462,7 @@
         private System.Windows.Forms.Label lblAddingHC;
         private System.Windows.Forms.Label lblAddedDoctor;
         private System.Windows.Forms.OpenFileDialog ofdAddHealthCard;
+        private System.Windows.Forms.ErrorProvider err;
+        private System.Windows.Forms.ErrorProvider validInputs;
     }
 }
