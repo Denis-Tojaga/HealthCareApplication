@@ -53,9 +53,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtTrenutniDatum = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.pbHealthCard = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
             this.lblAddedDoctor = new System.Windows.Forms.Label();
+            this.pbHealthCard = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,7 +65,7 @@
             this.btnAddPatient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Bold);
-            this.btnAddPatient.Location = new System.Drawing.Point(674, 453);
+            this.btnAddPatient.Location = new System.Drawing.Point(674, 348);
             this.btnAddPatient.Name = "btnAddPatient";
             this.btnAddPatient.Size = new System.Drawing.Size(182, 52);
             this.btnAddPatient.TabIndex = 71;
@@ -136,6 +136,7 @@
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(167, 25);
             this.txtIme.TabIndex = 47;
+            this.txtIme.TextChanged += new System.EventHandler(this.txtIme_TextChanged);
             // 
             // label4
             // 
@@ -167,6 +168,7 @@
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(167, 25);
             this.txtPrezime.TabIndex = 72;
+            this.txtPrezime.TextChanged += new System.EventHandler(this.txtPrezime_TextChanged);
             // 
             // label7
             // 
@@ -225,9 +227,10 @@
             this.txtSifraPacijenta.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSifraPacijenta.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
             this.txtSifraPacijenta.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtSifraPacijenta.Location = new System.Drawing.Point(212, 220);
+            this.txtSifraPacijenta.Location = new System.Drawing.Point(182, 220);
             this.txtSifraPacijenta.Name = "txtSifraPacijenta";
-            this.txtSifraPacijenta.Size = new System.Drawing.Size(101, 25);
+            this.txtSifraPacijenta.ReadOnly = true;
+            this.txtSifraPacijenta.Size = new System.Drawing.Size(131, 25);
             this.txtSifraPacijenta.TabIndex = 78;
             // 
             // label10
@@ -235,16 +238,16 @@
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DarkGray;
-            this.label10.Location = new System.Drawing.Point(212, 248);
+            this.label10.Location = new System.Drawing.Point(182, 248);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(101, 2);
+            this.label10.Size = new System.Drawing.Size(131, 2);
             this.label10.TabIndex = 79;
             // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(75, 285);
+            this.label2.Location = new System.Drawing.Point(25, 285);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 30);
             this.label2.TabIndex = 83;
@@ -254,21 +257,23 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 10.75F, System.Drawing.FontStyle.Bold);
             this.txtEmail.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtEmail.Location = new System.Drawing.Point(146, 285);
+            this.txtEmail.Location = new System.Drawing.Point(96, 289);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(167, 25);
+            this.txtEmail.ReadOnly = true;
+            this.txtEmail.Size = new System.Drawing.Size(217, 20);
             this.txtEmail.TabIndex = 81;
+            this.txtEmail.Text = "@healthCare.com";
             // 
             // label3
             // 
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DarkGray;
-            this.label3.Location = new System.Drawing.Point(146, 313);
+            this.label3.Location = new System.Drawing.Point(96, 313);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(167, 2);
+            this.label3.Size = new System.Drawing.Size(217, 2);
             this.label3.TabIndex = 82;
             // 
             // cmbDijagnoze
@@ -325,16 +330,6 @@
             this.label13.Size = new System.Drawing.Size(120, 2);
             this.label13.TabIndex = 87;
             // 
-            // pbHealthCard
-            // 
-            this.pbHealthCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbHealthCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pbHealthCard.Location = new System.Drawing.Point(338, 87);
-            this.pbHealthCard.Name = "pbHealthCard";
-            this.pbHealthCard.Size = new System.Drawing.Size(288, 280);
-            this.pbHealthCard.TabIndex = 89;
-            this.pbHealthCard.TabStop = false;
-            // 
             // label14
             // 
             this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
@@ -349,18 +344,29 @@
             // 
             this.lblAddedDoctor.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
             this.lblAddedDoctor.ForeColor = System.Drawing.Color.Silver;
-            this.lblAddedDoctor.Location = new System.Drawing.Point(25, 469);
+            this.lblAddedDoctor.Location = new System.Drawing.Point(674, 403);
             this.lblAddedDoctor.Name = "lblAddedDoctor";
-            this.lblAddedDoctor.Size = new System.Drawing.Size(214, 30);
+            this.lblAddedDoctor.Size = new System.Drawing.Size(182, 30);
             this.lblAddedDoctor.TabIndex = 93;
             this.lblAddedDoctor.Text = "Current Doctor";
+            this.lblAddedDoctor.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // pbHealthCard
+            // 
+            this.pbHealthCard.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pbHealthCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbHealthCard.Location = new System.Drawing.Point(338, 87);
+            this.pbHealthCard.Name = "pbHealthCard";
+            this.pbHealthCard.Size = new System.Drawing.Size(288, 280);
+            this.pbHealthCard.TabIndex = 89;
+            this.pbHealthCard.TabStop = false;
             // 
             // frmAddPatient
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(871, 517);
+            this.ClientSize = new System.Drawing.Size(871, 436);
             this.Controls.Add(this.lblAddedDoctor);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.pbHealthCard);
