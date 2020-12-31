@@ -165,7 +165,6 @@ namespace Hospital_System_Demo.Patients
         {
             if(ValidirajPolja())
             {
-                Validator.SveUredu(btnAddPatient, validInputs, true);
                 var newPatient = MakePatient();
                 baza.Pacijenti.Add(newPatient);
                 baza.SaveChanges();

@@ -80,7 +80,7 @@ namespace Hospital_System_Demo.ChildForms
 
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
-            frmAddPatient noviPacijent = new frmAddPatient();
+            frmAddPatient noviPacijent = new frmAddPatient(_loggedDoctor);
             if (noviPacijent.ShowDialog() == DialogResult.OK)
                 LoadPatients();
         }

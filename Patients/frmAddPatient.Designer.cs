@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAddPatient));
             this.btnAddPatient = new System.Windows.Forms.Button();
             this.cmbKrvnaGrupa = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -60,13 +59,11 @@
             this.pbHealthCard = new System.Windows.Forms.PictureBox();
             this.ofdAddHealthCard = new System.Windows.Forms.OpenFileDialog();
             this.err = new System.Windows.Forms.ErrorProvider(this.components);
-            this.validInputs = new System.Windows.Forms.ErrorProvider(this.components);
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.dtmDatumRodjenja = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validInputs)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddPatient
@@ -75,9 +72,9 @@
             this.btnAddPatient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Bold);
-            this.btnAddPatient.Location = new System.Drawing.Point(659, 360);
+            this.btnAddPatient.Location = new System.Drawing.Point(682, 370);
             this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(167, 40);
+            this.btnAddPatient.Size = new System.Drawing.Size(177, 40);
             this.btnAddPatient.TabIndex = 9;
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.UseVisualStyleBackColor = false;
@@ -356,7 +353,7 @@
             // 
             this.lblAddedDoctor.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
             this.lblAddedDoctor.ForeColor = System.Drawing.Color.Silver;
-            this.lblAddedDoctor.Location = new System.Drawing.Point(644, 403);
+            this.lblAddedDoctor.Location = new System.Drawing.Point(677, 413);
             this.lblAddedDoctor.Name = "lblAddedDoctor";
             this.lblAddedDoctor.Size = new System.Drawing.Size(182, 30);
             this.lblAddedDoctor.TabIndex = 93;
@@ -383,11 +380,6 @@
             // 
             this.err.BlinkRate = 200;
             this.err.ContainerControl = this;
-            this.err.Icon = ((System.Drawing.Icon)(resources.GetObject("err.Icon")));
-            // 
-            // validInputs
-            // 
-            this.validInputs.ContainerControl = this;
             // 
             // label14
             // 
@@ -426,7 +418,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(871, 436);
+            this.ClientSize = new System.Drawing.Size(871, 450);
             this.Controls.Add(this.dtmDatumRodjenja);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label16);
@@ -464,7 +456,6 @@
             this.Load += new System.EventHandler(this.frmAddPatient_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.validInputs)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -501,7 +492,6 @@
         private System.Windows.Forms.Label lblAddedDoctor;
         private System.Windows.Forms.OpenFileDialog ofdAddHealthCard;
         private System.Windows.Forms.ErrorProvider err;
-        private System.Windows.Forms.ErrorProvider validInputs;
         private System.Windows.Forms.DateTimePicker dtmDatumRodjenja;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;

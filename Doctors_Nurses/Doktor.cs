@@ -30,6 +30,6 @@ namespace Hospital_System_Demo.Doctors_Nurses
             RasporediDoktora = new List<Raspored>();
         }
 
-        public override string ToString()=>Ime + " " + Prezime;
+        public override string ToString()=>Titula.ToString() + Ime + " " + Prezime;
     }
 }
