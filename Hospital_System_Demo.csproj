@@ -161,6 +161,9 @@
     <EmbeddedResource Include="frmLogiranje.resx">
       <DependentUpon>frmLogiranje.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmAddPatient.resx">
+      <DependentUpon>frmAddPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patients\frmPatientDetails.resx">
       <DependentUpon>frmPatientDetails.cs</DependentUpon>
     </EmbeddedResource>
