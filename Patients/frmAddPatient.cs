@@ -32,6 +32,11 @@ namespace Hospital_System_Demo.Patients
         {
             UcitajDefaultPodatke();
         }
+
+
+        /// <summary>
+        /// Loads default data when creating a new user 
+        /// </summary>
         private void UcitajDefaultPodatke()
         {
             UcitajDijagnoze();
@@ -46,6 +51,11 @@ namespace Hospital_System_Demo.Patients
 
 
 
+
+
+        /// <summary>
+        /// Generates an email and radnom patient code 
+        /// </summary>
         private void GenerisiSifruPacijenta()
         {
             Random random = new Random();
@@ -69,6 +79,10 @@ namespace Hospital_System_Demo.Patients
 
 
 
+
+        /// <summary>
+        /// Loads gender,blood type,diagnosis in comboboxex
+        /// </summary>
         private void UcitajSpolove()
         {
             try
@@ -113,6 +127,10 @@ namespace Hospital_System_Demo.Patients
 
 
 
+
+        /// <summary>
+        /// Generates a new default email with users credentials
+        /// </summary>
         private void txtIme_TextChanged(object sender, EventArgs e)
         {
             GenerisiMail();
@@ -122,6 +140,15 @@ namespace Hospital_System_Demo.Patients
             GenerisiMail();
         }
 
+
+
+
+
+
+
+        /// <summary>
+        /// Adding a new healthCard from user's files
+        /// </summary>
         private void pbHealthCard_Click(object sender, EventArgs e)
         {
             if (ofdAddHealthCard.ShowDialog() == DialogResult.OK)

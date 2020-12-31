@@ -360,6 +360,7 @@
             this.pbHealthCard.Location = new System.Drawing.Point(338, 87);
             this.pbHealthCard.Name = "pbHealthCard";
             this.pbHealthCard.Size = new System.Drawing.Size(288, 280);
+            this.pbHealthCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbHealthCard.TabIndex = 89;
             this.pbHealthCard.TabStop = false;
             this.pbHealthCard.Click += new System.EventHandler(this.pbHealthCard_Click);
