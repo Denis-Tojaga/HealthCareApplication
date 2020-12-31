@@ -165,7 +165,7 @@ namespace Hospital_System_Demo.Patients
         {
             if(ValidirajPolja())
             {
-                Validator.SveUredu(btnAddPatient, err, true);
+                Validator.SveUredu(btnAddPatient, validInputs, true);
                 var newPatient = MakePatient();
                 baza.Pacijenti.Add(newPatient);
                 baza.SaveChanges();
@@ -181,6 +181,7 @@ namespace Hospital_System_Demo.Patients
             noviPacijent.Ime = txtIme.Text;
             noviPacijent.Prezime = txtPrezime.Text;
             noviPacijent.Email = txtEmail.Text;
+            noviPacijent.JMBG = txtJMBG.Text;
             noviPacijent.SifraPacijenta = txtSifraPacijenta.Text;
             noviPacijent.DatumEvidencije = txtTrenutniDatum.Text;
             noviPacijent.DatumRodjenja = dtmDatumRodjenja.Value.ToString();

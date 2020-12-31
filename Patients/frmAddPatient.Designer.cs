@@ -75,10 +75,10 @@
             this.btnAddPatient.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnAddPatient.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddPatient.Font = new System.Drawing.Font("Microsoft Sans Serif", 18.75F, System.Drawing.FontStyle.Bold);
-            this.btnAddPatient.Location = new System.Drawing.Point(674, 348);
+            this.btnAddPatient.Location = new System.Drawing.Point(659, 360);
             this.btnAddPatient.Name = "btnAddPatient";
-            this.btnAddPatient.Size = new System.Drawing.Size(182, 52);
-            this.btnAddPatient.TabIndex = 71;
+            this.btnAddPatient.Size = new System.Drawing.Size(167, 40);
+            this.btnAddPatient.TabIndex = 9;
             this.btnAddPatient.Text = "Add Patient";
             this.btnAddPatient.UseVisualStyleBackColor = false;
             this.btnAddPatient.Click += new System.EventHandler(this.btnAddPatient_Click);
@@ -93,7 +93,7 @@
             this.cmbKrvnaGrupa.Location = new System.Drawing.Point(733, 207);
             this.cmbKrvnaGrupa.Name = "cmbKrvnaGrupa";
             this.cmbKrvnaGrupa.Size = new System.Drawing.Size(123, 29);
-            this.cmbKrvnaGrupa.TabIndex = 67;
+            this.cmbKrvnaGrupa.TabIndex = 8;
             // 
             // label12
             // 
@@ -115,7 +115,7 @@
             this.cmbSpol.Location = new System.Drawing.Point(733, 148);
             this.cmbSpol.Name = "cmbSpol";
             this.cmbSpol.Size = new System.Drawing.Size(123, 29);
-            this.cmbSpol.TabIndex = 65;
+            this.cmbSpol.TabIndex = 7;
             // 
             // Gender
             // 
@@ -146,7 +146,7 @@
             this.txtIme.Location = new System.Drawing.Point(146, 43);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(167, 25);
-            this.txtIme.TabIndex = 47;
+            this.txtIme.TabIndex = 0;
             this.txtIme.TextChanged += new System.EventHandler(this.txtIme_TextChanged);
             // 
             // label4
@@ -178,7 +178,7 @@
             this.txtPrezime.Location = new System.Drawing.Point(146, 102);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(167, 25);
-            this.txtPrezime.TabIndex = 72;
+            this.txtPrezime.TabIndex = 1;
             this.txtPrezime.TextChanged += new System.EventHandler(this.txtPrezime_TextChanged);
             // 
             // label7
@@ -210,7 +210,7 @@
             this.txtJMBG.Location = new System.Drawing.Point(146, 161);
             this.txtJMBG.Name = "txtJMBG";
             this.txtJMBG.Size = new System.Drawing.Size(167, 25);
-            this.txtJMBG.TabIndex = 75;
+            this.txtJMBG.TabIndex = 2;
             // 
             // label15
             // 
@@ -242,7 +242,7 @@
             this.txtSifraPacijenta.Name = "txtSifraPacijenta";
             this.txtSifraPacijenta.ReadOnly = true;
             this.txtSifraPacijenta.Size = new System.Drawing.Size(131, 25);
-            this.txtSifraPacijenta.TabIndex = 78;
+            this.txtSifraPacijenta.TabIndex = 3;
             // 
             // label10
             // 
@@ -298,7 +298,7 @@
             this.cmbDijagnoze.Location = new System.Drawing.Point(436, 38);
             this.cmbDijagnoze.Name = "cmbDijagnoze";
             this.cmbDijagnoze.Size = new System.Drawing.Size(190, 29);
-            this.cmbDijagnoze.TabIndex = 84;
+            this.cmbDijagnoze.TabIndex = 5;
             // 
             // label8
             // 
@@ -330,7 +330,7 @@
             this.txtTrenutniDatum.Name = "txtTrenutniDatum";
             this.txtTrenutniDatum.ReadOnly = true;
             this.txtTrenutniDatum.Size = new System.Drawing.Size(120, 25);
-            this.txtTrenutniDatum.TabIndex = 86;
+            this.txtTrenutniDatum.TabIndex = 6;
             // 
             // label13
             // 
@@ -356,7 +356,7 @@
             // 
             this.lblAddedDoctor.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
             this.lblAddedDoctor.ForeColor = System.Drawing.Color.Silver;
-            this.lblAddedDoctor.Location = new System.Drawing.Point(674, 403);
+            this.lblAddedDoctor.Location = new System.Drawing.Point(644, 403);
             this.lblAddedDoctor.Name = "lblAddedDoctor";
             this.lblAddedDoctor.Size = new System.Drawing.Size(182, 30);
             this.lblAddedDoctor.TabIndex = 93;
@@ -419,7 +419,7 @@
             this.dtmDatumRodjenja.Location = new System.Drawing.Point(161, 342);
             this.dtmDatumRodjenja.Name = "dtmDatumRodjenja";
             this.dtmDatumRodjenja.Size = new System.Drawing.Size(152, 25);
-            this.dtmDatumRodjenja.TabIndex = 97;
+            this.dtmDatumRodjenja.TabIndex = 4;
             // 
             // frmAddPatient
             // 

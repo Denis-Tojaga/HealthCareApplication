@@ -52,7 +52,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.pbHealthCard = new System.Windows.Forms.PictureBox();
-            this.btnAddHC = new System.Windows.Forms.Button();
             this.Gender = new System.Windows.Forms.Label();
             this.cmbSpol = new System.Windows.Forms.ComboBox();
             this.cmbKrvnaGrupa = new System.Windows.Forms.ComboBox();
@@ -65,6 +64,7 @@
             this.lblCancel = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.ofdAddCard = new System.Windows.Forms.OpenFileDialog();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDijagnozePacijenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbHealthCard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
@@ -312,23 +312,10 @@
             this.pbHealthCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbHealthCard.Location = new System.Drawing.Point(32, 185);
             this.pbHealthCard.Name = "pbHealthCard";
-            this.pbHealthCard.Size = new System.Drawing.Size(213, 225);
+            this.pbHealthCard.Size = new System.Drawing.Size(218, 280);
+            this.pbHealthCard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbHealthCard.TabIndex = 33;
             this.pbHealthCard.TabStop = false;
-            // 
-            // btnAddHC
-            // 
-            this.btnAddHC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.btnAddHC.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btnAddHC.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddHC.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
-            this.btnAddHC.Location = new System.Drawing.Point(32, 417);
-            this.btnAddHC.Name = "btnAddHC";
-            this.btnAddHC.Size = new System.Drawing.Size(213, 32);
-            this.btnAddHC.TabIndex = 34;
-            this.btnAddHC.Text = "Click to add Health Card";
-            this.btnAddHC.UseVisualStyleBackColor = false;
-            this.btnAddHC.Click += new System.EventHandler(this.btnAddHC_Click);
             // 
             // Gender
             // 
@@ -455,12 +442,23 @@
             // 
             this.ofdAddCard.FileName = "openFileDialog1";
             // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Segoe UI Semibold", 13.75F, System.Drawing.FontStyle.Bold);
+            this.label15.ForeColor = System.Drawing.Color.Silver;
+            this.label15.Location = new System.Drawing.Point(79, 471);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(119, 30);
+            this.label15.TabIndex = 47;
+            this.label15.Text = "Health Card";
+            // 
             // frmPatientDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(871, 517);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.lblCancel);
             this.Controls.Add(this.btnEditDetails);
@@ -471,7 +469,6 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.cmbSpol);
             this.Controls.Add(this.Gender);
-            this.Controls.Add(this.btnAddHC);
             this.Controls.Add(this.pbHealthCard);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
@@ -525,7 +522,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.PictureBox pbHealthCard;
-        private System.Windows.Forms.Button btnAddHC;
         private System.Windows.Forms.Label Gender;
         private System.Windows.Forms.ComboBox cmbSpol;
         private System.Windows.Forms.ComboBox cmbKrvnaGrupa;
@@ -538,5 +534,6 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label lblCancel;
         private System.Windows.Forms.OpenFileDialog ofdAddCard;
+        private System.Windows.Forms.Label label15;
     }
 }

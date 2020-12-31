@@ -96,7 +96,6 @@ namespace Hospital_System_Demo.Patients
             txtPrezime.Enabled = false;
             txtJMBG.Enabled = false;
             txtEmail.Enabled = false;
-            btnAddHC.Enabled = false;
             txtDatumEvidencije.Enabled = false;
             cmbKrvnaGrupa.Enabled = false;
             cmbSpol.Enabled = false;
@@ -108,7 +107,6 @@ namespace Hospital_System_Demo.Patients
             txtPrezime.Enabled = true;
             txtJMBG.Enabled = true;
             txtEmail.Enabled = true;
-            btnAddHC.Enabled = true;
             txtDatumEvidencije.Enabled = true;
             cmbSpol.Enabled = true;
             cmbKrvnaGrupa.Enabled = true;
@@ -237,11 +235,6 @@ namespace Hospital_System_Demo.Patients
                 btnCancel.Hide();
                 lblCancel.Hide();
             }
-        }
-        private void btnAddHC_Click(object sender, EventArgs e)
-        {
-            if (ofdAddCard.ShowDialog() == DialogResult.OK)
-                pbHealthCard.Image = Image.FromFile(ofdAddCard.FileName);
         }
     }
 }
