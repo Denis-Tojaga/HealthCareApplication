@@ -41,8 +41,8 @@ namespace Hospital_System_Demo.ChildForms
                 {
                     lblPregled1.Text +=" "+ odabraniRaspored.Raspored.ListaPregleda[0].Pacijent.ToString();
                     lblPregled2.Text += " " + odabraniRaspored.Raspored.ListaPregleda[1].Pacijent.ToString();
-                    lblPregled3.Text += " " + odabraniRaspored.Raspored.ListaPregleda[2].Pacijent.ToString();
-                    lblPregled4.Text += " " + odabraniRaspored.Raspored.ListaPregleda[3].Pacijent.ToString();
+                    //lblPregled3.Text += " " + odabraniRaspored.Raspored.ListaPregleda[2].Pacijent.ToString();
+                    //lblPregled4.Text += " " + odabraniRaspored.Raspored.ListaPregleda[3].Pacijent.ToString();
                 }
             }
             catch (Exception ex)
@@ -53,9 +53,54 @@ namespace Hospital_System_Demo.ChildForms
 
         private void btnPreviousDate_Click(object sender, EventArgs e)
         {
-            int trenutniDan = int.Parse(DateTime.Now.Day.ToString());
-            int trenutniMjesec = int.Parse(DateTime.Now.Month.ToString());
-            int trenutnaGodina = int.Parse(DateTime.Now.Year.ToString());
+            string dan = "";
+            string mjesec = "";
+            string godina = "";
+
+            //22.12.2000
+            //4.4.2012
+            //4.12.2000
+            //12.4.2000
+
+            if (lblTrenutniDatum.Text[1] == '.' && lblTrenutniDatum.Text[3]=='.')
+            {
+                dan += lblTrenutniDatum.Text[0];
+                mjesec += lblTrenutniDatum.Text[2];
+                for (int i = 4; i < 8; i++)
+                    godina += lblTrenutniDatum.Text[i];
+            }
+            else if(lblTrenutniDatum.Text[1] == '.' && lblTrenutniDatum.Text[3] != '.')
+            {
+                dan += lblTrenutniDatum.Text[0];
+                for (int i = 2; i < 4; i++)
+                    mjesec += lblTrenutniDatum.Text[i];
+                for (int i = 5; i < 9; i++)
+                    godina += lblTrenutniDatum.Text[i];
+            }
+            else if(lblTrenutniDatum.Text[1] != '.' && lblTrenutniDatum.Text[4] == '.')
+            {
+                for (int i = 0; i < 2; i++)
+                    dan += lblTrenutniDatum.Text[i];
+                mjesec += lblTrenutniDatum.Text[3];
+                for (int i = 5; i < 9; i++)
+                    godina += lblTrenutniDatum.Text[i];
+            }
+            else if(lblTrenutniDatum.Text[1] != '.' && lblTrenutniDatum.Text[3] != '.')
+            {
+                for (int i = 0; i < 2; i++)
+                    dan += lblTrenutniDatum.Text[i];
+                for (int i = 3; i < 5; i++)
+                    mjesec += lblTrenutniDatum.Text[i];
+                for (int i = 6; i < 10; i++)
+                    godina += lblTrenutniDatum.Text[i];
+            }
+           
+
+
+
+            int trenutniDan = int.Parse(dan);
+            int trenutniMjesec = int.Parse(mjesec);
+            int trenutnaGodina = int.Parse(godina);
 
             trenutniDan--;
             if(trenutniDan == 0)
