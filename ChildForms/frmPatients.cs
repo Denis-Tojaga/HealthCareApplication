@@ -28,18 +28,15 @@ namespace Hospital_System_Demo.ChildForms
             _loggedDoctor = new Doktor();
             dgvPacijenti.AutoGenerateColumns = false;
         }
-
         public frmPatients(Doktor doktor):this()
         {
             _loggedDoctor = doktor;
             DoktorMode = true;
         }
-
         public frmPatients(MedicinskaSestra sestra):this()
         {
             _loggedNurse = sestra;
         }
-
         private void frmPatients_Load(object sender, EventArgs e)
         {
             if (DoktorMode)

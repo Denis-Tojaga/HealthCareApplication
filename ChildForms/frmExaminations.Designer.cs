@@ -492,6 +492,7 @@
             this.btnPreviousDate.Text = "<";
             this.btnPreviousDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnPreviousDate.UseVisualStyleBackColor = false;
+            this.btnPreviousDate.Click += new System.EventHandler(this.btnPreviousDate_Click);
             // 
             // frmExaminations
             // 
@@ -507,6 +508,7 @@
             this.Name = "frmExaminations";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Examinations";
+            this.Load += new System.EventHandler(this.frmExaminations_Load);
             this.panelRaspored.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.pnl9.ResumeLayout(false);

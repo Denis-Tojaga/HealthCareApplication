@@ -107,6 +107,7 @@
     <Compile Include="Doctors_Nurses\Dijagnoza.cs" />
     <Compile Include="Doctors_Nurses\Doktor.cs" />
     <Compile Include="Doctors_Nurses\MedicinskaSestra.cs" />
+    <Compile Include="Doctors_Nurses\RasporediDoktori.cs" />
     <Compile Include="Doctors_Nurses\Titula.cs" />
     <Compile Include="frmAppMain.cs">
       <SubType>Form</SubType>

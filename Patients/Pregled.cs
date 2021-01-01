@@ -13,9 +13,9 @@ namespace Hospital_System_Demo.Patients
     {
         public int Id { get; set; }
         public virtual Pacijent Pacijent { get; set; }
-        public virtual Doktor Doktor { get; set; }
         public virtual Dijagnoza Dijagnoza { get; set; }
-        public string Datum { get; set; }
+        public virtual Raspored Raspored { get; set; }
+        public string DatumPregleda { get; set; }
         public string OpisStanja { get; set; }
         public bool AktivanPregled { get; set; }
         public string ZakljucakDoktora { get; set; }
