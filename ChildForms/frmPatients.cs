@@ -84,5 +84,16 @@ namespace Hospital_System_Demo.ChildForms
             if (noviPacijent.ShowDialog() == DialogResult.OK)
                 LoadPatients();
         }
+
+        private void btnRelease_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("By clicking OK, You are releasing this patient from the hospital.","Release of patient",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                var selectedPatient = dgvPacijenti.SelectedRows[0].DataBoundItem as Pacijent;
+                baza.Pacijenti.Remove(selectedPatient);
+                baza.SaveChanges();
+                LoadPatients();
+            }
+        }
     }
 }

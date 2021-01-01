@@ -177,6 +177,7 @@
             this.btnRelease.Text = "Release";
             this.btnRelease.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRelease.UseVisualStyleBackColor = false;
+            this.btnRelease.Click += new System.EventHandler(this.btnRelease_Click);
             // 
             // panelRaspored
             // 
