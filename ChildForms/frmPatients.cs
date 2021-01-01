@@ -47,17 +47,25 @@ namespace Hospital_System_Demo.ChildForms
             LoadPatients();
         }
 
+
+
+
+
+
+
+        /// <summary>
+        /// Loads the data about currently logged doctor and all patient in database 
+        /// </summary>
         private void LoadPatients(List<Pacijent> listaPacijenata = null)
         {
             dgvPacijenti.DataSource = null;
             dgvPacijenti.DataSource = listaPacijenata ?? baza.Pacijenti.ToList();
         }
-
         private void UcitajPodatkeODoktoru(Doktor loggedDoctor)
         {
             try
             {
-                lblTrenutniDoktor.Text = loggedDoctor.Titula.TipTitule + loggedDoctor.Ime + " " + loggedDoctor.Prezime;
+                lblTrenutniDoktor.Text = loggedDoctor.ToString();
             }
             catch (Exception ex)
             {
@@ -65,6 +73,35 @@ namespace Hospital_System_Demo.ChildForms
             }
         }
 
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Selects the patient by clicking on the datagridview row
+        /// </summary>
+        private void dgvPacijenti_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            selected = dgvPacijenti.SelectedRows[0].DataBoundItem as Pacijent;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Shows all patient details in the new form, so the doctor can have a clear view
+        /// </summary>
         private void btnViewDetails_Click(object sender, EventArgs e)
         {
             if (selected != null)
@@ -73,11 +110,19 @@ namespace Hospital_System_Demo.ChildForms
                 MboxHelper.PrikaziObavjestenje("You must first click on any patient from the list!");
         }   
 
-        private void dgvPacijenti_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            selected = dgvPacijenti.SelectedRows[0].DataBoundItem as Pacijent;
-        }
 
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Adds new patient with the data entered in the frmAddPatient form
+        /// </summary>
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
             frmAddPatient noviPacijent = new frmAddPatient(_loggedDoctor);
@@ -85,6 +130,15 @@ namespace Hospital_System_Demo.ChildForms
                 LoadPatients();
         }
 
+
+
+
+
+
+
+        /// <summary>
+        /// Releases the selected patient from the hospital, and deletes its record
+        /// </summary>
         private void btnRelease_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("By clicking OK, You are releasing this patient from the hospital.","Release of patient",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
