@@ -153,6 +153,16 @@ namespace Hospital_System_Demo.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap unlockTransparent {
+            get {
+                object obj = ResourceManager.GetObject("unlockTransparent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap viewDetailsPatient {
             get {
                 object obj = ResourceManager.GetObject("viewDetailsPatient", resourceCulture);
