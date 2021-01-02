@@ -1,6 +1,7 @@
 ﻿using Hospital_System_Demo.Data;
 using Hospital_System_Demo.Doctors_Nurses;
 using Hospital_System_Demo.Helpers;
+using Hospital_System_Demo.Patients;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,7 @@ namespace Hospital_System_Demo.ChildForms
 {
     public partial class frmExaminations : Form
     {
+        private List<Label> ListaBoxovaExamination = new List<Label>();
         private Doktor _loggedDoctor;
         private MedicinskaSestra _loggedNurse;
         private HealthCareContext baza = HealthCareDB.Base;
@@ -22,7 +24,23 @@ namespace Hospital_System_Demo.ChildForms
         public frmExaminations()
         {
             InitializeComponent();
+            DodajBoxoveUListu();
+            string datumUFormatu = DateTime.Now.ToShortDateString();
+            string praviDatum = "";
+            for (int i = 0; i < datumUFormatu.Length; i++)
+                if (datumUFormatu[i] != ' ')
+                    praviDatum += datumUFormatu[i];
+            lblTrenutniDatum.Text = praviDatum;
         }
+
+        private void DodajBoxoveUListu()
+        {
+            ListaBoxovaExamination.Add(lblPregled1);
+            ListaBoxovaExamination.Add(lblPregled2);
+            ListaBoxovaExamination.Add(lblPregled3);
+            ListaBoxovaExamination.Add(lblPregled4);
+        }
+
         public frmExaminations(Doktor doktor) :this()
         {
             _loggedDoctor = doktor;
@@ -36,14 +54,7 @@ namespace Hospital_System_Demo.ChildForms
         {
             try
             {
-                var odabraniRaspored = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == lblTrenutniDatum.Text).FirstOrDefault();
-                if (odabraniRaspored.Raspored.ListaPregleda.Count() != 0)
-                {
-                    lblPregled1.Text +=" "+ odabraniRaspored.Raspored.ListaPregleda[0].Pacijent.ToString();
-                    lblPregled2.Text += " " + odabraniRaspored.Raspored.ListaPregleda[1].Pacijent.ToString();
-                    //lblPregled3.Text += " " + odabraniRaspored.Raspored.ListaPregleda[2].Pacijent.ToString();
-                    //lblPregled4.Text += " " + odabraniRaspored.Raspored.ListaPregleda[3].Pacijent.ToString();
-                }
+                LoadSchedules(lblTrenutniDatum.Text);
             }
             catch (Exception ex)
             {
@@ -54,10 +65,10 @@ namespace Hospital_System_Demo.ChildForms
         private void btnPreviousDate_Click(object sender, EventArgs e)
         {
             //Four possible casses
-            //22.12.2000
-            //4.4.2012
-            //4.12.2000
-            //12.4.2000
+            //22.12.2000.
+            //4.-4.-2012.
+            //-4.12.2000.
+            //12.-4.2000.
 
 
             string dan = "";
@@ -144,6 +155,27 @@ namespace Hospital_System_Demo.ChildForms
                         }
                     }
             lblTrenutniDatum.Text = trenutniDan.ToString() + "." + trenutniMjesec.ToString() + "."  + trenutnaGodina.ToString();
+            LoadSchedules(lblTrenutniDatum.Text);
+        }
+
+        private void LoadSchedules(string text)
+        {
+            var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == text).FirstOrDefault();
+            if (rezultat!=null)
+            {
+                if(rezultat.Raspored.ListaPregleda.Count() != 0)
+                    LoadExaminations(rezultat.Raspored.ListaPregleda, rezultat.Raspored.ListaPregleda.Count());
+                else
+                    MboxHelper.PrikaziObavjestenje("Doctor doesn't have any examinations on selected date!");
+            }
+            else
+                MboxHelper.PrikaziObavjestenje("Doctor doesn't have formatted schedulte on that date!");
+        }
+
+        private void LoadExaminations(List<Pregled> ListaPregleda, int numberOfExaminations)
+        {
+            for (int i = 0; i < numberOfExaminations-1; i++)
+                ListaBoxovaExamination[i].Text = ListaPregleda[i].Pacijent.ToString();
         }
     }
 }
