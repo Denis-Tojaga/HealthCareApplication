@@ -62,6 +62,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnPreviousDate = new System.Windows.Forms.Button();
+            this.btnNextDate = new System.Windows.Forms.Button();
             this.panelRaspored.SuspendLayout();
             this.panel10.SuspendLayout();
             this.pnl9.SuspendLayout();
@@ -79,13 +80,13 @@
             // 
             this.lblTrenutniDatum.Font = new System.Drawing.Font("Segoe UI", 23.2F, System.Drawing.FontStyle.Bold);
             this.lblTrenutniDatum.ForeColor = System.Drawing.Color.Silver;
-            this.lblTrenutniDatum.Location = new System.Drawing.Point(272, 36);
+            this.lblTrenutniDatum.Location = new System.Drawing.Point(177, 36);
             this.lblTrenutniDatum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTrenutniDatum.Name = "lblTrenutniDatum";
-            this.lblTrenutniDatum.Size = new System.Drawing.Size(184, 46);
+            this.lblTrenutniDatum.Size = new System.Drawing.Size(210, 46);
             this.lblTrenutniDatum.TabIndex = 38;
             this.lblTrenutniDatum.Text = "25.12.2020";
-            this.lblTrenutniDatum.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblTrenutniDatum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
@@ -494,12 +495,29 @@
             this.btnPreviousDate.UseVisualStyleBackColor = false;
             this.btnPreviousDate.Click += new System.EventHandler(this.btnPreviousDate_Click);
             // 
+            // btnNextDate
+            // 
+            this.btnNextDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnNextDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnNextDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNextDate.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Bold);
+            this.btnNextDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnNextDate.Location = new System.Drawing.Point(407, 36);
+            this.btnNextDate.Margin = new System.Windows.Forms.Padding(0);
+            this.btnNextDate.Name = "btnNextDate";
+            this.btnNextDate.Size = new System.Drawing.Size(49, 46);
+            this.btnNextDate.TabIndex = 41;
+            this.btnNextDate.Text = ">";
+            this.btnNextDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNextDate.UseVisualStyleBackColor = false;
+            // 
             // frmExaminations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(887, 556);
+            this.Controls.Add(this.btnNextDate);
             this.Controls.Add(this.btnPreviousDate);
             this.Controls.Add(this.lblTrenutniDatum);
             this.Controls.Add(this.label1);
@@ -560,5 +578,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnPreviousDate;
+        private System.Windows.Forms.Button btnNextDate;
     }
 }

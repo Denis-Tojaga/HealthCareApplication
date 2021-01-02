@@ -20,27 +20,12 @@ namespace Hospital_System_Demo.ChildForms
         private Doktor _loggedDoctor;
         private MedicinskaSestra _loggedNurse;
         private HealthCareContext baza = HealthCareDB.Base;
-
         public frmExaminations()
         {
             InitializeComponent();
             DodajBoxoveUListu();
-            string datumUFormatu = DateTime.Now.ToShortDateString();
-            string praviDatum = "";
-            for (int i = 0; i < datumUFormatu.Length; i++)
-                if (datumUFormatu[i] != ' ')
-                    praviDatum += datumUFormatu[i];
-            lblTrenutniDatum.Text = praviDatum;
+            FormatDate(DateTime.Now.ToShortDateString());
         }
-
-        private void DodajBoxoveUListu()
-        {
-            ListaBoxovaExamination.Add(lblPregled1);
-            ListaBoxovaExamination.Add(lblPregled2);
-            ListaBoxovaExamination.Add(lblPregled3);
-            ListaBoxovaExamination.Add(lblPregled4);
-        }
-
         public frmExaminations(Doktor doktor) :this()
         {
             _loggedDoctor = doktor;
@@ -50,6 +35,19 @@ namespace Hospital_System_Demo.ChildForms
             _loggedNurse = sestra;
         }
 
+
+
+
+        /// <summary>
+        /// Adding labels to a list and load of all examination for current date 
+        /// </summary>
+        private void DodajBoxoveUListu()
+        {
+            ListaBoxovaExamination.Add(lblPregled1);
+            ListaBoxovaExamination.Add(lblPregled2);
+            ListaBoxovaExamination.Add(lblPregled3);
+            ListaBoxovaExamination.Add(lblPregled4);
+        }
         private void frmExaminations_Load(object sender, EventArgs e)
         {
             try
@@ -62,6 +60,39 @@ namespace Hospital_System_Demo.ChildForms
             }
         }
 
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Formatting current date to valid string and then calculating spaces for the valid set of date
+        /// </summary>
+        private void FormatDate(string datumUFormatu)
+        {
+            string praviDatum = "";
+            for (int i = 0; i < datumUFormatu.Length; i++)
+                if (datumUFormatu[i] != ' ')
+                    praviDatum += datumUFormatu[i];
+            lblTrenutniDatum.Text = "1.9.2020.";
+        }
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Calculating date format to an integers and loading schedule on the same date 
+        /// </summary>
         private void btnPreviousDate_Click(object sender, EventArgs e)
         {
             //Four possible casses
@@ -117,7 +148,7 @@ namespace Hospital_System_Demo.ChildForms
             if(trenutniDan == 0)
                 if(trenutniMjesec==1 || trenutniMjesec==3 || trenutniMjesec==5 || trenutniMjesec==7 || trenutniMjesec == 8 || trenutniMjesec == 10 || trenutniMjesec == 12)
                 {
-                    trenutniDan = 31;
+                    trenutniDan = 30;
                     trenutniMjesec--;
                     if(trenutniMjesec==0)
                     {
@@ -126,7 +157,7 @@ namespace Hospital_System_Demo.ChildForms
                     }
                 }else if(trenutniMjesec == 4 || trenutniMjesec == 6 || trenutniMjesec == 9 || trenutniMjesec == 11)
                 {
-                    trenutniDan = 30;
+                    trenutniDan = 31;
                     trenutniMjesec--;
                     if(trenutniMjesec==0)
                     {
@@ -154,24 +185,29 @@ namespace Hospital_System_Demo.ChildForms
                             trenutnaGodina--;
                         }
                     }
-            lblTrenutniDatum.Text = trenutniDan.ToString() + "." + trenutniMjesec.ToString() + "."  + trenutnaGodina.ToString();
+            lblTrenutniDatum.Text = trenutniDan.ToString() + "." + trenutniMjesec.ToString() + "."  + trenutnaGodina.ToString()  + ".";
             LoadSchedules(lblTrenutniDatum.Text);
         }
 
+
+
+
+
+
+
+
+        /// <summary>
+        /// Loads all examinations to labels and valid schedule for current date  
+        /// </summary>
         private void LoadSchedules(string text)
         {
             var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == text).FirstOrDefault();
             if (rezultat!=null)
-            {
                 if(rezultat.Raspored.ListaPregleda.Count() != 0)
                     LoadExaminations(rezultat.Raspored.ListaPregleda, rezultat.Raspored.ListaPregleda.Count());
                 else
                     MboxHelper.PrikaziObavjestenje("Doctor doesn't have any examinations on selected date!");
-            }
-            else
-                MboxHelper.PrikaziObavjestenje("Doctor doesn't have formatted schedulte on that date!");
         }
-
         private void LoadExaminations(List<Pregled> ListaPregleda, int numberOfExaminations)
         {
             for (int i = 0; i < numberOfExaminations-1; i++)
