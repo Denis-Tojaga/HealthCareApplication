@@ -53,14 +53,16 @@ namespace Hospital_System_Demo.ChildForms
 
         private void btnPreviousDate_Click(object sender, EventArgs e)
         {
-            string dan = "";
-            string mjesec = "";
-            string godina = "";
-
+            //Four possible casses
             //22.12.2000
             //4.4.2012
             //4.12.2000
             //12.4.2000
+
+
+            string dan = "";
+            string mjesec = "";
+            string godina = "";
 
             if (lblTrenutniDatum.Text[1] == '.' && lblTrenutniDatum.Text[3]=='.')
             {
@@ -95,16 +97,13 @@ namespace Hospital_System_Demo.ChildForms
                     godina += lblTrenutniDatum.Text[i];
             }
            
-
-
-
             int trenutniDan = int.Parse(dan);
             int trenutniMjesec = int.Parse(mjesec);
             int trenutnaGodina = int.Parse(godina);
 
+
             trenutniDan--;
             if(trenutniDan == 0)
-            {
                 if(trenutniMjesec==1 || trenutniMjesec==3 || trenutniMjesec==5 || trenutniMjesec==7 || trenutniMjesec == 8 || trenutniMjesec == 10 || trenutniMjesec == 12)
                 {
                     trenutniDan = 31;
@@ -124,7 +123,6 @@ namespace Hospital_System_Demo.ChildForms
                         trenutnaGodina--;
                     }
                 }else if(trenutniMjesec==2)
-                {
                     if(trenutnaGodina%4==0)
                     {
                         trenutniDan = 29;
@@ -145,11 +143,6 @@ namespace Hospital_System_Demo.ChildForms
                             trenutnaGodina--;
                         }
                     }
-                }
-            }
-
-
-
             lblTrenutniDatum.Text = trenutniDan.ToString() + "." + trenutniMjesec.ToString() + "."  + trenutnaGodina.ToString();
         }
     }
