@@ -85,7 +85,7 @@
             this.lblTrenutniDatum.Name = "lblTrenutniDatum";
             this.lblTrenutniDatum.Size = new System.Drawing.Size(210, 46);
             this.lblTrenutniDatum.TabIndex = 38;
-            this.lblTrenutniDatum.Text = "25.12.2020";
+            this.lblTrenutniDatum.Text = "3.1.2020";
             this.lblTrenutniDatum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -510,6 +510,7 @@
             this.btnNextDate.Text = ">";
             this.btnNextDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNextDate.UseVisualStyleBackColor = false;
+            this.btnNextDate.Click += new System.EventHandler(this.btnNextDate_Click);
             // 
             // frmExaminations
             // 

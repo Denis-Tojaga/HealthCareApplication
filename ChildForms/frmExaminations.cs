@@ -91,7 +91,7 @@ namespace Hospital_System_Demo.ChildForms
 
 
         /// <summary>
-        /// Calculating date format to an integers and loading schedule on the same date 
+        /// Calculating date format to an integers and loading schedule on the same date, previous and next button
         /// </summary>
         private void btnPreviousDate_Click(object sender, EventArgs e)
         {
@@ -146,7 +146,7 @@ namespace Hospital_System_Demo.ChildForms
 
             trenutniDan--;
             if(trenutniDan == 0)
-                if(trenutniMjesec==1 || trenutniMjesec==3 || trenutniMjesec==5 || trenutniMjesec==7 || trenutniMjesec == 8 || trenutniMjesec == 10 || trenutniMjesec == 12)
+                if(trenutniMjesec==1 || trenutniMjesec==5 || trenutniMjesec==7 || trenutniMjesec == 8 || trenutniMjesec == 10 || trenutniMjesec == 12)
                 {
                     trenutniDan = 30;
                     trenutniMjesec--;
@@ -155,7 +155,7 @@ namespace Hospital_System_Demo.ChildForms
                         trenutniMjesec = 12;
                         trenutnaGodina--;
                     }
-                }else if(trenutniMjesec == 4 || trenutniMjesec == 6 || trenutniMjesec == 9 || trenutniMjesec == 11)
+                }else if(trenutniMjesec == 2 || trenutniMjesec == 4 || trenutniMjesec == 6 || trenutniMjesec == 9 || trenutniMjesec == 11)
                 {
                     trenutniDan = 31;
                     trenutniMjesec--;
@@ -164,7 +164,7 @@ namespace Hospital_System_Demo.ChildForms
                         trenutniMjesec = 12;
                         trenutnaGodina--;
                     }
-                }else if(trenutniMjesec==2)
+                }else if(trenutniMjesec==3)
                     if(trenutnaGodina%4==0)
                     {
                         trenutniDan = 29;
@@ -188,7 +188,98 @@ namespace Hospital_System_Demo.ChildForms
             lblTrenutniDatum.Text = trenutniDan.ToString() + "." + trenutniMjesec.ToString() + "."  + trenutnaGodina.ToString()  + ".";
             LoadSchedules(lblTrenutniDatum.Text);
         }
+        private void btnNextDate_Click(object sender, EventArgs e)
+        {
+            //Four possible casses
+            //22.12.2000.
+            //3.-1.-2021.
+            //-4.12.2000.
+            //12.-4.2000.
 
+            
+
+
+            string dan = "";
+            string mjesec = "";
+            string godina = "";
+
+            if (lblTrenutniDatum.Text[1] == '.' && lblTrenutniDatum.Text[3] == '.')
+            {
+                dan += lblTrenutniDatum.Text[0];
+                mjesec += lblTrenutniDatum.Text[2];
+                for (int i = 4; i < 8; i++)
+                    godina += lblTrenutniDatum.Text[i];
+            }
+            else if (lblTrenutniDatum.Text[1] == '.' && lblTrenutniDatum.Text[3] != '.')
+            {
+                dan += lblTrenutniDatum.Text[0];
+                for (int i = 2; i < 4; i++)
+                    mjesec += lblTrenutniDatum.Text[i];
+                for (int i = 5; i < 9; i++)
+                    godina += lblTrenutniDatum.Text[i];
+            }
+            else if (lblTrenutniDatum.Text[1] != '.' && lblTrenutniDatum.Text[4] == '.')
+            {
+                for (int i = 0; i < 2; i++)
+                    dan += lblTrenutniDatum.Text[i];
+                mjesec += lblTrenutniDatum.Text[3];
+                for (int i = 5; i < 9; i++)
+                    godina += lblTrenutniDatum.Text[i];
+            }
+            else if (lblTrenutniDatum.Text[1] != '.' && lblTrenutniDatum.Text[3] != '.')
+            {
+                for (int i = 0; i < 2; i++)
+                    dan += lblTrenutniDatum.Text[i];
+                for (int i = 3; i < 5; i++)
+                    mjesec += lblTrenutniDatum.Text[i];
+                for (int i = 6; i < 10; i++)
+                    godina += lblTrenutniDatum.Text[i];
+            }
+
+            int trenutniDan = int.Parse(dan);
+            int trenutniMjesec = int.Parse(mjesec);
+            int trenutnaGodina = int.Parse(godina);
+
+
+            trenutniDan++;
+            if ((trenutniMjesec == 1 || trenutniMjesec == 3 || trenutniMjesec == 5 || trenutniMjesec == 7 || trenutniMjesec == 8 || trenutniMjesec == 10 || trenutniMjesec == 12) && trenutniDan > 31)
+            {
+                trenutniDan = 1;
+                trenutniMjesec++;
+                if (trenutniMjesec > 12)
+                {
+                    trenutniMjesec = 1;
+                    trenutnaGodina++;
+                }
+            }
+            else if (trenutniMjesec == 4 || trenutniMjesec == 6 || trenutniMjesec == 9 || trenutniMjesec == 11 && trenutniDan>30)
+            {
+                trenutniDan = 1;
+                trenutniMjesec++;
+                if (trenutniMjesec > 12)
+                {
+                    trenutniMjesec = 1;
+                    trenutnaGodina++;
+                }
+            }
+            else if (trenutniMjesec == 2 && trenutniDan>28)
+                if (trenutnaGodina % 4 == 0)
+                {
+                    trenutniDan = 29;
+                }
+                else
+                {
+                    trenutniDan = 1;
+                    trenutniMjesec++;
+                    if (trenutniMjesec >12)
+                    {
+                        trenutniMjesec = 1;
+                        trenutnaGodina++;
+                    }
+                }
+            lblTrenutniDatum.Text = trenutniDan.ToString() + "." + trenutniMjesec.ToString() + "." + trenutnaGodina.ToString() + ".";
+            LoadSchedules(lblTrenutniDatum.Text);
+        }
 
 
 
@@ -208,20 +299,20 @@ namespace Hospital_System_Demo.ChildForms
             var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == text).FirstOrDefault();
             if (rezultat!=null)
             {
-
                 if (rezultat.Raspored.ListaPregleda.Count() != 0)
                     LoadExaminations(rezultat.Raspored.ListaPregleda, rezultat.Raspored.ListaPregleda.Count());
-                else
-                    OcistiLabels();
-            }
-                else
-                    MboxHelper.PrikaziObavjestenje("Doctor doesn't have any examinations on selected date!");
+               
+            }else
+                 OcistiLabels();
         }
         private void LoadExaminations(List<Pregled> ListaPregleda, int numberOfExaminations)
         {
             for (int i = 0; i < numberOfExaminations-1; i++)
                 ListaBoxovaExamination[i].Text = ListaPregleda[i].Pacijent.ToString();
         }
+
+
+
 
 
 
@@ -239,5 +330,6 @@ namespace Hospital_System_Demo.ChildForms
             lblPregled3.Text = "Examination";
             lblPregled4.Text = "Examination";
         }
+
     }
 }
