@@ -160,21 +160,23 @@ namespace Hospital_System_Demo.Patients
                 lblAddingHC.Hide();
             }
         }
-
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
             if(ValidirajPolja())
             {
-                var newPatient = MakePatient();
-                baza.Pacijenti.Add(newPatient);
-                baza.SaveChanges();
+                MakePatient();
                 MessageBox.Show($"Patient successfully added!");
                 DialogResult = DialogResult.OK;
                 Close();
             }
         }
 
-        private Pacijent MakePatient()
+
+
+        /// <summary>
+        /// Makes new patient with all entered data 
+        /// </summary>
+        private void MakePatient()
         {
             Pacijent noviPacijent = new Pacijent();
             noviPacijent.Ime = txtIme.Text;
@@ -192,9 +194,9 @@ namespace Hospital_System_Demo.Patients
                 DatumOdredjivanja = txtTrenutniDatum.Text
             });
             noviPacijent.ZdravstveniKartonSlika = ImageHelper.FromImageToByte(pbHealthCard.Image);
-            return noviPacijent;
+            baza.Pacijenti.Add(noviPacijent);
+            baza.SaveChanges();
         }
-
         private bool ValidirajPolja() => Validator.ValidirajPolje(txtIme, err, Validator.Warning) && Validator.ValidirajPolje(txtPrezime, err, Validator.Warning)
             && Validator.ValidirajPolje(txtJMBG, err, Validator.Warning) && Validator.ValidirajPolje(txtEmail, err, Validator.Warning)
             && Validator.ValidirajPolje(pbHealthCard, err, Validator.Warning);
