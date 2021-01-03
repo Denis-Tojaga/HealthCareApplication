@@ -243,14 +243,15 @@
             // 
             this.lblPregled4.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblPregled4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPregled4.Location = new System.Drawing.Point(82, 0);
+            this.lblPregled4.Location = new System.Drawing.Point(73, 0);
             this.lblPregled4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPregled4.Name = "lblPregled4";
             this.lblPregled4.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.lblPregled4.Size = new System.Drawing.Size(272, 72);
+            this.lblPregled4.Size = new System.Drawing.Size(281, 72);
             this.lblPregled4.TabIndex = 2;
             this.lblPregled4.Text = "Examination of";
             this.lblPregled4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPregled4.Click += new System.EventHandler(this.lblPregled4_Click);
             // 
             // label8
             // 
@@ -279,14 +280,15 @@
             // 
             this.lblPregled3.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblPregled3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPregled3.Location = new System.Drawing.Point(80, 0);
+            this.lblPregled3.Location = new System.Drawing.Point(66, 0);
             this.lblPregled3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPregled3.Name = "lblPregled3";
             this.lblPregled3.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.lblPregled3.Size = new System.Drawing.Size(251, 73);
+            this.lblPregled3.Size = new System.Drawing.Size(265, 73);
             this.lblPregled3.TabIndex = 2;
             this.lblPregled3.Text = "Examination of";
             this.lblPregled3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPregled3.Click += new System.EventHandler(this.lblPregled3_Click);
             // 
             // label7
             // 
@@ -386,14 +388,15 @@
             // 
             this.lblPregled1.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblPregled1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPregled1.Location = new System.Drawing.Point(80, 0);
+            this.lblPregled1.Location = new System.Drawing.Point(62, 0);
             this.lblPregled1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPregled1.Name = "lblPregled1";
             this.lblPregled1.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.lblPregled1.Size = new System.Drawing.Size(251, 69);
+            this.lblPregled1.Size = new System.Drawing.Size(269, 69);
             this.lblPregled1.TabIndex = 2;
             this.lblPregled1.Text = "Examination of";
             this.lblPregled1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPregled1.Click += new System.EventHandler(this.lblPregled1_Click);
             // 
             // label3
             // 
@@ -422,14 +425,15 @@
             // 
             this.lblPregled2.Dock = System.Windows.Forms.DockStyle.Right;
             this.lblPregled2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lblPregled2.Location = new System.Drawing.Point(82, 0);
+            this.lblPregled2.Location = new System.Drawing.Point(69, 0);
             this.lblPregled2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPregled2.Name = "lblPregled2";
             this.lblPregled2.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
-            this.lblPregled2.Size = new System.Drawing.Size(272, 65);
+            this.lblPregled2.Size = new System.Drawing.Size(285, 65);
             this.lblPregled2.TabIndex = 2;
             this.lblPregled2.Text = "Examination of";
             this.lblPregled2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.lblPregled2.Click += new System.EventHandler(this.lblPregled2_Click);
             // 
             // label4
             // 

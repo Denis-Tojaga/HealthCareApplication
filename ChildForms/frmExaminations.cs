@@ -308,7 +308,7 @@ namespace Hospital_System_Demo.ChildForms
         private void LoadExaminations(List<Pregled> ListaPregleda, int numberOfExaminations)
         {
             for (int i = 0; i < numberOfExaminations-1; i++)
-                ListaBoxovaExamination[i].Text = ListaPregleda[i].Pacijent.ToString();
+                ListaBoxovaExamination[i].Text += " of " +  ListaPregleda[i].Pacijent.ToString();
         }
 
 
@@ -331,5 +331,84 @@ namespace Hospital_System_Demo.ChildForms
             lblPregled4.Text = "Examination";
         }
 
+
+
+
+
+
+
+        /// <summary>
+        /// Shows or adds an examination in case there is nobody in label
+        /// </summary>
+        private void ShowORAddExamination(Label kliknutaLabela)
+        {
+            if(kliknutaLabela.Text=="Examination")
+            {
+                frmNoviPregled noviPregled = new frmNoviPregled();
+                noviPregled.ShowDialog();
+            }else
+            {
+                string Ime = IzdvojiIme(kliknutaLabela.Text);
+                string Prezime = IzdvojiPrezime(kliknutaLabela.Text);
+                frmShowExamination prikaziPregled = new frmShowExamination(Ime, Prezime);
+                prikaziPregled.ShowDialog();
+            }
+        }
+
+
+
+        /// <summary>
+        /// Manipulates with text in label, takes the name and surname of the patient from the string
+        /// </summary>
+        private string IzdvojiPrezime(string citavNiz)
+        {
+            string prezime = "";
+            for (int i = citavNiz.Length-1; i > 0; i--)
+                if (citavNiz[i] != ' ')
+                    prezime += citavNiz[i];
+                else
+                    return OkrenutoPrezime(prezime);
+            return "";
+        }
+        private string OkrenutoPrezime(string prezime)
+        {
+            string novoPrezime = "";
+            for (int i = prezime.Length-1; i >= 0; i--)
+                novoPrezime += prezime[i];
+            return novoPrezime;
+        }
+        private string IzdvojiIme(string text)
+        {
+            string ime="";
+            for (int i = 15; i < text.Length-1; i++)
+                if (text[i] != ' ')
+                    ime += text[i];
+                else
+                    return ime;
+            return "";
+        }
+
+
+
+
+        /// <summary>
+        /// What happens when user clicks on examination label
+        /// </summary>
+        private void lblPregled1_Click(object sender, EventArgs e)
+        {
+            ShowORAddExamination(sender as Label);
+        }
+        private void lblPregled2_Click(object sender, EventArgs e)
+        {
+            ShowORAddExamination(sender as Label);
+        }
+        private void lblPregled3_Click(object sender, EventArgs e)
+        {
+            ShowORAddExamination(sender as Label);
+        }
+        private void lblPregled4_Click(object sender, EventArgs e)
+        {
+            ShowORAddExamination(sender as Label);
+        }
     }
 }

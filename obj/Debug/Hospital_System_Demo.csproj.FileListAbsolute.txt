@@ -91,3 +91,4 @@ C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.exe
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.pdb
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.Patients.frmAddPatient.resources
+C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.Patients.frmShowExamination.resources

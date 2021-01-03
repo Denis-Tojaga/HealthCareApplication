@@ -131,11 +131,23 @@
     <Compile Include="Patients\frmAddPatient.Designer.cs">
       <DependentUpon>frmAddPatient.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patients\frmNoviPregled.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmNoviPregled.Designer.cs">
+      <DependentUpon>frmNoviPregled.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patients\frmPatientDetails.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Patients\frmPatientDetails.Designer.cs">
       <DependentUpon>frmPatientDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patients\frmShowExamination.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patients\frmShowExamination.Designer.cs">
+      <DependentUpon>frmShowExamination.cs</DependentUpon>
     </Compile>
     <Compile Include="Patients\KrvnaGrupa.cs" />
     <Compile Include="Patients\PacijentiDijagnoze.cs" />
@@ -167,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patients\frmPatientDetails.resx">
       <DependentUpon>frmPatientDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patients\frmShowExamination.resx">
+      <DependentUpon>frmShowExamination.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
