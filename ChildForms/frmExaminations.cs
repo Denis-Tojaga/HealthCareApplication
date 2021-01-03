@@ -79,7 +79,7 @@ namespace Hospital_System_Demo.ChildForms
             for (int i = 0; i < datumUFormatu.Length; i++)
                 if (datumUFormatu[i] != ' ')
                     praviDatum += datumUFormatu[i];
-            lblTrenutniDatum.Text = "1.9.2020.";
+            lblTrenutniDatum.Text = praviDatum;
         }
 
 
@@ -196,6 +196,10 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
+
+
+
+
         /// <summary>
         /// Loads all examinations to labels and valid schedule for current date  
         /// </summary>
@@ -203,8 +207,13 @@ namespace Hospital_System_Demo.ChildForms
         {
             var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == text).FirstOrDefault();
             if (rezultat!=null)
-                if(rezultat.Raspored.ListaPregleda.Count() != 0)
+            {
+
+                if (rezultat.Raspored.ListaPregleda.Count() != 0)
                     LoadExaminations(rezultat.Raspored.ListaPregleda, rezultat.Raspored.ListaPregleda.Count());
+                else
+                    OcistiLabels();
+            }
                 else
                     MboxHelper.PrikaziObavjestenje("Doctor doesn't have any examinations on selected date!");
         }
@@ -212,6 +221,23 @@ namespace Hospital_System_Demo.ChildForms
         {
             for (int i = 0; i < numberOfExaminations-1; i++)
                 ListaBoxovaExamination[i].Text = ListaPregleda[i].Pacijent.ToString();
+        }
+
+
+
+
+
+
+
+        /// <summary>
+        /// Cleas all labels if there are no any examinations on that day
+        /// </summary>
+        private void OcistiLabels()
+        {
+            lblPregled1.Text = "Examination";
+            lblPregled2.Text = "Examination";
+            lblPregled3.Text = "Examination";
+            lblPregled4.Text = "Examination";
         }
     }
 }
