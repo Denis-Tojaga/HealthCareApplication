@@ -13,23 +13,33 @@ namespace Hospital_System_Demo.Patients
 {
     public partial class frmShowExamination : Form
     {
-        private Pacijent _pacijent;
-        private List<Pregled> _listaPregleda;
+        private Pregled _pregled;
         private HealthCareContext baza = HealthCareDB.Base;
         public frmShowExamination()
         {
             InitializeComponent();
         }
 
-        public frmShowExamination(string imeP,string prezimeP,int raspored) : this()
+        public frmShowExamination(Pregled objekat) : this()
         {
-            _pacijent = baza.Pacijenti.Where(pacijent => pacijent.Ime == imeP && pacijent.Prezime == prezimeP).FirstOrDefault();
-            _listaPregleda = baza.Pregledi.Where(pregled => pregled.Pacijent.Ime == imeP && pregled.Pacijent.Prezime == prezimeP && pregled.Raspored.Id == raspored).ToList();
+            _pregled = objekat;
         }
 
         private void frmShowExamination_Load(object sender, EventArgs e)
         {
-            
+            UcitajPregled();
+        }
+
+        private void UcitajPregled()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
     }
 }
