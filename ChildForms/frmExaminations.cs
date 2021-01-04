@@ -20,6 +20,7 @@ namespace Hospital_System_Demo.ChildForms
         private Doktor _loggedDoctor;
         private MedicinskaSestra _loggedNurse;
         private HealthCareContext baza = HealthCareDB.Base;
+        private List<Pregled> ListaPregledaDanas;
         public frmExaminations()
         {
             InitializeComponent();
@@ -300,7 +301,10 @@ namespace Hospital_System_Demo.ChildForms
             if (rezultat!=null)
             {
                 if (rezultat.Raspored.ListaPregleda.Count() != 0)
+                {
+                    ListaPregledaDanas = rezultat.Raspored.ListaPregleda;
                     LoadExaminations(rezultat.Raspored.ListaPregleda, rezultat.Raspored.ListaPregleda.Count());
+                }
                
             }else
                  OcistiLabels();
@@ -391,6 +395,10 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
+
+
+
+
         /// <summary>
         /// What happens when user clicks on examination label
         /// </summary>
@@ -409,6 +417,27 @@ namespace Hospital_System_Demo.ChildForms
         private void lblPregled4_Click(object sender, EventArgs e)
         {
             ShowORAddExamination(sender as Label);
+        }
+
+
+
+
+
+
+
+
+
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dtoTransfer transferObjekat = new dtoTransfer();
+            transferObjekat.BrojOsobljaNaSmjeni = 2;
+            transferObjekat.BrojPacijenata = baza.Pacijenti.Count();
+            transferObjekat.ImePrezime = _loggedDoctor.Ime + " " + _loggedDoctor.Prezime;
+            transferObjekat.ListaPregledaZaDanas = ListaPregledaDanas;
+            frmDailyReview izvjestaj = new frmDailyReview(transferObjekat);
+            izvjestaj.Show();
         }
     }
 }

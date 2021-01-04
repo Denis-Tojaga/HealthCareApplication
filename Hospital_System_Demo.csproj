@@ -106,6 +106,13 @@
     <Compile Include="Data\HealthCareDB.cs" />
     <Compile Include="Doctors_Nurses\Dijagnoza.cs" />
     <Compile Include="Doctors_Nurses\Doktor.cs" />
+    <Compile Include="Doctors_Nurses\dtoTransfer.cs" />
+    <Compile Include="Doctors_Nurses\frmDailyReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctors_Nurses\frmDailyReview.Designer.cs">
+      <DependentUpon>frmDailyReview.cs</DependentUpon>
+    </Compile>
     <Compile Include="Doctors_Nurses\MedicinskaSestra.cs" />
     <Compile Include="Doctors_Nurses\RasporediDoktori.cs" />
     <Compile Include="Doctors_Nurses\Titula.cs" />
@@ -168,6 +175,9 @@
     <EmbeddedResource Include="ChildForms\frmPatients.resx">
       <DependentUpon>frmPatients.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Doctors_Nurses\frmDailyReview.resx">
+      <DependentUpon>frmDailyReview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAppMain.resx">
       <DependentUpon>frmAppMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -227,6 +237,7 @@
     <None Include="Resources\Add_patient.png" />
     <None Include="Resources\viewDetailsPatient.png" />
     <None Include="Resources\pregled4.png" />
+    <None Include="Resources\healthCareTeam.jpg" />
     <Content Include="Resources\symbol_exclamation.ico" />
     <Content Include="ICOSlike\tick.ico" />
     <None Include="Resources\unlockTransparent.png" />

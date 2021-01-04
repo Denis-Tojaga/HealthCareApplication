@@ -38,8 +38,12 @@
             this.btnExaminations = new System.Windows.Forms.Button();
             this.btnPatients = new System.Windows.Forms.Button();
             this.panelChildForms = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelTitle.SuspendLayout();
             this.panelMeniButtons.SuspendLayout();
+            this.panelChildForms.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelTitle
@@ -180,10 +184,35 @@
             // 
             // panelChildForms
             // 
+            this.panelChildForms.BackColor = System.Drawing.Color.White;
+            this.panelChildForms.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panelChildForms.Controls.Add(this.pictureBox1);
+            this.panelChildForms.Controls.Add(this.label1);
             this.panelChildForms.Location = new System.Drawing.Point(189, 110);
             this.panelChildForms.Name = "panelChildForms";
             this.panelChildForms.Size = new System.Drawing.Size(887, 556);
             this.panelChildForms.TabIndex = 3;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 32F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.label1.Location = new System.Drawing.Point(0, 479);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(887, 77);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "The future of healthcare industry";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hospital_System_Demo.Properties.Resources.healthCareTeam;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(887, 487);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
             // 
             // frmAppMain
             // 
@@ -202,6 +231,8 @@
             this.Load += new System.EventHandler(this.frmAppMain_Load);
             this.panelTitle.ResumeLayout(false);
             this.panelMeniButtons.ResumeLayout(false);
+            this.panelChildForms.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,5 +248,7 @@
         private System.Windows.Forms.Button btnExaminations;
         private System.Windows.Forms.Button btnPatients;
         private System.Windows.Forms.Panel panelChildForms;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
