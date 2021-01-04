@@ -54,5 +54,15 @@ namespace Hospital_System_Demo.Patients
         {
 
         }
+
+        private void btnAddExamination_Click(object sender, EventArgs e)
+        {
+            if(ValidanUnos())
+            {
+
+            }
+        }
+
+        private bool ValidanUnos() => Validator.ValidirajPolje(txtOpisStanja, err, Validator.Warning) && Validator.ValidirajPolje(txtZapazenjeDoktora, err, Validator.Warning);
     }
 }

@@ -20,6 +20,8 @@ namespace Hospital_System_Demo
                 validno = false;
             else if (kontrola is PictureBox && (kontrola as PictureBox).Image == null)
                 validno = false;
+            else if (kontrola is RichTextBox && string.IsNullOrEmpty((kontrola as RichTextBox).Text))
+                validno = false;
 
             if(!validno)
             {

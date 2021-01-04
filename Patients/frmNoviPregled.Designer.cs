@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cmbDijagnoze = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -38,6 +39,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtZapazenjeDoktora = new System.Windows.Forms.Label();
+            this.btnAddExamination = new System.Windows.Forms.Button();
+            this.err = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbDijagnoze
@@ -80,14 +84,14 @@
             this.cmbPacijenti.Location = new System.Drawing.Point(528, 55);
             this.cmbPacijenti.Name = "cmbPacijenti";
             this.cmbPacijenti.Size = new System.Drawing.Size(225, 39);
-            this.cmbPacijenti.TabIndex = 2;
+            this.cmbPacijenti.TabIndex = 1;
             // 
             // lbl
             // 
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold);
             this.lbl.ForeColor = System.Drawing.Color.Silver;
-            this.lbl.Location = new System.Drawing.Point(529, 308);
+            this.lbl.Location = new System.Drawing.Point(12, 308);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(225, 31);
             this.lbl.TabIndex = 4;
@@ -98,7 +102,7 @@
             this.txtDatumPregleda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.txtDatumPregleda.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDatumPregleda.ForeColor = System.Drawing.Color.White;
-            this.txtDatumPregleda.Location = new System.Drawing.Point(600, 342);
+            this.txtDatumPregleda.Location = new System.Drawing.Point(18, 342);
             this.txtDatumPregleda.Name = "txtDatumPregleda";
             this.txtDatumPregleda.ReadOnly = true;
             this.txtDatumPregleda.Size = new System.Drawing.Size(153, 35);
@@ -113,7 +117,7 @@
             this.txtOpisStanja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtOpisStanja.Name = "txtOpisStanja";
             this.txtOpisStanja.Size = new System.Drawing.Size(349, 125);
-            this.txtOpisStanja.TabIndex = 46;
+            this.txtOpisStanja.TabIndex = 2;
             // 
             // label4
             // 
@@ -146,14 +150,35 @@
             this.txtZapazenjeDoktora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtZapazenjeDoktora.Name = "txtZapazenjeDoktora";
             this.txtZapazenjeDoktora.Size = new System.Drawing.Size(345, 125);
-            this.txtZapazenjeDoktora.TabIndex = 49;
+            this.txtZapazenjeDoktora.TabIndex = 3;
+            // 
+            // btnAddExamination
+            // 
+            this.btnAddExamination.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAddExamination.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAddExamination.FlatAppearance.BorderSize = 2;
+            this.btnAddExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddExamination.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Bold);
+            this.btnAddExamination.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAddExamination.Location = new System.Drawing.Point(521, 329);
+            this.btnAddExamination.Name = "btnAddExamination";
+            this.btnAddExamination.Size = new System.Drawing.Size(233, 48);
+            this.btnAddExamination.TabIndex = 4;
+            this.btnAddExamination.Text = "Add Examination";
+            this.btnAddExamination.UseVisualStyleBackColor = false;
+            this.btnAddExamination.Click += new System.EventHandler(this.btnAddExamination_Click);
+            // 
+            // err
+            // 
+            this.err.ContainerControl = this;
             // 
             // frmNoviPregled
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(800, 410);
+            this.ClientSize = new System.Drawing.Size(800, 392);
+            this.Controls.Add(this.btnAddExamination);
             this.Controls.Add(this.txtZapazenjeDoktora);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
@@ -169,6 +194,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New examination";
             this.Load += new System.EventHandler(this.frmNoviPregled_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.err)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +212,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label txtZapazenjeDoktora;
+        private System.Windows.Forms.Button btnAddExamination;
+        private System.Windows.Forms.ErrorProvider err;
     }
 }
