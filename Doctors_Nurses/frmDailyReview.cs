@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace Hospital_System_Demo.Doctors_Nurses
 {
@@ -25,6 +26,7 @@ namespace Hospital_System_Demo.Doctors_Nurses
 
         private void frmDailyReview_Load(object sender, EventArgs e)
         {
+
 
             this.rptViewer.RefreshReport();
         }
