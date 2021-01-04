@@ -37,6 +37,11 @@ namespace Hospital_System_Demo.Patients
             }
         }
 
+
+
+        /// <summary>
+        /// Loads patients and diagnosis in comboboxes
+        /// </summary>
         private void UcitajPacijente()
         {
             cmbPacijenti.DataSource = baza.Pacijenti.ToList();
@@ -57,6 +62,11 @@ namespace Hospital_System_Demo.Patients
 
 
 
+
+
+        /// <summary>
+        /// Adds new examination to the list of examinations in the correct schedule
+        /// </summary>
         private void btnAddExamination_Click(object sender, EventArgs e)
         {
             if(ValidanUnos())
@@ -78,6 +88,13 @@ namespace Hospital_System_Demo.Patients
                     MessageBox.Show($"Doctor already has 4 examinations on that day!");
             }
         }
+
+
+
+
+        /// <summary>
+        /// Validates the input of the user
+        /// </summary>
         private bool ValidanUnos() => Validator.ValidirajPolje(txtOpisStanja, err, Validator.Warning) && Validator.ValidirajPolje(txtZapazanjeDoktora, err, Validator.Warning);
     }
 }
