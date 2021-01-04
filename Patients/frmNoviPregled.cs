@@ -64,6 +64,11 @@ namespace Hospital_System_Demo.Patients
 
 
 
+
+
+
+
+
         /// <summary>
         /// Adds new examination to the list of examinations in the correct schedule
         /// </summary>
@@ -88,6 +93,11 @@ namespace Hospital_System_Demo.Patients
                     MessageBox.Show($"Doctor already has 4 examinations on that day!");
             }
         }
+
+
+
+
+
 
 
 

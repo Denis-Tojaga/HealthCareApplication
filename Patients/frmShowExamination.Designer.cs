@@ -131,7 +131,6 @@
             this.lblZapazanjeDoktora.Size = new System.Drawing.Size(266, 137);
             this.lblZapazanjeDoktora.TabIndex = 46;
             this.lblZapazanjeDoktora.Text = "\"";
-            this.lblZapazanjeDoktora.Click += new System.EventHandler(this.lblZapazanjeDoktora_Click);
             // 
             // label4
             // 

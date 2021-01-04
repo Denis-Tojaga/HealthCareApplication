@@ -23,18 +23,22 @@ namespace Hospital_System_Demo.Patients
         {
             InitializeComponent();
         }
-
         public frmShowExamination(Pregled objekat,Doktor doktor) : this()
         {
             _pregled = objekat;
             _doktor = doktor;
         }
-
         private void frmShowExamination_Load(object sender, EventArgs e)
         {
             UcitajPregled();
         }
 
+
+
+
+        /// <summary>
+        /// Loads the current examination and its data
+        /// </summary>
         private void UcitajPregled()
         {
             try
@@ -52,9 +56,6 @@ namespace Hospital_System_Demo.Patients
             }
         }
 
-        private void lblZapazanjeDoktora_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

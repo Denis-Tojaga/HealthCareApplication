@@ -30,9 +30,6 @@ namespace Hospital_System_Demo.Patients
         {
             _pacijent = pacijent;
         }
-
-
-
         private void frmPatientDetails_Load(object sender, EventArgs e)
         {
             btnCancel.Hide();
@@ -41,6 +38,9 @@ namespace Hospital_System_Demo.Patients
             LoadData(_pacijent);
             LoadDiagnosis(_pacijent.ListaDijagnoza);
         }
+
+
+
 
 
 
