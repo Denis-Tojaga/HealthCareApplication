@@ -18,6 +18,7 @@ namespace Hospital_System_Demo.Patients
         private Pregled _pregled;
         private Doktor _doktor;
         private HealthCareContext baza = HealthCareDB.Base;
+        string navodnik = "";
         public frmShowExamination()
         {
             InitializeComponent();
@@ -38,15 +39,22 @@ namespace Hospital_System_Demo.Patients
         {
             try
             {
-                lblPatient.Text = "  " + _pregled.Pacijent.ToString();
-                lblOnDate.Text = "  " + _pregled.DatumPregleda;
-                lblDiagnosis.Text = "  " + _pregled.Dijagnoza.ToString();
-                lblDoctor.Text = "  " + _doktor.ToString();
+                lblPatient.Text += "  " + _pregled.Pacijent.ToString();
+                lblOnDate.Text += "  " + _pregled.DatumPregleda;
+                lblDiagnosis.Text += "  " + _pregled.Dijagnoza.ToString();
+                lblDoctor.Text += "  " + _doktor.ToString();
+                lblOpisStanja.Text +=_pregled.OpisStanja + "...";
+                lblZapazanjeDoktora.Text = _pregled.ZakljucakDoktora + "...";
             }
             catch (Exception ex)
             {
                 MboxHelper.PrikaziGresku(ex);
             }
+        }
+
+        private void lblZapazanjeDoktora_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
