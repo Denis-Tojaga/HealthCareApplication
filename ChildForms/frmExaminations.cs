@@ -302,28 +302,32 @@ namespace Hospital_System_Demo.ChildForms
         /// </summary>
         private void LoadSchedules(string text)
         {
-            var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == text).First();
+
+            var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == text).FirstOrDefault();
             if (rezultat!=null)
             {
                 if (rezultat.Raspored.ListaPregleda.Count() != 0)
                 {
                     var ListaPregledaDanas = new List<Pregled>();
-                    ListaPregledaDanas=rezultat.Raspored.ListaPregleda;
+                    ListaPregledaDanas = rezultat.Raspored.ListaPregleda;
                     button1.Enabled = true;
-                    if(ListaPregledaDanas.Count()>0)
+                    if (ListaPregledaDanas.Count() > 0)
                         LoadExaminations(ListaPregledaDanas, rezultat.Raspored.ListaPregleda.Count());
                 }
-            }
+            }else
+                OcistiLabels();
         }
         private void LoadExaminations(List<Pregled> ListaPregleda, int numberOfExaminations)
         {
             OcistiLabels();
             for (int i = 0; i < numberOfExaminations; i++)
             {
-                if(i<5)
+                if(i<4)
                   ListaBoxovaExamination[i].Text += " of " + ListaPregleda[i].Pacijent.ToString();
             }
         }
+
+
 
 
 
