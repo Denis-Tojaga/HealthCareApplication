@@ -17,19 +17,19 @@ namespace Hospital_System_Demo.Patients
     {
         private Doktor _doktor;
         private HealthCareContext baza = HealthCareDB.Base;
+        private RasporediDoktori _raspored;
         public frmNoviPregled()
         {
             InitializeComponent();
         }
-
-        public frmNoviPregled(Doktor doktor):this()
+        public frmNoviPregled(RasporediDoktori objekat):this()
         {
-            _doktor = doktor;
+            _doktor = baza.Doktori.Where(x=>x.ID == objekat.Doktor.ID).FirstOrDefault();
+            _raspored = objekat;
             try
             {
                 UcitajDijagnoze();
                 UcitajPacijente();
-                txtDatumPregleda.Text = DateTime.Now.ToShortDateString();
             }
             catch (Exception ex)
             {
@@ -39,30 +39,45 @@ namespace Hospital_System_Demo.Patients
 
         private void UcitajPacijente()
         {
-            throw new NotImplementedException();
+            cmbPacijenti.DataSource = baza.Pacijenti.ToList();
+            cmbPacijenti.DisplayMember = "ImePrezime";
+            cmbPacijenti.ValueMember = "Id";
         }
-
-       
         private void UcitajDijagnoze()
         {
             cmbDijagnoze.DataSource = baza.Dijagnoze.ToList();
             cmbDijagnoze.DisplayMember = "Naziv";
             cmbDijagnoze.ValueMember = "Id";
         }
-
         private void frmNoviPregled_Load(object sender, EventArgs e)
         {
-
+            txtDatumPregleda.Text = DateTime.Now.ToShortDateString();
         }
+
+
+
 
         private void btnAddExamination_Click(object sender, EventArgs e)
         {
             if(ValidanUnos())
             {
-
+                Pregled noviPregled = new Pregled();
+                noviPregled.DatumPregleda = txtDatumPregleda.Text;
+                noviPregled.Pacijent = cmbPacijenti.SelectedItem as Pacijent;
+                noviPregled.Dijagnoza = cmbDijagnoze.SelectedItem as Dijagnoza;
+                noviPregled.OpisStanja = txtOpisStanja.Text;
+                noviPregled.ZakljucakDoktora = txtZapazanjeDoktora.Text;
+                noviPregled.AktivanPregled = cbAktivan.Checked;
+                if (_raspored.Raspored.ListaPregleda.Count() < 4)
+                {
+                    _raspored.Raspored.ListaPregleda.Add(noviPregled);
+                    baza.SaveChanges();
+                    MessageBox.Show($"Examination added!");
+                    DialogResult=DialogResult.OK;
+                }else
+                    MessageBox.Show($"Doctor already has 4 examinations on that day!");
             }
         }
-
-        private bool ValidanUnos() => Validator.ValidirajPolje(txtOpisStanja, err, Validator.Warning) && Validator.ValidirajPolje(txtZapazenjeDoktora, err, Validator.Warning);
+        private bool ValidanUnos() => Validator.ValidirajPolje(txtOpisStanja, err, Validator.Warning) && Validator.ValidirajPolje(txtZapazanjeDoktora, err, Validator.Warning);
     }
 }

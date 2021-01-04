@@ -35,12 +35,13 @@
             this.cmbPacijenti = new System.Windows.Forms.ComboBox();
             this.lbl = new System.Windows.Forms.Label();
             this.txtDatumPregleda = new System.Windows.Forms.TextBox();
-            this.txtOpisStanja = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtZapazenjeDoktora = new System.Windows.Forms.Label();
             this.btnAddExamination = new System.Windows.Forms.Button();
             this.err = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbAktivan = new System.Windows.Forms.CheckBox();
+            this.txtOpisStanja = new System.Windows.Forms.RichTextBox();
+            this.txtZapazanjeDoktora = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.err)).BeginInit();
             this.SuspendLayout();
             // 
@@ -91,7 +92,7 @@
             this.lbl.AutoSize = true;
             this.lbl.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold);
             this.lbl.ForeColor = System.Drawing.Color.Silver;
-            this.lbl.Location = new System.Drawing.Point(12, 308);
+            this.lbl.Location = new System.Drawing.Point(8, 298);
             this.lbl.Name = "lbl";
             this.lbl.Size = new System.Drawing.Size(225, 31);
             this.lbl.TabIndex = 4;
@@ -102,22 +103,11 @@
             this.txtDatumPregleda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.txtDatumPregleda.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDatumPregleda.ForeColor = System.Drawing.Color.White;
-            this.txtDatumPregleda.Location = new System.Drawing.Point(18, 342);
+            this.txtDatumPregleda.Location = new System.Drawing.Point(14, 332);
             this.txtDatumPregleda.Name = "txtDatumPregleda";
             this.txtDatumPregleda.ReadOnly = true;
             this.txtDatumPregleda.Size = new System.Drawing.Size(153, 35);
             this.txtDatumPregleda.TabIndex = 6;
-            // 
-            // txtOpisStanja
-            // 
-            this.txtOpisStanja.BackColor = System.Drawing.Color.Silver;
-            this.txtOpisStanja.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold);
-            this.txtOpisStanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.txtOpisStanja.Location = new System.Drawing.Point(18, 170);
-            this.txtOpisStanja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtOpisStanja.Name = "txtOpisStanja";
-            this.txtOpisStanja.Size = new System.Drawing.Size(349, 125);
-            this.txtOpisStanja.TabIndex = 2;
             // 
             // label4
             // 
@@ -141,17 +131,6 @@
             this.label3.Text = "Doctor\'s observation:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // txtZapazenjeDoktora
-            // 
-            this.txtZapazenjeDoktora.BackColor = System.Drawing.Color.Silver;
-            this.txtZapazenjeDoktora.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold);
-            this.txtZapazenjeDoktora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.txtZapazenjeDoktora.Location = new System.Drawing.Point(409, 170);
-            this.txtZapazenjeDoktora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtZapazenjeDoktora.Name = "txtZapazenjeDoktora";
-            this.txtZapazenjeDoktora.Size = new System.Drawing.Size(345, 125);
-            this.txtZapazenjeDoktora.TabIndex = 3;
-            // 
             // btnAddExamination
             // 
             this.btnAddExamination.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
@@ -160,7 +139,7 @@
             this.btnAddExamination.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddExamination.Font = new System.Drawing.Font("Segoe UI", 18.75F, System.Drawing.FontStyle.Bold);
             this.btnAddExamination.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.btnAddExamination.Location = new System.Drawing.Point(521, 329);
+            this.btnAddExamination.Location = new System.Drawing.Point(528, 403);
             this.btnAddExamination.Name = "btnAddExamination";
             this.btnAddExamination.Size = new System.Drawing.Size(233, 48);
             this.btnAddExamination.TabIndex = 4;
@@ -172,17 +151,54 @@
             // 
             this.err.ContainerControl = this;
             // 
+            // cbAktivan
+            // 
+            this.cbAktivan.AutoSize = true;
+            this.cbAktivan.Font = new System.Drawing.Font("Segoe UI Semibold", 17.25F, System.Drawing.FontStyle.Bold);
+            this.cbAktivan.ForeColor = System.Drawing.Color.Silver;
+            this.cbAktivan.Location = new System.Drawing.Point(523, 332);
+            this.cbAktivan.Name = "cbAktivan";
+            this.cbAktivan.Size = new System.Drawing.Size(231, 35);
+            this.cbAktivan.TabIndex = 50;
+            this.cbAktivan.Text = "Active examination";
+            this.cbAktivan.UseVisualStyleBackColor = true;
+            // 
+            // txtOpisStanja
+            // 
+            this.txtOpisStanja.BackColor = System.Drawing.Color.Silver;
+            this.txtOpisStanja.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtOpisStanja.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold);
+            this.txtOpisStanja.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.txtOpisStanja.Location = new System.Drawing.Point(23, 170);
+            this.txtOpisStanja.Name = "txtOpisStanja";
+            this.txtOpisStanja.Size = new System.Drawing.Size(344, 125);
+            this.txtOpisStanja.TabIndex = 51;
+            this.txtOpisStanja.Text = "";
+            // 
+            // txtZapazanjeDoktora
+            // 
+            this.txtZapazanjeDoktora.BackColor = System.Drawing.Color.Silver;
+            this.txtZapazanjeDoktora.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtZapazanjeDoktora.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold);
+            this.txtZapazanjeDoktora.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.txtZapazanjeDoktora.Location = new System.Drawing.Point(427, 170);
+            this.txtZapazanjeDoktora.Name = "txtZapazanjeDoktora";
+            this.txtZapazanjeDoktora.Size = new System.Drawing.Size(344, 125);
+            this.txtZapazanjeDoktora.TabIndex = 52;
+            this.txtZapazanjeDoktora.Text = "";
+            // 
             // frmNoviPregled
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.ClientSize = new System.Drawing.Size(800, 392);
+            this.ClientSize = new System.Drawing.Size(800, 463);
+            this.Controls.Add(this.txtZapazanjeDoktora);
+            this.Controls.Add(this.txtOpisStanja);
+            this.Controls.Add(this.cbAktivan);
             this.Controls.Add(this.btnAddExamination);
-            this.Controls.Add(this.txtZapazenjeDoktora);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtOpisStanja);
             this.Controls.Add(this.txtDatumPregleda);
             this.Controls.Add(this.lbl);
             this.Controls.Add(this.label2);
@@ -208,11 +224,12 @@
         private System.Windows.Forms.ComboBox cmbPacijenti;
         private System.Windows.Forms.Label lbl;
         private System.Windows.Forms.TextBox txtDatumPregleda;
-        private System.Windows.Forms.Label txtOpisStanja;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label txtZapazenjeDoktora;
         private System.Windows.Forms.Button btnAddExamination;
         private System.Windows.Forms.ErrorProvider err;
+        private System.Windows.Forms.CheckBox cbAktivan;
+        private System.Windows.Forms.RichTextBox txtZapazanjeDoktora;
+        private System.Windows.Forms.RichTextBox txtOpisStanja;
     }
 }

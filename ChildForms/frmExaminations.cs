@@ -313,7 +313,7 @@ namespace Hospital_System_Demo.ChildForms
         private void LoadExaminations(List<Pregled> ListaPregleda, int numberOfExaminations)
         {
             for (int i = 0; i < numberOfExaminations-1; i++)
-                ListaBoxovaExamination[i].Text += " of " +  ListaPregleda[i].Pacijent.ToString();
+                ListaBoxovaExamination[i].Text += " " + ListaPregleda[i].Pacijent.ToString();
         }
 
 
@@ -347,11 +347,28 @@ namespace Hospital_System_Demo.ChildForms
         /// </summary>
         private void ShowORAddExamination(Label kliknutaLabela)
         {
-            if(kliknutaLabela.Text=="Examination")
+            if(kliknutaLabela.Text=="Examination of")
             {
-                frmNoviPregled noviPregled = new frmNoviPregled();
-                if (noviPregled.ShowDialog() == DialogResult.OK)
-                    LoadSchedules(lblTrenutniDatum.Text);
+                var objekat = baza.RasporediDoktori.Where(x => x.DatumRasporeda == lblTrenutniDatum.Text && x.Doktor.ID == _loggedDoctor.ID).FirstOrDefault();
+                if (objekat == null)
+                {
+                    var rasporedObj = new Raspored();
+                    var noviRaspored = new RasporediDoktori();
+                    noviRaspored.DatumRasporeda = lblTrenutniDatum.Text;
+                    noviRaspored.Raspored = rasporedObj;
+                    _loggedDoctor.RasporediDoktora.Add(noviRaspored);
+                    baza.SaveChanges();
+                    frmNoviPregled noviPregled = new frmNoviPregled(noviRaspored);
+                    if (noviPregled.ShowDialog() == DialogResult.OK)
+                        LoadSchedules(lblTrenutniDatum.Text);
+                }
+                else
+                {
+                    frmNoviPregled pronadjen = new frmNoviPregled(objekat);
+                    if (pronadjen.ShowDialog() == DialogResult.OK)
+                        LoadSchedules(lblTrenutniDatum.Text);
+                }
+                
             }else
             {
                 string Ime = IzdvojiIme(kliknutaLabela.Text);
