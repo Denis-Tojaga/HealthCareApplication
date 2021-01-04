@@ -43,7 +43,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Segoe UI", 23.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(187, 9);
+            this.label1.Location = new System.Drawing.Point(194, 9);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(349, 63);
@@ -54,7 +54,7 @@
             // lblPatient
             // 
             this.lblPatient.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.lblPatient.ForeColor = System.Drawing.Color.Silver;
+            this.lblPatient.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.lblPatient.Location = new System.Drawing.Point(35, 114);
             this.lblPatient.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPatient.Name = "lblPatient";
@@ -66,11 +66,11 @@
             // lblOnDate
             // 
             this.lblOnDate.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.lblOnDate.ForeColor = System.Drawing.Color.Silver;
+            this.lblOnDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.lblOnDate.Location = new System.Drawing.Point(488, 114);
             this.lblOnDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOnDate.Name = "lblOnDate";
-            this.lblOnDate.Size = new System.Drawing.Size(307, 43);
+            this.lblOnDate.Size = new System.Drawing.Size(267, 43);
             this.lblOnDate.TabIndex = 40;
             this.lblOnDate.Text = "On date:";
             this.lblOnDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -78,7 +78,7 @@
             // lblDiagnosis
             // 
             this.lblDiagnosis.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.lblDiagnosis.ForeColor = System.Drawing.Color.Silver;
+            this.lblDiagnosis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.lblDiagnosis.Location = new System.Drawing.Point(35, 157);
             this.lblDiagnosis.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDiagnosis.Name = "lblDiagnosis";
@@ -102,7 +102,7 @@
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.Silver;
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.label2.Location = new System.Drawing.Point(35, 200);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
@@ -118,17 +118,17 @@
             this.lblOpisStanja.Location = new System.Drawing.Point(36, 273);
             this.lblOpisStanja.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblOpisStanja.Name = "lblOpisStanja";
-            this.lblOpisStanja.Size = new System.Drawing.Size(288, 93);
+            this.lblOpisStanja.Size = new System.Drawing.Size(288, 137);
             this.lblOpisStanja.TabIndex = 44;
             // 
             // lblZapazanjeDoktora
             // 
             this.lblZapazanjeDoktora.Font = new System.Drawing.Font("Segoe UI", 13.2F, System.Drawing.FontStyle.Bold);
             this.lblZapazanjeDoktora.ForeColor = System.Drawing.Color.Silver;
-            this.lblZapazanjeDoktora.Location = new System.Drawing.Point(489, 243);
+            this.lblZapazanjeDoktora.Location = new System.Drawing.Point(489, 273);
             this.lblZapazanjeDoktora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblZapazanjeDoktora.Name = "lblZapazanjeDoktora";
-            this.lblZapazanjeDoktora.Size = new System.Drawing.Size(266, 210);
+            this.lblZapazanjeDoktora.Size = new System.Drawing.Size(266, 137);
             this.lblZapazanjeDoktora.TabIndex = 46;
             this.lblZapazanjeDoktora.Text = "\"";
             this.lblZapazanjeDoktora.Click += new System.EventHandler(this.lblZapazanjeDoktora_Click);
@@ -136,7 +136,7 @@
             // label4
             // 
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18.2F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.Silver;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.label4.Location = new System.Drawing.Point(488, 200);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";

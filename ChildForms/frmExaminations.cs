@@ -39,6 +39,10 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
+
+
+
+
         /// <summary>
         /// Adding labels to a list and load of all examination for current date 
         /// </summary>
@@ -298,23 +302,29 @@ namespace Hospital_System_Demo.ChildForms
         /// </summary>
         private void LoadSchedules(string text)
         {
-            var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == text).FirstOrDefault();
+            var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == text).First();
             if (rezultat!=null)
             {
                 if (rezultat.Raspored.ListaPregleda.Count() != 0)
                 {
-                    ListaPregledaDanas = rezultat.Raspored.ListaPregleda;
+                    var ListaPregledaDanas = new List<Pregled>();
+                    ListaPregledaDanas=rezultat.Raspored.ListaPregleda;
                     button1.Enabled = true;
-                    LoadExaminations(rezultat.Raspored.ListaPregleda, rezultat.Raspored.ListaPregleda.Count());
+                    if(ListaPregledaDanas.Count()>0)
+                        LoadExaminations(ListaPregledaDanas, rezultat.Raspored.ListaPregleda.Count());
                 }
-            }else
-                 OcistiLabels();
+            }
         }
         private void LoadExaminations(List<Pregled> ListaPregleda, int numberOfExaminations)
         {
-            for (int i = 0; i < numberOfExaminations-1; i++)
-                ListaBoxovaExamination[i].Text += " " + ListaPregleda[i].Pacijent.ToString();
+            OcistiLabels();
+            for (int i = 0; i < numberOfExaminations; i++)
+            {
+                if(i<5)
+                  ListaBoxovaExamination[i].Text += " of " + ListaPregleda[i].Pacijent.ToString();
+            }
         }
+
 
 
 
@@ -347,7 +357,7 @@ namespace Hospital_System_Demo.ChildForms
         /// </summary>
         private void ShowORAddExamination(Label kliknutaLabela)
         {
-            if(kliknutaLabela.Text=="Examination of")
+            if(kliknutaLabela.Text=="Examination")
             {
                 var objekat = baza.RasporediDoktori.Where(x => x.DatumRasporeda == lblTrenutniDatum.Text && x.Doktor.ID == _loggedDoctor.ID).FirstOrDefault();
                 if (objekat == null)
@@ -379,6 +389,11 @@ namespace Hospital_System_Demo.ChildForms
                 prikaziPregled.ShowDialog();
             }
         }
+
+
+
+
+
 
 
 
@@ -420,6 +435,10 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
+
+
+
+
         /// <summary>
         /// What happens when user clicks on examination label
         /// </summary>
@@ -449,7 +468,9 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
-
+        /// <summary>
+        /// Shows a daily report for a doctor, which he is able to print out
+        /// </summary>
         private void button1_Click(object sender, EventArgs e)
         {
             dtoTransfer transferObjekat = new dtoTransfer();

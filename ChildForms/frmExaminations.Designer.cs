@@ -250,7 +250,7 @@
             this.lblPregled4.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
             this.lblPregled4.Size = new System.Drawing.Size(281, 72);
             this.lblPregled4.TabIndex = 2;
-            this.lblPregled4.Text = "Examination of";
+            this.lblPregled4.Text = "Examination";
             this.lblPregled4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblPregled4.Click += new System.EventHandler(this.lblPregled4_Click);
             // 
@@ -287,7 +287,7 @@
             this.lblPregled3.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
             this.lblPregled3.Size = new System.Drawing.Size(265, 73);
             this.lblPregled3.TabIndex = 2;
-            this.lblPregled3.Text = "Examination of";
+            this.lblPregled3.Text = "Examination";
             this.lblPregled3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblPregled3.Click += new System.EventHandler(this.lblPregled3_Click);
             // 
@@ -395,7 +395,7 @@
             this.lblPregled1.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
             this.lblPregled1.Size = new System.Drawing.Size(269, 69);
             this.lblPregled1.TabIndex = 2;
-            this.lblPregled1.Text = "Examination of";
+            this.lblPregled1.Text = "Examination";
             this.lblPregled1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblPregled1.Click += new System.EventHandler(this.lblPregled1_Click);
             // 
@@ -432,7 +432,7 @@
             this.lblPregled2.Padding = new System.Windows.Forms.Padding(0, 0, 7, 0);
             this.lblPregled2.Size = new System.Drawing.Size(285, 65);
             this.lblPregled2.TabIndex = 2;
-            this.lblPregled2.Text = "Examination of";
+            this.lblPregled2.Text = "Examination";
             this.lblPregled2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lblPregled2.Click += new System.EventHandler(this.lblPregled2_Click);
             // 
