@@ -38,14 +38,14 @@
             this.rptViewer.Location = new System.Drawing.Point(0, 0);
             this.rptViewer.Name = "rptViewer";
             this.rptViewer.ServerReport.BearerToken = null;
-            this.rptViewer.Size = new System.Drawing.Size(594, 637);
+            this.rptViewer.Size = new System.Drawing.Size(700, 669);
             this.rptViewer.TabIndex = 0;
             // 
             // frmDailyReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(594, 637);
+            this.ClientSize = new System.Drawing.Size(700, 669);
             this.Controls.Add(this.rptViewer);
             this.Name = "frmDailyReview";
             this.Text = "frmDailyReview";

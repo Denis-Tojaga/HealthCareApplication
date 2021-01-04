@@ -355,7 +355,9 @@ namespace Hospital_System_Demo.ChildForms
             {
                 string Ime = IzdvojiIme(kliknutaLabela.Text);
                 string Prezime = IzdvojiPrezime(kliknutaLabela.Text);
-                frmShowExamination prikaziPregled = new frmShowExamination(Ime, Prezime);
+                var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == lblTrenutniDatum.Text).FirstOrDefault();
+                int RasporedID = rezultat.Id;
+                frmShowExamination prikaziPregled = new frmShowExamination(Ime, Prezime, RasporedID);
                 prikaziPregled.ShowDialog();
             }
         }
