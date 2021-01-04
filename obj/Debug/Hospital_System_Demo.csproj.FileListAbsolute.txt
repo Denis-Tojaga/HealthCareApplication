@@ -93,3 +93,5 @@ C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.Patients.frmAddPatient.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.Patients.frmShowExamination.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.Doctors_Nurses.frmDailyReview.resources
+C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\RdlCompile.cache
+C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\RdlCompile.compiled

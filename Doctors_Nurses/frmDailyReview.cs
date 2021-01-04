@@ -24,10 +24,44 @@ namespace Hospital_System_Demo.Doctors_Nurses
             objekat = transfer;
         }
 
+        private string PostaviSatnicu(int i)
+        {
+            if (i == 0)
+                return "08:30";
+            else if (i == 1)
+                return "09:30";
+            else if (i == 2)
+                return "13:30";
+            else if (i == 3)
+                return "14:30";
+            else if (i == 4)
+                return "15:30";
+            return "";
+        }
+
         private void frmDailyReview_Load(object sender, EventArgs e)
         {
+            ReportParameterCollection rpc = new ReportParameterCollection();
+            rpc.Add(new ReportParameter("ImePrezime", objekat.ImePrezime));
+            rpc.Add(new ReportParameter("BrojPacijenata", objekat.BrojPacijenata.ToString()));
+            rpc.Add(new ReportParameter("BrojOsobljaNaSmjeni", objekat.BrojOsobljaNaSmjeni.ToString()));
+            rptViewer.LocalReport.SetParameters(rpc);
 
+            dsStanje.tblDanasnjeStanjeDataTable tbl = new dsStanje.tblDanasnjeStanjeDataTable();
+            for (int i = 0; i < objekat.ListaPregledaZaDanas.Count(); i++)
+            {
+                dsStanje.tblDanasnjeStanjeRow noviRed = tbl.NewtblDanasnjeStanjeRow();
+                noviRed.Satnica = PostaviSatnicu(i);
+                noviRed.Soba = "Soba10" + i;
+                noviRed.Pacijent = objekat.ListaPregledaZaDanas[i].Pacijent.ToString();
+                tbl.Rows.Add(noviRed);
+            }
 
+            ReportDataSource izvor = new ReportDataSource();
+            izvor.Name = "dsIzvor";
+            izvor.Value = tbl;
+
+            rptViewer.LocalReport.DataSources.Add(izvor);
             this.rptViewer.RefreshReport();
         }
     }

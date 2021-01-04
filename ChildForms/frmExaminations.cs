@@ -53,6 +53,7 @@ namespace Hospital_System_Demo.ChildForms
         {
             try
             {
+                button1.Enabled = false;
                 LoadSchedules(lblTrenutniDatum.Text);
             }
             catch (Exception ex)
@@ -303,9 +304,9 @@ namespace Hospital_System_Demo.ChildForms
                 if (rezultat.Raspored.ListaPregleda.Count() != 0)
                 {
                     ListaPregledaDanas = rezultat.Raspored.ListaPregleda;
+                    button1.Enabled = true;
                     LoadExaminations(rezultat.Raspored.ListaPregleda, rezultat.Raspored.ListaPregleda.Count());
                 }
-               
             }else
                  OcistiLabels();
         }

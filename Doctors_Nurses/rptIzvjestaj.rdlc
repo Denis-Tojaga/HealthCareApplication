@@ -176,7 +176,7 @@
             <Top>1.8299cm</Top>
             <Left>4.72814cm</Left>
             <Height>0.67938cm</Height>
-            <Width>2.44708cm</Width>
+            <Width>2.12958cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -420,7 +420,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dsIzvor</DataSetName>
-            <Top>6.05578cm</Top>
+            <Top>7.85495cm</Top>
             <Left>2.22814cm</Left>
             <Height>3.105cm</Height>
             <Width>16.20479cm</Width>
@@ -452,11 +452,81 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>3.48933cm</Top>
+            <Top>5.28849cm</Top>
             <Left>5.7912cm</Left>
             <Height>1.18208cm</Height>
             <Width>8.90292cm</Width>
             <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Today's staff: </Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>16pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>2.65038cm</Top>
+            <Left>0.28787cm</Left>
+            <Height>1.04979cm</Height>
+            <Width>4.21979cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>2pt</Width>
+              </Border>
+              <BottomBorder>
+                <Style>Double</Style>
+              </BottomBorder>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox15">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!BrojOsobljaNaSmjeni.Value</Value>
+                    <Style>
+                      <FontFamily>Segoe UI</FontFamily>
+                      <FontSize>14pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox15</rd:DefaultName>
+            <Top>3.10017cm</Top>
+            <Left>4.72814cm</Left>
+            <Height>0.6cm</Height>
+            <Width>2.12958cm</Width>
+            <ZIndex>7</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>

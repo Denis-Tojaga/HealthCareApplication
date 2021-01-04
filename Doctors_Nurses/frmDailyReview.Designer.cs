@@ -34,6 +34,7 @@
             // rptViewer
             // 
             this.rptViewer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rptViewer.LocalReport.ReportEmbeddedResource = "Hospital_System_Demo.Doctors_Nurses.rptIzvjestaj.rdlc";
             this.rptViewer.Location = new System.Drawing.Point(0, 0);
             this.rptViewer.Name = "rptViewer";
             this.rptViewer.ServerReport.BearerToken = null;
