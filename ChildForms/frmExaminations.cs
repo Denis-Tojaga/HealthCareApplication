@@ -350,7 +350,8 @@ namespace Hospital_System_Demo.ChildForms
             if(kliknutaLabela.Text=="Examination")
             {
                 frmNoviPregled noviPregled = new frmNoviPregled();
-                noviPregled.ShowDialog();
+                if (noviPregled.ShowDialog() == DialogResult.OK)
+                    LoadSchedules(lblTrenutniDatum.Text);
             }else
             {
                 string Ime = IzdvojiIme(kliknutaLabela.Text);
