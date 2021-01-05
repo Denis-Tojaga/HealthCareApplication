@@ -1,6 +1,6 @@
 ﻿namespace Hospital_System_Demo.ChildForms
 {
-    partial class frmMedicineOrders
+    partial class frmEquipment
     {
         /// <summary>
         /// Required designer variable.
@@ -32,44 +32,44 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.pbElasticniZavoj = new System.Windows.Forms.ProgressBar();
+            this.pb1 = new System.Windows.Forms.ProgressBar();
             this.label4 = new System.Windows.Forms.Label();
-            this.btnPreviousDate = new System.Windows.Forms.Button();
+            this.btnAdd1 = new System.Windows.Forms.Button();
             this.btnO1 = new System.Windows.Forms.Button();
             this.btnO2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAdd2 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.pb2 = new System.Windows.Forms.ProgressBar();
             this.label7 = new System.Windows.Forms.Label();
             this.btnO4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnAdd4 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.progressBar2 = new System.Windows.Forms.ProgressBar();
+            this.pb4 = new System.Windows.Forms.ProgressBar();
             this.label9 = new System.Windows.Forms.Label();
             this.btnO3 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnAdd3 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.progressBar3 = new System.Windows.Forms.ProgressBar();
+            this.pb3 = new System.Windows.Forms.ProgressBar();
             this.label11 = new System.Windows.Forms.Label();
             this.btnO6 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnAdd6 = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.progressBar4 = new System.Windows.Forms.ProgressBar();
+            this.pb6 = new System.Windows.Forms.ProgressBar();
             this.label13 = new System.Windows.Forms.Label();
             this.btnO5 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
+            this.btnAdd5 = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
-            this.progressBar5 = new System.Windows.Forms.ProgressBar();
+            this.pb5 = new System.Windows.Forms.ProgressBar();
             this.label15 = new System.Windows.Forms.Label();
             this.btnO8 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.btnAdd8 = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
-            this.progressBar6 = new System.Windows.Forms.ProgressBar();
+            this.pb8 = new System.Windows.Forms.ProgressBar();
             this.label17 = new System.Windows.Forms.Label();
             this.btnO7 = new System.Windows.Forms.Button();
-            this.button15 = new System.Windows.Forms.Button();
+            this.btnAdd7 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
-            this.progressBar7 = new System.Windows.Forms.ProgressBar();
+            this.pb7 = new System.Windows.Forms.ProgressBar();
             this.label19 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -115,13 +115,13 @@
             this.label5.TabIndex = 37;
             this.label5.Text = "Elastic bandage";
             // 
-            // pbElasticniZavoj
+            // pb1
             // 
-            this.pbElasticniZavoj.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.pbElasticniZavoj.Location = new System.Drawing.Point(28, 169);
-            this.pbElasticniZavoj.Name = "pbElasticniZavoj";
-            this.pbElasticniZavoj.Size = new System.Drawing.Size(215, 23);
-            this.pbElasticniZavoj.TabIndex = 38;
+            this.pb1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.pb1.Location = new System.Drawing.Point(28, 169);
+            this.pb1.Name = "pb1";
+            this.pb1.Size = new System.Drawing.Size(215, 23);
+            this.pb1.TabIndex = 38;
             // 
             // label4
             // 
@@ -134,21 +134,21 @@
             this.label4.TabIndex = 39;
             this.label4.Text = "Currently available";
             // 
-            // btnPreviousDate
+            // btnAdd1
             // 
-            this.btnPreviousDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.btnPreviousDate.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.btnPreviousDate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPreviousDate.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.btnPreviousDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.btnPreviousDate.Location = new System.Drawing.Point(255, 169);
-            this.btnPreviousDate.Margin = new System.Windows.Forms.Padding(0);
-            this.btnPreviousDate.Name = "btnPreviousDate";
-            this.btnPreviousDate.Size = new System.Drawing.Size(41, 39);
-            this.btnPreviousDate.TabIndex = 41;
-            this.btnPreviousDate.Text = "+";
-            this.btnPreviousDate.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnPreviousDate.UseVisualStyleBackColor = false;
+            this.btnAdd1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAdd1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd1.Location = new System.Drawing.Point(255, 169);
+            this.btnAdd1.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd1.Name = "btnAdd1";
+            this.btnAdd1.Size = new System.Drawing.Size(41, 39);
+            this.btnAdd1.TabIndex = 41;
+            this.btnAdd1.Text = "+";
+            this.btnAdd1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd1.UseVisualStyleBackColor = false;
             // 
             // btnO1
             // 
@@ -182,21 +182,21 @@
             this.btnO2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO2.UseVisualStyleBackColor = false;
             // 
-            // button3
+            // btnAdd2
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button3.Location = new System.Drawing.Point(689, 169);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(41, 39);
-            this.button3.TabIndex = 46;
-            this.button3.Text = "+";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnAdd2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAdd2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd2.Location = new System.Drawing.Point(689, 169);
+            this.btnAdd2.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd2.Name = "btnAdd2";
+            this.btnAdd2.Size = new System.Drawing.Size(41, 39);
+            this.btnAdd2.TabIndex = 46;
+            this.btnAdd2.Text = "+";
+            this.btnAdd2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd2.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -209,13 +209,13 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "Currently available";
             // 
-            // progressBar1
+            // pb2
             // 
-            this.progressBar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.progressBar1.Location = new System.Drawing.Point(462, 169);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(215, 23);
-            this.progressBar1.TabIndex = 44;
+            this.pb2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.pb2.Location = new System.Drawing.Point(462, 169);
+            this.pb2.Name = "pb2";
+            this.pb2.Size = new System.Drawing.Size(215, 23);
+            this.pb2.TabIndex = 44;
             // 
             // label7
             // 
@@ -224,9 +224,9 @@
             this.label7.ForeColor = System.Drawing.Color.Silver;
             this.label7.Location = new System.Drawing.Point(456, 135);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(180, 31);
+            this.label7.Size = new System.Drawing.Size(89, 31);
             this.label7.TabIndex = 43;
-            this.label7.Text = "Elastic bandage";
+            this.label7.Text = "Needle";
             // 
             // btnO4
             // 
@@ -244,21 +244,21 @@
             this.btnO4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO4.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // btnAdd4
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button5.Location = new System.Drawing.Point(689, 271);
-            this.button5.Margin = new System.Windows.Forms.Padding(0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(41, 39);
-            this.button5.TabIndex = 56;
-            this.button5.Text = "+";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.UseVisualStyleBackColor = false;
+            this.btnAdd4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAdd4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd4.Location = new System.Drawing.Point(689, 271);
+            this.btnAdd4.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd4.Name = "btnAdd4";
+            this.btnAdd4.Size = new System.Drawing.Size(41, 39);
+            this.btnAdd4.TabIndex = 56;
+            this.btnAdd4.Text = "+";
+            this.btnAdd4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd4.UseVisualStyleBackColor = false;
             // 
             // label8
             // 
@@ -271,13 +271,13 @@
             this.label8.TabIndex = 55;
             this.label8.Text = "Currently available";
             // 
-            // progressBar2
+            // pb4
             // 
-            this.progressBar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.progressBar2.Location = new System.Drawing.Point(462, 271);
-            this.progressBar2.Name = "progressBar2";
-            this.progressBar2.Size = new System.Drawing.Size(215, 23);
-            this.progressBar2.TabIndex = 54;
+            this.pb4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.pb4.Location = new System.Drawing.Point(462, 271);
+            this.pb4.Name = "pb4";
+            this.pb4.Size = new System.Drawing.Size(215, 23);
+            this.pb4.TabIndex = 54;
             // 
             // label9
             // 
@@ -286,9 +286,9 @@
             this.label9.ForeColor = System.Drawing.Color.Silver;
             this.label9.Location = new System.Drawing.Point(456, 237);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(180, 31);
+            this.label9.Size = new System.Drawing.Size(123, 31);
             this.label9.TabIndex = 53;
-            this.label9.Text = "Elastic bandage";
+            this.label9.Text = "Antiseptic";
             // 
             // btnO3
             // 
@@ -306,21 +306,21 @@
             this.btnO3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO3.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnAdd3
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button7.Location = new System.Drawing.Point(255, 271);
-            this.button7.Margin = new System.Windows.Forms.Padding(0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(41, 39);
-            this.button7.TabIndex = 51;
-            this.button7.Text = "+";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnAdd3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAdd3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd3.Location = new System.Drawing.Point(255, 271);
+            this.btnAdd3.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd3.Name = "btnAdd3";
+            this.btnAdd3.Size = new System.Drawing.Size(41, 39);
+            this.btnAdd3.TabIndex = 51;
+            this.btnAdd3.Text = "+";
+            this.btnAdd3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd3.UseVisualStyleBackColor = false;
             // 
             // label10
             // 
@@ -333,13 +333,13 @@
             this.label10.TabIndex = 50;
             this.label10.Text = "Currently available";
             // 
-            // progressBar3
+            // pb3
             // 
-            this.progressBar3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.progressBar3.Location = new System.Drawing.Point(28, 271);
-            this.progressBar3.Name = "progressBar3";
-            this.progressBar3.Size = new System.Drawing.Size(215, 23);
-            this.progressBar3.TabIndex = 49;
+            this.pb3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.pb3.Location = new System.Drawing.Point(28, 271);
+            this.pb3.Name = "pb3";
+            this.pb3.Size = new System.Drawing.Size(215, 23);
+            this.pb3.TabIndex = 49;
             // 
             // label11
             // 
@@ -348,9 +348,9 @@
             this.label11.ForeColor = System.Drawing.Color.Silver;
             this.label11.Location = new System.Drawing.Point(22, 237);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(180, 31);
+            this.label11.Size = new System.Drawing.Size(145, 31);
             this.label11.TabIndex = 48;
-            this.label11.Text = "Elastic bandage";
+            this.label11.Text = "Disinfectant";
             // 
             // btnO6
             // 
@@ -368,21 +368,21 @@
             this.btnO6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO6.UseVisualStyleBackColor = false;
             // 
-            // button9
+            // btnAdd6
             // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button9.Location = new System.Drawing.Point(689, 376);
-            this.button9.Margin = new System.Windows.Forms.Padding(0);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(41, 39);
-            this.button9.TabIndex = 66;
-            this.button9.Text = "+";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button9.UseVisualStyleBackColor = false;
+            this.btnAdd6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAdd6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd6.Location = new System.Drawing.Point(689, 376);
+            this.btnAdd6.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd6.Name = "btnAdd6";
+            this.btnAdd6.Size = new System.Drawing.Size(41, 39);
+            this.btnAdd6.TabIndex = 66;
+            this.btnAdd6.Text = "+";
+            this.btnAdd6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd6.UseVisualStyleBackColor = false;
             // 
             // label12
             // 
@@ -395,13 +395,13 @@
             this.label12.TabIndex = 65;
             this.label12.Text = "Currently available";
             // 
-            // progressBar4
+            // pb6
             // 
-            this.progressBar4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.progressBar4.Location = new System.Drawing.Point(462, 376);
-            this.progressBar4.Name = "progressBar4";
-            this.progressBar4.Size = new System.Drawing.Size(215, 23);
-            this.progressBar4.TabIndex = 64;
+            this.pb6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.pb6.Location = new System.Drawing.Point(462, 376);
+            this.pb6.Name = "pb6";
+            this.pb6.Size = new System.Drawing.Size(215, 23);
+            this.pb6.TabIndex = 64;
             // 
             // label13
             // 
@@ -410,9 +410,9 @@
             this.label13.ForeColor = System.Drawing.Color.Silver;
             this.label13.Location = new System.Drawing.Point(456, 342);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(180, 31);
+            this.label13.Size = new System.Drawing.Size(94, 31);
             this.label13.TabIndex = 63;
-            this.label13.Text = "Elastic bandage";
+            this.label13.Text = "Syringe";
             // 
             // btnO5
             // 
@@ -430,21 +430,21 @@
             this.btnO5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO5.UseVisualStyleBackColor = false;
             // 
-            // button11
+            // btnAdd5
             // 
-            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button11.Location = new System.Drawing.Point(255, 376);
-            this.button11.Margin = new System.Windows.Forms.Padding(0);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(41, 39);
-            this.button11.TabIndex = 61;
-            this.button11.Text = "+";
-            this.button11.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button11.UseVisualStyleBackColor = false;
+            this.btnAdd5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAdd5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd5.Location = new System.Drawing.Point(255, 376);
+            this.btnAdd5.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd5.Name = "btnAdd5";
+            this.btnAdd5.Size = new System.Drawing.Size(41, 39);
+            this.btnAdd5.TabIndex = 61;
+            this.btnAdd5.Text = "+";
+            this.btnAdd5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd5.UseVisualStyleBackColor = false;
             // 
             // label14
             // 
@@ -457,13 +457,13 @@
             this.label14.TabIndex = 60;
             this.label14.Text = "Currently available";
             // 
-            // progressBar5
+            // pb5
             // 
-            this.progressBar5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.progressBar5.Location = new System.Drawing.Point(28, 376);
-            this.progressBar5.Name = "progressBar5";
-            this.progressBar5.Size = new System.Drawing.Size(215, 23);
-            this.progressBar5.TabIndex = 59;
+            this.pb5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.pb5.Location = new System.Drawing.Point(28, 376);
+            this.pb5.Name = "pb5";
+            this.pb5.Size = new System.Drawing.Size(215, 23);
+            this.pb5.TabIndex = 59;
             // 
             // label15
             // 
@@ -472,9 +472,9 @@
             this.label15.ForeColor = System.Drawing.Color.Silver;
             this.label15.Location = new System.Drawing.Point(22, 342);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(180, 31);
+            this.label15.Size = new System.Drawing.Size(109, 31);
             this.label15.TabIndex = 58;
-            this.label15.Text = "Elastic bandage";
+            this.label15.Text = "Sterilizer";
             // 
             // btnO8
             // 
@@ -492,21 +492,21 @@
             this.btnO8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO8.UseVisualStyleBackColor = false;
             // 
-            // button13
+            // btnAdd8
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button13.Location = new System.Drawing.Point(689, 478);
-            this.button13.Margin = new System.Windows.Forms.Padding(0);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(41, 39);
-            this.button13.TabIndex = 76;
-            this.button13.Text = "+";
-            this.button13.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button13.UseVisualStyleBackColor = false;
+            this.btnAdd8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAdd8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd8.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd8.Location = new System.Drawing.Point(689, 478);
+            this.btnAdd8.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd8.Name = "btnAdd8";
+            this.btnAdd8.Size = new System.Drawing.Size(41, 39);
+            this.btnAdd8.TabIndex = 76;
+            this.btnAdd8.Text = "+";
+            this.btnAdd8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd8.UseVisualStyleBackColor = false;
             // 
             // label16
             // 
@@ -519,13 +519,13 @@
             this.label16.TabIndex = 75;
             this.label16.Text = "Currently available";
             // 
-            // progressBar6
+            // pb8
             // 
-            this.progressBar6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.progressBar6.Location = new System.Drawing.Point(462, 478);
-            this.progressBar6.Name = "progressBar6";
-            this.progressBar6.Size = new System.Drawing.Size(215, 23);
-            this.progressBar6.TabIndex = 74;
+            this.pb8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.pb8.Location = new System.Drawing.Point(462, 478);
+            this.pb8.Name = "pb8";
+            this.pb8.Size = new System.Drawing.Size(215, 23);
+            this.pb8.TabIndex = 74;
             // 
             // label17
             // 
@@ -554,21 +554,21 @@
             this.btnO7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO7.UseVisualStyleBackColor = false;
             // 
-            // button15
+            // btnAdd7
             // 
-            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
-            this.button15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.button15.Location = new System.Drawing.Point(255, 478);
-            this.button15.Margin = new System.Windows.Forms.Padding(0);
-            this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(41, 39);
-            this.button15.TabIndex = 71;
-            this.button15.Text = "+";
-            this.button15.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button15.UseVisualStyleBackColor = false;
+            this.btnAdd7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.btnAdd7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdd7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold);
+            this.btnAdd7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.btnAdd7.Location = new System.Drawing.Point(255, 478);
+            this.btnAdd7.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd7.Name = "btnAdd7";
+            this.btnAdd7.Size = new System.Drawing.Size(41, 39);
+            this.btnAdd7.TabIndex = 71;
+            this.btnAdd7.Text = "+";
+            this.btnAdd7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAdd7.UseVisualStyleBackColor = false;
             // 
             // label18
             // 
@@ -581,13 +581,13 @@
             this.label18.TabIndex = 70;
             this.label18.Text = "Currently available";
             // 
-            // progressBar7
+            // pb7
             // 
-            this.progressBar7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
-            this.progressBar7.Location = new System.Drawing.Point(28, 478);
-            this.progressBar7.Name = "progressBar7";
-            this.progressBar7.Size = new System.Drawing.Size(215, 23);
-            this.progressBar7.TabIndex = 69;
+            this.pb7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
+            this.pb7.Location = new System.Drawing.Point(28, 478);
+            this.pb7.Name = "pb7";
+            this.pb7.Size = new System.Drawing.Size(215, 23);
+            this.pb7.TabIndex = 69;
             // 
             // label19
             // 
@@ -596,9 +596,9 @@
             this.label19.ForeColor = System.Drawing.Color.Silver;
             this.label19.Location = new System.Drawing.Point(22, 444);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(180, 31);
+            this.label19.Size = new System.Drawing.Size(90, 31);
             this.label19.TabIndex = 68;
-            this.label19.Text = "Elastic bandage";
+            this.label19.Text = "Scalpel";
             // 
             // frmMedicineOrders
             // 
@@ -607,44 +607,44 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(887, 556);
             this.Controls.Add(this.btnO8);
-            this.Controls.Add(this.button13);
+            this.Controls.Add(this.btnAdd8);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.progressBar6);
+            this.Controls.Add(this.pb8);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.btnO7);
-            this.Controls.Add(this.button15);
+            this.Controls.Add(this.btnAdd7);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.progressBar7);
+            this.Controls.Add(this.pb7);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.btnO6);
-            this.Controls.Add(this.button9);
+            this.Controls.Add(this.btnAdd6);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.progressBar4);
+            this.Controls.Add(this.pb6);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.btnO5);
-            this.Controls.Add(this.button11);
+            this.Controls.Add(this.btnAdd5);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.progressBar5);
+            this.Controls.Add(this.pb5);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.btnO4);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnAdd4);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.progressBar2);
+            this.Controls.Add(this.pb4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnO3);
-            this.Controls.Add(this.button7);
+            this.Controls.Add(this.btnAdd3);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.progressBar3);
+            this.Controls.Add(this.pb3);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.btnO2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btnAdd2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.pb2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnO1);
-            this.Controls.Add(this.btnPreviousDate);
+            this.Controls.Add(this.btnAdd1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pbElasticniZavoj);
+            this.Controls.Add(this.pb1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -664,44 +664,44 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ProgressBar pbElasticniZavoj;
+        private System.Windows.Forms.ProgressBar pb1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnPreviousDate;
+        private System.Windows.Forms.Button btnAdd1;
         private System.Windows.Forms.Button btnO1;
         private System.Windows.Forms.Button btnO2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAdd2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar pb2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnO4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnAdd4;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ProgressBar progressBar2;
+        private System.Windows.Forms.ProgressBar pb4;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnO3;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnAdd3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ProgressBar progressBar3;
+        private System.Windows.Forms.ProgressBar pb3;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button btnO6;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnAdd6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ProgressBar progressBar4;
+        private System.Windows.Forms.ProgressBar pb6;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button btnO5;
-        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button btnAdd5;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ProgressBar progressBar5;
+        private System.Windows.Forms.ProgressBar pb5;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button btnO8;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button btnAdd8;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.ProgressBar progressBar6;
+        private System.Windows.Forms.ProgressBar pb8;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnO7;
-        private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button btnAdd7;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.ProgressBar progressBar7;
+        private System.Windows.Forms.ProgressBar pb7;
         private System.Windows.Forms.Label label19;
     }
 }

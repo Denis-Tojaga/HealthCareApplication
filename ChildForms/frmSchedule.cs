@@ -14,24 +14,24 @@ using System.Windows.Forms;
 
 namespace Hospital_System_Demo.ChildForms
 {
-    public partial class frmExaminations : Form
+    public partial class frmSchedule : Form
     {
         private List<Label> ListaBoxovaExamination = new List<Label>();
         private Doktor _loggedDoctor;
         private MedicinskaSestra _loggedNurse;
         private HealthCareContext baza = HealthCareDB.Base;
         private List<Pregled> ListaPregledaDanas;
-        public frmExaminations()
+        public frmSchedule()
         {
             InitializeComponent();
             DodajBoxoveUListu();
             FormatDate(DateTime.Now.ToShortDateString());
         }
-        public frmExaminations(Doktor doktor) :this()
+        public frmSchedule(Doktor doktor) :this()
         {
             _loggedDoctor = doktor;
         }
-        public frmExaminations(MedicinskaSestra sestra) : this()
+        public frmSchedule(MedicinskaSestra sestra) : this()
         {
             _loggedNurse = sestra;
         }

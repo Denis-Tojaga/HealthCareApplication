@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace Hospital_System_Demo.ChildForms
 {
-    public partial class frmMedicineOrders : Form
+    public partial class frmEquipment : Form
     {
         private Doktor _doktor;
-        public frmMedicineOrders()
+        public frmEquipment()
         {
             InitializeComponent();
         }
-        public frmMedicineOrders(Doktor doktor):this()
+        public frmEquipment(Doktor doktor):this()
         {
             _doktor = doktor;
         }

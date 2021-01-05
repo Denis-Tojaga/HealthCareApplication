@@ -125,15 +125,15 @@ namespace Hospital_System_Demo
         private void btnExaminations_Click(object sender, EventArgs e)
         {
             if (doctorMode)
-                OpenChildForm(new frmExaminations(_doctor), sender);
+                OpenChildForm(new frmSchedule(_doctor), sender);
             else
-                OpenChildForm(new frmExaminations(_nurse), sender);
+                OpenChildForm(new frmSchedule(_nurse), sender);
         }
 
         private void btnMedicineOrders_Click(object sender, EventArgs e)
         {
             if (doctorMode)
-                OpenChildForm(new frmMedicineOrders(_doctor),sender);
+                OpenChildForm(new frmEquipment(_doctor),sender);
             else
                 MboxHelper.PrikaziObavjestenje($"You have to be in doctor mode to view this!");
 

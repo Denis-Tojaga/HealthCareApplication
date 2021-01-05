@@ -1,6 +1,6 @@
 ﻿namespace Hospital_System_Demo.ChildForms
 {
-    partial class frmExaminations
+    partial class frmSchedule
     {
         /// <summary>
         /// Required designer variable.

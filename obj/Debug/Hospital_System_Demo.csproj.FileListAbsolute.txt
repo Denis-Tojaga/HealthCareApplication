@@ -78,7 +78,6 @@ C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\bin\Debug\ru\Microsoft.Re
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.csprojAssemblyReference.cache
-C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmExaminations.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmHospitalInfo.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmPatients.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.frmAppMain.resources
@@ -96,4 +95,5 @@ C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\RdlCompile.cache
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\RdlCompile.compiled
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.Patients.frmNoviPregled.resources
-C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmMedicineOrders.resources
+C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmSchedule.resources
+C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmEquipment.resources

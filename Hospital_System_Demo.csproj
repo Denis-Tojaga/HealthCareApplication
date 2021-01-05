@@ -85,11 +85,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChildForms\frmExaminations.cs">
+    <Compile Include="ChildForms\frmSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\frmExaminations.Designer.cs">
-      <DependentUpon>frmExaminations.cs</DependentUpon>
+    <Compile Include="ChildForms\frmSchedule.Designer.cs">
+      <DependentUpon>frmSchedule.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\frmHospitalInfo.cs">
       <SubType>Form</SubType>
@@ -97,11 +97,11 @@
     <Compile Include="ChildForms\frmHospitalInfo.Designer.cs">
       <DependentUpon>frmHospitalInfo.cs</DependentUpon>
     </Compile>
-    <Compile Include="ChildForms\frmMedicineOrders.cs">
+    <Compile Include="ChildForms\frmEquipment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ChildForms\frmMedicineOrders.Designer.cs">
-      <DependentUpon>frmMedicineOrders.cs</DependentUpon>
+    <Compile Include="ChildForms\frmEquipment.Designer.cs">
+      <DependentUpon>frmEquipment.cs</DependentUpon>
     </Compile>
     <Compile Include="ChildForms\frmPatients.cs">
       <SubType>Form</SubType>
@@ -177,14 +177,14 @@
     <Compile Include="Spol.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="Helpers\Validator.cs" />
-    <EmbeddedResource Include="ChildForms\frmExaminations.resx">
-      <DependentUpon>frmExaminations.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\frmSchedule.resx">
+      <DependentUpon>frmSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\frmHospitalInfo.resx">
       <DependentUpon>frmHospitalInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ChildForms\frmMedicineOrders.resx">
-      <DependentUpon>frmMedicineOrders.cs</DependentUpon>
+    <EmbeddedResource Include="ChildForms\frmEquipment.resx">
+      <DependentUpon>frmEquipment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\frmPatients.resx">
       <DependentUpon>frmPatients.cs</DependentUpon>
