@@ -97,6 +97,12 @@
     <Compile Include="ChildForms\frmHospitalInfo.Designer.cs">
       <DependentUpon>frmHospitalInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\frmMedicineOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\frmMedicineOrders.Designer.cs">
+      <DependentUpon>frmMedicineOrders.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChildForms\frmPatients.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,12 +112,12 @@
     <Compile Include="Data\HealthCareDB.cs" />
     <Compile Include="Doctors_Nurses\Dijagnoza.cs" />
     <Compile Include="Doctors_Nurses\Doktor.cs" />
-    <Compile Include="Doctors_Nurses\dsStanje.Designer.cs">
+    <Compile Include="Data\dsStanje.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsStanje.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Doctors_Nurses\dtoTransfer.cs" />
+    <Compile Include="Data\dtoTransfer.cs" />
     <Compile Include="Doctors_Nurses\frmDailyReview.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,13 +183,16 @@
     <EmbeddedResource Include="ChildForms\frmHospitalInfo.resx">
       <DependentUpon>frmHospitalInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\frmMedicineOrders.resx">
+      <DependentUpon>frmMedicineOrders.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\frmPatients.resx">
       <DependentUpon>frmPatients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors_Nurses\frmDailyReview.resx">
       <DependentUpon>frmDailyReview.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctors_Nurses\rptIzvjestaj.rdlc" />
+    <EmbeddedResource Include="Data\rptIzvjestaj.rdlc" />
     <EmbeddedResource Include="frmAppMain.resx">
       <DependentUpon>frmAppMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,15 +221,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Doctors_Nurses\dsStanje.xsc">
+    <None Include="Data\dsStanje.xsc">
       <DependentUpon>dsStanje.xsd</DependentUpon>
     </None>
-    <None Include="Doctors_Nurses\dsStanje.xsd">
+    <None Include="Data\dsStanje.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsStanje.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Doctors_Nurses\dsStanje.xss">
+    <None Include="Data\dsStanje.xss">
       <DependentUpon>dsStanje.xsd</DependentUpon>
     </None>
     <None Include="HealthCareDatabase.db">

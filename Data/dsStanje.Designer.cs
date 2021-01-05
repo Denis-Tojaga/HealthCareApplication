@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Hospital_System_Demo.Doctors_Nurses {
+namespace Hospital_System_Demo.Data {
     
     
     /// <summary>

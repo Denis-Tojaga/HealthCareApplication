@@ -38,8 +38,8 @@
             this.btnExaminations = new System.Windows.Forms.Button();
             this.btnPatients = new System.Windows.Forms.Button();
             this.panelChildForms = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             this.panelMeniButtons.SuspendLayout();
             this.panelChildForms.SuspendLayout();
@@ -123,7 +123,7 @@
             this.btnUserInfo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(83)))), ((int)(((byte)(20)))));
             this.btnUserInfo.FlatAppearance.BorderSize = 6;
             this.btnUserInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUserInfo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold);
+            this.btnUserInfo.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserInfo.ForeColor = System.Drawing.Color.White;
             this.btnUserInfo.Location = new System.Drawing.Point(0, 447);
             this.btnUserInfo.Name = "btnUserInfo";
@@ -147,6 +147,7 @@
             this.btnMedicineOrders.TabIndex = 3;
             this.btnMedicineOrders.Text = "Medicine orders";
             this.btnMedicineOrders.UseVisualStyleBackColor = false;
+            this.btnMedicineOrders.Click += new System.EventHandler(this.btnMedicineOrders_Click);
             // 
             // btnExaminations
             // 
@@ -193,6 +194,16 @@
             this.panelChildForms.Size = new System.Drawing.Size(887, 556);
             this.panelChildForms.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hospital_System_Demo.Properties.Resources.healthCareTeam;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(887, 487);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 32F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -203,16 +214,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "The future of healthcare industry";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hospital_System_Demo.Properties.Resources.healthCareTeam;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(887, 487);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // frmAppMain
             // 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Hospital_System_Demo.Data;
 using Microsoft.Reporting.WinForms;
 
 namespace Hospital_System_Demo.Doctors_Nurses

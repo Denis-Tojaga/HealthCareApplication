@@ -1,5 +1,6 @@
 ﻿using Hospital_System_Demo.ChildForms;
 using Hospital_System_Demo.Doctors_Nurses;
+using Hospital_System_Demo.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -127,6 +128,15 @@ namespace Hospital_System_Demo
                 OpenChildForm(new frmExaminations(_doctor), sender);
             else
                 OpenChildForm(new frmExaminations(_nurse), sender);
+        }
+
+        private void btnMedicineOrders_Click(object sender, EventArgs e)
+        {
+            if (doctorMode)
+                OpenChildForm(new frmMedicineOrders(_doctor),sender);
+            else
+                MboxHelper.PrikaziObavjestenje($"You have to be in doctor mode to view this!");
+
         }
     }
 }
