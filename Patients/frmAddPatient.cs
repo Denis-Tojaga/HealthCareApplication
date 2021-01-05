@@ -160,11 +160,38 @@ namespace Hospital_System_Demo.Patients
                 lblAddingHC.Hide();
             }
         }
+
+
+
+
+
+
+
+        /// <summary>
+        /// Makes new patient with all entered data 
+        /// </summary>
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
             if(ValidirajPolja())
             {
-                MakePatient();
+                Pacijent noviPacijent = new Pacijent();
+                noviPacijent.Ime = txtIme.Text;
+                noviPacijent.Prezime = txtPrezime.Text;
+                noviPacijent.Email = txtEmail.Text;
+                noviPacijent.JMBG = txtJMBG.Text;
+                noviPacijent.SifraPacijenta = txtSifraPacijenta.Text;
+                noviPacijent.DatumEvidencije = txtTrenutniDatum.Text;
+                noviPacijent.DatumRodjenja = dtmDatumRodjenja.Value.ToString();
+                noviPacijent.Spol = cmbSpol.SelectedItem as Spol;
+                noviPacijent.KrvnaGrupa = cmbKrvnaGrupa.SelectedItem as KrvnaGrupa;
+                noviPacijent.ListaDijagnoza.Add(new PacijentiDijagnoze()
+                {
+                    Dijagnoza = cmbDijagnoze.SelectedItem as Dijagnoza,
+                    DatumOdredjivanja = txtTrenutniDatum.Text
+                });
+                noviPacijent.ZdravstveniKartonSlika = ImageHelper.FromImageToByte(pbHealthCard.Image);
+                baza.Pacijenti.Add(noviPacijent);
+                baza.SaveChanges();
                 MessageBox.Show($"Patient successfully added!");
                 DialogResult = DialogResult.OK;
                 Close();
@@ -172,31 +199,6 @@ namespace Hospital_System_Demo.Patients
         }
 
 
-
-        /// <summary>
-        /// Makes new patient with all entered data 
-        /// </summary>
-        private void MakePatient()
-        {
-            Pacijent noviPacijent = new Pacijent();
-            noviPacijent.Ime = txtIme.Text;
-            noviPacijent.Prezime = txtPrezime.Text;
-            noviPacijent.Email = txtEmail.Text;
-            noviPacijent.JMBG = txtJMBG.Text;
-            noviPacijent.SifraPacijenta = txtSifraPacijenta.Text;
-            noviPacijent.DatumEvidencije = txtTrenutniDatum.Text;
-            noviPacijent.DatumRodjenja = dtmDatumRodjenja.Value.ToString();
-            noviPacijent.Spol = cmbSpol.SelectedItem as Spol;
-            noviPacijent.KrvnaGrupa = cmbKrvnaGrupa.SelectedItem as KrvnaGrupa;
-            noviPacijent.ListaDijagnoza.Add(new PacijentiDijagnoze()
-            {
-                Dijagnoza = cmbDijagnoze.SelectedItem as Dijagnoza,
-                DatumOdredjivanja = txtTrenutniDatum.Text
-            });
-            noviPacijent.ZdravstveniKartonSlika = ImageHelper.FromImageToByte(pbHealthCard.Image);
-            baza.Pacijenti.Add(noviPacijent);
-            baza.SaveChanges();
-        }
         private bool ValidirajPolja() => Validator.ValidirajPolje(txtIme, err, Validator.Warning) && Validator.ValidirajPolje(txtPrezime, err, Validator.Warning)
             && Validator.ValidirajPolje(txtJMBG, err, Validator.Warning) && Validator.ValidirajPolje(txtEmail, err, Validator.Warning)
             && Validator.ValidirajPolje(pbHealthCard, err, Validator.Warning);
