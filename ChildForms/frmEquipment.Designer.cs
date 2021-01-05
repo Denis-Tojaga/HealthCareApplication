@@ -534,9 +534,9 @@
             this.label17.ForeColor = System.Drawing.Color.Silver;
             this.label17.Location = new System.Drawing.Point(456, 444);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(180, 31);
+            this.label17.Size = new System.Drawing.Size(145, 31);
             this.label17.TabIndex = 73;
-            this.label17.Text = "Elastic bandage";
+            this.label17.Text = "Stethoscope";
             // 
             // btnO7
             // 
@@ -600,7 +600,7 @@
             this.label19.TabIndex = 68;
             this.label19.Text = "Scalpel";
             // 
-            // frmMedicineOrders
+            // frmEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -650,9 +650,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmMedicineOrders";
+            this.Name = "frmEquipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital orders";
+            this.Load += new System.EventHandler(this.frmEquipment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

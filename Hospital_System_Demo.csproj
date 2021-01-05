@@ -125,6 +125,7 @@
       <DependentUpon>frmDailyReview.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctors_Nurses\MedicinskaSestra.cs" />
+    <Compile Include="Doctors_Nurses\Oprema.cs" />
     <Compile Include="Doctors_Nurses\RasporediDoktori.cs" />
     <Compile Include="Doctors_Nurses\Titula.cs" />
     <Compile Include="frmAppMain.cs">
