@@ -71,6 +71,14 @@
             this.label18 = new System.Windows.Forms.Label();
             this.pb7 = new System.Windows.Forms.ProgressBar();
             this.label19 = new System.Windows.Forms.Label();
+            this.lblKol1 = new System.Windows.Forms.Label();
+            this.lblKol3 = new System.Windows.Forms.Label();
+            this.lblKol5 = new System.Windows.Forms.Label();
+            this.lblKol7 = new System.Windows.Forms.Label();
+            this.lblKol2 = new System.Windows.Forms.Label();
+            this.lblKol4 = new System.Windows.Forms.Label();
+            this.lblKol6 = new System.Windows.Forms.Label();
+            this.lblKol8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -146,7 +154,7 @@
             this.btnAdd1.Name = "btnAdd1";
             this.btnAdd1.Size = new System.Drawing.Size(41, 39);
             this.btnAdd1.TabIndex = 41;
-            this.btnAdd1.Text = "+";
+            this.btnAdd1.Text = "-";
             this.btnAdd1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd1.UseVisualStyleBackColor = false;
             // 
@@ -194,7 +202,7 @@
             this.btnAdd2.Name = "btnAdd2";
             this.btnAdd2.Size = new System.Drawing.Size(41, 39);
             this.btnAdd2.TabIndex = 46;
-            this.btnAdd2.Text = "+";
+            this.btnAdd2.Text = "-";
             this.btnAdd2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd2.UseVisualStyleBackColor = false;
             // 
@@ -256,7 +264,7 @@
             this.btnAdd4.Name = "btnAdd4";
             this.btnAdd4.Size = new System.Drawing.Size(41, 39);
             this.btnAdd4.TabIndex = 56;
-            this.btnAdd4.Text = "+";
+            this.btnAdd4.Text = "-";
             this.btnAdd4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd4.UseVisualStyleBackColor = false;
             // 
@@ -318,7 +326,7 @@
             this.btnAdd3.Name = "btnAdd3";
             this.btnAdd3.Size = new System.Drawing.Size(41, 39);
             this.btnAdd3.TabIndex = 51;
-            this.btnAdd3.Text = "+";
+            this.btnAdd3.Text = "-";
             this.btnAdd3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd3.UseVisualStyleBackColor = false;
             // 
@@ -380,7 +388,7 @@
             this.btnAdd6.Name = "btnAdd6";
             this.btnAdd6.Size = new System.Drawing.Size(41, 39);
             this.btnAdd6.TabIndex = 66;
-            this.btnAdd6.Text = "+";
+            this.btnAdd6.Text = "-";
             this.btnAdd6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd6.UseVisualStyleBackColor = false;
             // 
@@ -442,7 +450,7 @@
             this.btnAdd5.Name = "btnAdd5";
             this.btnAdd5.Size = new System.Drawing.Size(41, 39);
             this.btnAdd5.TabIndex = 61;
-            this.btnAdd5.Text = "+";
+            this.btnAdd5.Text = "-";
             this.btnAdd5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd5.UseVisualStyleBackColor = false;
             // 
@@ -504,7 +512,7 @@
             this.btnAdd8.Name = "btnAdd8";
             this.btnAdd8.Size = new System.Drawing.Size(41, 39);
             this.btnAdd8.TabIndex = 76;
-            this.btnAdd8.Text = "+";
+            this.btnAdd8.Text = "-";
             this.btnAdd8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd8.UseVisualStyleBackColor = false;
             // 
@@ -566,7 +574,7 @@
             this.btnAdd7.Name = "btnAdd7";
             this.btnAdd7.Size = new System.Drawing.Size(41, 39);
             this.btnAdd7.TabIndex = 71;
-            this.btnAdd7.Text = "+";
+            this.btnAdd7.Text = "-";
             this.btnAdd7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd7.UseVisualStyleBackColor = false;
             // 
@@ -600,12 +608,108 @@
             this.label19.TabIndex = 68;
             this.label19.Text = "Scalpel";
             // 
+            // lblKol1
+            // 
+            this.lblKol1.AutoSize = true;
+            this.lblKol1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblKol1.ForeColor = System.Drawing.Color.Silver;
+            this.lblKol1.Location = new System.Drawing.Point(135, 195);
+            this.lblKol1.Name = "lblKol1";
+            this.lblKol1.Size = new System.Drawing.Size(13, 13);
+            this.lblKol1.TabIndex = 78;
+            this.lblKol1.Text = "0";
+            // 
+            // lblKol3
+            // 
+            this.lblKol3.AutoSize = true;
+            this.lblKol3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblKol3.ForeColor = System.Drawing.Color.Silver;
+            this.lblKol3.Location = new System.Drawing.Point(135, 297);
+            this.lblKol3.Name = "lblKol3";
+            this.lblKol3.Size = new System.Drawing.Size(13, 13);
+            this.lblKol3.TabIndex = 79;
+            this.lblKol3.Text = "0";
+            // 
+            // lblKol5
+            // 
+            this.lblKol5.AutoSize = true;
+            this.lblKol5.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblKol5.ForeColor = System.Drawing.Color.Silver;
+            this.lblKol5.Location = new System.Drawing.Point(135, 402);
+            this.lblKol5.Name = "lblKol5";
+            this.lblKol5.Size = new System.Drawing.Size(13, 13);
+            this.lblKol5.TabIndex = 80;
+            this.lblKol5.Text = "0";
+            // 
+            // lblKol7
+            // 
+            this.lblKol7.AutoSize = true;
+            this.lblKol7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblKol7.ForeColor = System.Drawing.Color.Silver;
+            this.lblKol7.Location = new System.Drawing.Point(135, 504);
+            this.lblKol7.Name = "lblKol7";
+            this.lblKol7.Size = new System.Drawing.Size(13, 13);
+            this.lblKol7.TabIndex = 81;
+            this.lblKol7.Text = "0";
+            // 
+            // lblKol2
+            // 
+            this.lblKol2.AutoSize = true;
+            this.lblKol2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblKol2.ForeColor = System.Drawing.Color.Silver;
+            this.lblKol2.Location = new System.Drawing.Point(565, 195);
+            this.lblKol2.Name = "lblKol2";
+            this.lblKol2.Size = new System.Drawing.Size(13, 13);
+            this.lblKol2.TabIndex = 82;
+            this.lblKol2.Text = "0";
+            // 
+            // lblKol4
+            // 
+            this.lblKol4.AutoSize = true;
+            this.lblKol4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblKol4.ForeColor = System.Drawing.Color.Silver;
+            this.lblKol4.Location = new System.Drawing.Point(565, 297);
+            this.lblKol4.Name = "lblKol4";
+            this.lblKol4.Size = new System.Drawing.Size(13, 13);
+            this.lblKol4.TabIndex = 83;
+            this.lblKol4.Text = "0";
+            // 
+            // lblKol6
+            // 
+            this.lblKol6.AutoSize = true;
+            this.lblKol6.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblKol6.ForeColor = System.Drawing.Color.Silver;
+            this.lblKol6.Location = new System.Drawing.Point(565, 402);
+            this.lblKol6.Name = "lblKol6";
+            this.lblKol6.Size = new System.Drawing.Size(13, 13);
+            this.lblKol6.TabIndex = 84;
+            this.lblKol6.Text = "0";
+            // 
+            // lblKol8
+            // 
+            this.lblKol8.AutoSize = true;
+            this.lblKol8.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lblKol8.ForeColor = System.Drawing.Color.Silver;
+            this.lblKol8.Location = new System.Drawing.Point(565, 504);
+            this.lblKol8.Name = "lblKol8";
+            this.lblKol8.Size = new System.Drawing.Size(13, 13);
+            this.lblKol8.TabIndex = 85;
+            this.lblKol8.Text = "0";
+            // 
             // frmEquipment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(887, 556);
+            this.Controls.Add(this.lblKol8);
+            this.Controls.Add(this.lblKol6);
+            this.Controls.Add(this.lblKol4);
+            this.Controls.Add(this.lblKol2);
+            this.Controls.Add(this.lblKol7);
+            this.Controls.Add(this.lblKol5);
+            this.Controls.Add(this.lblKol3);
+            this.Controls.Add(this.lblKol1);
             this.Controls.Add(this.btnO8);
             this.Controls.Add(this.btnAdd8);
             this.Controls.Add(this.label16);
@@ -704,5 +808,13 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.ProgressBar pb7;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblKol1;
+        private System.Windows.Forms.Label lblKol3;
+        private System.Windows.Forms.Label lblKol5;
+        private System.Windows.Forms.Label lblKol7;
+        private System.Windows.Forms.Label lblKol2;
+        private System.Windows.Forms.Label lblKol4;
+        private System.Windows.Forms.Label lblKol6;
+        private System.Windows.Forms.Label lblKol8;
     }
 }
