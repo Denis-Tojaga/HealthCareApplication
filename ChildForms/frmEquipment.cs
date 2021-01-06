@@ -117,6 +117,9 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
+        /// <summary>
+        /// Logic for ordering certain product
+        /// </summary>
         private void NapraviOrder(int redniBroj)
         {
             if (MessageBox.Show($"Please confirm doing this order {_doktor}","User action",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
@@ -132,6 +135,13 @@ namespace Hospital_System_Demo.ChildForms
                     MessageBox.Show($"You already have enough in stock!");
             }
         }
+
+
+
+
+
+
+
 
 
 
