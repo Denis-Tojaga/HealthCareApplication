@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace Hospital_System_Demo.ChildForms
     public partial class frmEquipment : Form
     {
         private Doktor _doktor;
+        private List<Oprema> SvaOprema;
         private List<ProgressBar> ListaBarova = new List<ProgressBar>();
         private HealthCareContext baza = HealthCareDB.Base;
         public frmEquipment()
@@ -49,15 +51,64 @@ namespace Hospital_System_Demo.ChildForms
         {
             try
             {
-                var svaOprema = baza.PopisOpreme.ToList();
-                for (int i = 0; i < svaOprema.Count(); i++)
-                    ListaBarova[i].Value = int.Parse(svaOprema[i].KolicinaNaStanju);
+                SvaOprema = baza.PopisOpreme.ToList();
+                for (int i = 0; i < SvaOprema.Count(); i++)
+                    ListaBarova[i].Value = int.Parse(SvaOprema[i].KolicinaNaStanju);
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Unsuccessful load!");
                 throw;
             }
+        }
+        private void SmanjiKolicinu(int redniBrojbara)
+        {
+            ListaBarova[redniBrojbara].Value -= 1;
+            SvaOprema[redniBrojbara].KolicinaNaStanju = ListaBarova[redniBrojbara].Value.ToString();
+            baza.Entry(SvaOprema[redniBrojbara]).State = EntityState.Modified;
+        }
+
+
+
+
+
+
+        private void btnAdd1_Click(object sender, EventArgs e)
+        {
+            SmanjiKolicinu(0);
+        }
+        private void btnAdd2_Click(object sender, EventArgs e)
+        {
+            SmanjiKolicinu(1);
+        }
+        private void btnAdd3_Click(object sender, EventArgs e)
+        {
+            SmanjiKolicinu(2);
+        }
+        private void btnAdd4_Click(object sender, EventArgs e)
+        {
+            SmanjiKolicinu(3);
+        }
+        private void btnAdd5_Click(object sender, EventArgs e)
+        {
+            SmanjiKolicinu(4);
+        }
+        private void btnAdd6_Click(object sender, EventArgs e)
+        {
+            SmanjiKolicinu(5);
+        }
+        private void btnAdd7_Click(object sender, EventArgs e)
+        {
+            SmanjiKolicinu(6);
+        }
+        private void btnAdd8_Click(object sender, EventArgs e)
+        {
+            SmanjiKolicinu(7);
+        }
+
+        private void frmEquipment_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            baza.SaveChanges();
         }
     }
 }

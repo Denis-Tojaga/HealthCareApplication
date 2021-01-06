@@ -157,6 +157,7 @@
             this.btnAdd1.Text = "-";
             this.btnAdd1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd1.UseVisualStyleBackColor = false;
+            this.btnAdd1.Click += new System.EventHandler(this.btnAdd1_Click);
             // 
             // btnO1
             // 
@@ -205,6 +206,7 @@
             this.btnAdd2.Text = "-";
             this.btnAdd2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd2.UseVisualStyleBackColor = false;
+            this.btnAdd2.Click += new System.EventHandler(this.btnAdd2_Click);
             // 
             // label6
             // 
@@ -267,6 +269,7 @@
             this.btnAdd4.Text = "-";
             this.btnAdd4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd4.UseVisualStyleBackColor = false;
+            this.btnAdd4.Click += new System.EventHandler(this.btnAdd4_Click);
             // 
             // label8
             // 
@@ -329,6 +332,7 @@
             this.btnAdd3.Text = "-";
             this.btnAdd3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd3.UseVisualStyleBackColor = false;
+            this.btnAdd3.Click += new System.EventHandler(this.btnAdd3_Click);
             // 
             // label10
             // 
@@ -391,6 +395,7 @@
             this.btnAdd6.Text = "-";
             this.btnAdd6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd6.UseVisualStyleBackColor = false;
+            this.btnAdd6.Click += new System.EventHandler(this.btnAdd6_Click);
             // 
             // label12
             // 
@@ -453,6 +458,7 @@
             this.btnAdd5.Text = "-";
             this.btnAdd5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd5.UseVisualStyleBackColor = false;
+            this.btnAdd5.Click += new System.EventHandler(this.btnAdd5_Click);
             // 
             // label14
             // 
@@ -515,6 +521,7 @@
             this.btnAdd8.Text = "-";
             this.btnAdd8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd8.UseVisualStyleBackColor = false;
+            this.btnAdd8.Click += new System.EventHandler(this.btnAdd8_Click);
             // 
             // label16
             // 
@@ -577,6 +584,7 @@
             this.btnAdd7.Text = "-";
             this.btnAdd7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnAdd7.UseVisualStyleBackColor = false;
+            this.btnAdd7.Click += new System.EventHandler(this.btnAdd7_Click);
             // 
             // label18
             // 
@@ -757,6 +765,7 @@
             this.Name = "frmEquipment";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hospital orders";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmEquipment_FormClosed);
             this.Load += new System.EventHandler(this.frmEquipment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
