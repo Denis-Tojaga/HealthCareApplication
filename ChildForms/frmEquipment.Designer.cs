@@ -174,6 +174,7 @@
             this.btnO1.Text = "Order";
             this.btnO1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO1.UseVisualStyleBackColor = false;
+            this.btnO1.Click += new System.EventHandler(this.btnO1_Click);
             // 
             // btnO2
             // 
@@ -190,6 +191,7 @@
             this.btnO2.Text = "Order";
             this.btnO2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO2.UseVisualStyleBackColor = false;
+            this.btnO2.Click += new System.EventHandler(this.btnO2_Click);
             // 
             // btnAdd2
             // 
@@ -253,6 +255,7 @@
             this.btnO4.Text = "Order";
             this.btnO4.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO4.UseVisualStyleBackColor = false;
+            this.btnO4.Click += new System.EventHandler(this.btnO4_Click);
             // 
             // btnAdd4
             // 
@@ -316,6 +319,7 @@
             this.btnO3.Text = "Order";
             this.btnO3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO3.UseVisualStyleBackColor = false;
+            this.btnO3.Click += new System.EventHandler(this.btnO3_Click);
             // 
             // btnAdd3
             // 
@@ -379,6 +383,7 @@
             this.btnO6.Text = "Order";
             this.btnO6.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO6.UseVisualStyleBackColor = false;
+            this.btnO6.Click += new System.EventHandler(this.btnO6_Click);
             // 
             // btnAdd6
             // 
@@ -442,6 +447,7 @@
             this.btnO5.Text = "Order";
             this.btnO5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO5.UseVisualStyleBackColor = false;
+            this.btnO5.Click += new System.EventHandler(this.btnO5_Click);
             // 
             // btnAdd5
             // 
@@ -505,6 +511,7 @@
             this.btnO8.Text = "Order";
             this.btnO8.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO8.UseVisualStyleBackColor = false;
+            this.btnO8.Click += new System.EventHandler(this.btnO8_Click);
             // 
             // btnAdd8
             // 
@@ -568,6 +575,7 @@
             this.btnO7.Text = "Order";
             this.btnO7.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnO7.UseVisualStyleBackColor = false;
+            this.btnO7.Click += new System.EventHandler(this.btnO7_Click);
             // 
             // btnAdd7
             // 

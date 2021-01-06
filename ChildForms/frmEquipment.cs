@@ -117,6 +117,21 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
+        private void NapraviOrder(int redniBroj)
+        {
+            if (MessageBox.Show($"Please confirm doing this order {_doktor}","User action",MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+            {
+                if (ListaBarova[redniBroj].Value + 20 < 100)
+                {
+                    ListaBarova[redniBroj].Value += 20;
+                    SvaOprema[redniBroj].KolicinaNaStanju = ListaBarova[redniBroj].Value.ToString();
+                    LabelKolicineLista[redniBroj].Text = ListaBarova[redniBroj].Value.ToString() + "/100";
+                    baza.Entry(SvaOprema[redniBroj]).State = EntityState.Modified;
+                    baza.SaveChanges();
+                }else
+                    MessageBox.Show($"You already have enough in stock!");
+            }
+        }
 
 
 
@@ -155,6 +170,49 @@ namespace Hospital_System_Demo.ChildForms
         {
             SmanjiKolicinu(7);
         }
-       
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// Call of ordering method for every button 
+        /// </summary>
+        private void btnO1_Click(object sender, EventArgs e)
+        {
+            NapraviOrder(0);
+        }
+        private void btnO2_Click(object sender, EventArgs e)
+        {
+            NapraviOrder(1);
+        }
+        private void btnO3_Click(object sender, EventArgs e)
+        {
+            NapraviOrder(2);
+        }
+        private void btnO4_Click(object sender, EventArgs e)
+        {
+            NapraviOrder(3);
+        }
+        private void btnO5_Click(object sender, EventArgs e)
+        {
+            NapraviOrder(4);
+        }
+        private void btnO6_Click(object sender, EventArgs e)
+        {
+            NapraviOrder(5);
+        }
+        private void btnO7_Click(object sender, EventArgs e)
+        {
+            NapraviOrder(6);
+        }
+        private void btnO8_Click(object sender, EventArgs e)
+        {
+            NapraviOrder(7);
+        }
     }
 }
