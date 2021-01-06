@@ -26,7 +26,16 @@ namespace Hospital_System_Demo.ChildForms
             AddBars();
             AddQuantity();
         }
+        public frmEquipment(Doktor doktor):this()
+        {
+            _doktor = doktor;
+        }
 
+
+
+        /// <summary>
+        /// Adds list of progres bard and labels to private lists
+        /// </summary>
         private void AddQuantity()
         {
             LabelKolicineLista.Add(lblKol1);
@@ -38,7 +47,6 @@ namespace Hospital_System_Demo.ChildForms
             LabelKolicineLista.Add(lblKol7);
             LabelKolicineLista.Add(lblKol8);
         }
-
         private void AddBars()
         {
             ListaBarova.Add(pb1);
@@ -51,16 +59,21 @@ namespace Hospital_System_Demo.ChildForms
             ListaBarova.Add(pb8);
         }
 
-        public frmEquipment(Doktor doktor):this()
-        {
-            _doktor = doktor;
-        }
 
         private void frmEquipment_Load(object sender, EventArgs e)
         {
             LoadQuantity();
         }
 
+
+
+
+
+
+
+        /// <summary>
+        /// Loads equipment and its quantity in stock to the correct labels
+        /// </summary>
         private void LoadQuantity()
         {
             try
@@ -78,6 +91,16 @@ namespace Hospital_System_Demo.ChildForms
                 throw;
             }
         }
+
+
+
+
+
+
+
+        /// <summary>
+        /// Logic for reducing quantity number
+        /// </summary>
         private void SmanjiKolicinu(int redniBrojbara)
         {
             ListaBarova[redniBrojbara].Value -= 1;
@@ -92,6 +115,14 @@ namespace Hospital_System_Demo.ChildForms
 
 
 
+
+
+
+
+
+        /// <summary>
+        /// Lowers the quantity of the selected equipment and saves that immediately to database
+        /// </summary>
         private void btnAdd1_Click(object sender, EventArgs e)
         {
             SmanjiKolicinu(0);
@@ -124,7 +155,6 @@ namespace Hospital_System_Demo.ChildForms
         {
             SmanjiKolicinu(7);
         }
-
        
     }
 }
