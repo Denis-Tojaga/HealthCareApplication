@@ -17,12 +17,26 @@ namespace Hospital_System_Demo.ChildForms
     {
         private Doktor _doktor;
         private List<Oprema> SvaOprema;
+        private List<Label> LabelKolicineLista = new List<Label>();
         private List<ProgressBar> ListaBarova = new List<ProgressBar>();
         private HealthCareContext baza = HealthCareDB.Base;
         public frmEquipment()
         {
             InitializeComponent();
             AddBars();
+            AddQuantity();
+        }
+
+        private void AddQuantity()
+        {
+            LabelKolicineLista.Add(lblKol1);
+            LabelKolicineLista.Add(lblKol2);
+            LabelKolicineLista.Add(lblKol3);
+            LabelKolicineLista.Add(lblKol4);
+            LabelKolicineLista.Add(lblKol5);
+            LabelKolicineLista.Add(lblKol6);
+            LabelKolicineLista.Add(lblKol7);
+            LabelKolicineLista.Add(lblKol8);
         }
 
         private void AddBars()
@@ -53,7 +67,10 @@ namespace Hospital_System_Demo.ChildForms
             {
                 SvaOprema = baza.PopisOpreme.ToList();
                 for (int i = 0; i < SvaOprema.Count(); i++)
+                {
                     ListaBarova[i].Value = int.Parse(SvaOprema[i].KolicinaNaStanju);
+                    LabelKolicineLista[i].Text = ListaBarova[i].Value.ToString() + "/100";
+                }
             }
             catch (Exception ex)
             {
@@ -65,7 +82,9 @@ namespace Hospital_System_Demo.ChildForms
         {
             ListaBarova[redniBrojbara].Value -= 1;
             SvaOprema[redniBrojbara].KolicinaNaStanju = ListaBarova[redniBrojbara].Value.ToString();
+            LabelKolicineLista[redniBrojbara].Text = ListaBarova[redniBrojbara].Value.ToString() + "/100";
             baza.Entry(SvaOprema[redniBrojbara]).State = EntityState.Modified;
+            baza.SaveChanges();
         }
 
 
@@ -106,9 +125,6 @@ namespace Hospital_System_Demo.ChildForms
             SmanjiKolicinu(7);
         }
 
-        private void frmEquipment_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            baza.SaveChanges();
-        }
+       
     }
 }
