@@ -138,5 +138,16 @@ namespace Hospital_System_Demo
                 MboxHelper.PrikaziObavjestenje($"You have to be in doctor mode to view this!");
 
         }
+
+        private void btnUserInfo_Click(object sender, EventArgs e)
+        {
+            object objekat;
+            if (_doctor != null)
+                objekat = _doctor;
+            else
+                objekat = _nurse;
+            frmUserInfo forma = new frmUserInfo(objekat);
+            forma.ShowDialog();
+        }
     }
 }

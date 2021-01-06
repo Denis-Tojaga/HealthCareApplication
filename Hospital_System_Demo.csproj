@@ -109,6 +109,12 @@
     <Compile Include="ChildForms\frmPatients.Designer.cs">
       <DependentUpon>frmPatients.cs</DependentUpon>
     </Compile>
+    <Compile Include="ChildForms\frmUserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChildForms\frmUserInfo.Designer.cs">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Data\HealthCareDB.cs" />
     <Compile Include="Doctors_Nurses\Dijagnoza.cs" />
     <Compile Include="Doctors_Nurses\Doktor.cs" />
@@ -189,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChildForms\frmPatients.resx">
       <DependentUpon>frmPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChildForms\frmUserInfo.resx">
+      <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Doctors_Nurses\frmDailyReview.resx">
       <DependentUpon>frmDailyReview.cs</DependentUpon>

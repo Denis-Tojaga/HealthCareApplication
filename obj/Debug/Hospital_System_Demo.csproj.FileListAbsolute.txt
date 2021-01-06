@@ -97,3 +97,4 @@ C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\RdlCompile.comp
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.Patients.frmNoviPregled.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmSchedule.resources
 C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmEquipment.resources
+C:\Users\Denis\Documents\GitHub\HealthCare_System_Demo\obj\Debug\Hospital_System_Demo.ChildForms.frmUserInfo.resources

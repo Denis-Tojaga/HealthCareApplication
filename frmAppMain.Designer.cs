@@ -38,8 +38,8 @@
             this.btnExaminations = new System.Windows.Forms.Button();
             this.btnPatients = new System.Windows.Forms.Button();
             this.panelChildForms = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panelTitle.SuspendLayout();
             this.panelMeniButtons.SuspendLayout();
             this.panelChildForms.SuspendLayout();
@@ -131,6 +131,7 @@
             this.btnUserInfo.TabIndex = 4;
             this.btnUserInfo.Text = "User info";
             this.btnUserInfo.UseVisualStyleBackColor = false;
+            this.btnUserInfo.Click += new System.EventHandler(this.btnUserInfo_Click);
             // 
             // btnMedicineOrders
             // 
@@ -194,6 +195,16 @@
             this.panelChildForms.Size = new System.Drawing.Size(887, 556);
             this.panelChildForms.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Hospital_System_Demo.Properties.Resources.healthCareTeam;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(887, 487);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 32F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
@@ -204,16 +215,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "The future of healthcare industry";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Hospital_System_Demo.Properties.Resources.healthCareTeam;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(887, 487);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // frmAppMain
             // 
