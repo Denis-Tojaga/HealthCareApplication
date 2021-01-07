@@ -33,5 +33,10 @@ namespace Hospital_System_Demo.ChildForms
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
