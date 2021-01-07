@@ -49,6 +49,8 @@
             this.Spol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblTrenutniDoktor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtPretraga = new System.Windows.Forms.TextBox();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -295,15 +297,41 @@
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.2F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 15.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(168, 25);
+            this.label1.Location = new System.Drawing.Point(25, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(278, 52);
+            this.label1.Size = new System.Drawing.Size(212, 40);
             this.label1.TabIndex = 37;
             this.label1.Text = "Current patients list";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txtPretraga
+            // 
+            this.txtPretraga.BackColor = System.Drawing.Color.Silver;
+            this.txtPretraga.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPretraga.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPretraga.ForeColor = System.Drawing.Color.Black;
+            this.txtPretraga.Location = new System.Drawing.Point(242, 39);
+            this.txtPretraga.Name = "txtPretraga";
+            this.txtPretraga.Size = new System.Drawing.Size(270, 28);
+            this.txtPretraga.TabIndex = 38;
+            this.txtPretraga.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackgroundImage = global::Hospital_System_Demo.Properties.Resources.lupa3;
+            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSearch.Location = new System.Drawing.Point(518, 34);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(47, 40);
+            this.btnSearch.TabIndex = 39;
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // frmPatients
             // 
@@ -311,6 +339,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(871, 552);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.txtPretraga);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTrenutniDoktor);
             this.Controls.Add(this.panelRaspored);
@@ -331,6 +361,7 @@
             this.panelRaspored.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacijenti)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -354,5 +385,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DatumRodjenja;
         private System.Windows.Forms.DataGridViewTextBoxColumn JMBG;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spol;
+        private System.Windows.Forms.TextBox txtPretraga;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

@@ -277,6 +277,7 @@
     <None Include="Resources\viewDetailsPatient.png" />
     <None Include="Resources\pregled4.png" />
     <None Include="Resources\healthCareTeam.jpg" />
+    <None Include="Resources\lupa3.png" />
     <Content Include="Resources\symbol_exclamation.ico" />
     <Content Include="ICOSlike\tick.ico" />
     <None Include="Resources\unlockTransparent.png" />

@@ -146,5 +146,22 @@ namespace Hospital_System_Demo.ChildForms
                 LoadPatients();
             }
         }
+
+      
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            var filter = txtPretraga.Text.ToLower();
+            if (filter == "")
+            {
+                LoadPatients();
+                return;
+            }
+            else
+            {
+                var rezultat = baza.Pacijenti.Where(pacijent => pacijent.Ime.ToLower().Contains(filter) || pacijent.Prezime.ToLower().Contains(filter)).ToList();
+                LoadPatients(rezultat);
+            }
+        }
     }
 }
