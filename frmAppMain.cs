@@ -143,8 +143,7 @@ namespace Hospital_System_Demo
                 objekat = _doctor;
             else
                 objekat = _nurse;
-            frmUserInfo forma = new frmUserInfo(objekat);
-            forma.ShowDialog();
+            OpenChildForm(new frmUserInfo(objekat),sender);
         }
     }
 }

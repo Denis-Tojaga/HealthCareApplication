@@ -320,12 +320,12 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.Silver;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 17.75F, System.Drawing.FontStyle.Bold);
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12.75F, System.Drawing.FontStyle.Bold);
             this.txtEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
-            this.txtEmail.Location = new System.Drawing.Point(149, 361);
+            this.txtEmail.Location = new System.Drawing.Point(149, 368);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.ReadOnly = true;
-            this.txtEmail.Size = new System.Drawing.Size(182, 32);
+            this.txtEmail.Size = new System.Drawing.Size(182, 23);
             this.txtEmail.TabIndex = 67;
             // 
             // textBox13

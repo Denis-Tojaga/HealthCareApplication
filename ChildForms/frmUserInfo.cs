@@ -65,6 +65,10 @@ namespace Hospital_System_Demo.ChildForms
             txtPassword.Text = doktor.Lozinka;
             cmbGrad.SelectedItem = doktor.Grad;
             txtTitula.Text = doktor.Titula.ToString();
+            if (doktor.Slika.Length != 0)
+                pbProfilna.Image = ImageHelper.FromByteToImage(doktor.Slika);
+            else
+                pbProfilna.Image = null;
         }
 
         
