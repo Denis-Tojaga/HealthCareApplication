@@ -149,7 +149,10 @@ namespace Hospital_System_Demo.ChildForms
 
       
 
-        private void btnSearch_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Finds all patients whose name or surname contains filter
+        /// </summary>
+        private void txtPretraga_TextChanged(object sender, EventArgs e)
         {
             var filter = txtPretraga.Text.ToLower();
             if (filter == "")

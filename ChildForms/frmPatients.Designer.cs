@@ -50,7 +50,6 @@
             this.lblTrenutniDoktor = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPretraga = new System.Windows.Forms.TextBox();
-            this.btnSearch = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -315,23 +314,10 @@
             this.txtPretraga.ForeColor = System.Drawing.Color.Black;
             this.txtPretraga.Location = new System.Drawing.Point(242, 39);
             this.txtPretraga.Name = "txtPretraga";
-            this.txtPretraga.Size = new System.Drawing.Size(270, 28);
+            this.txtPretraga.Size = new System.Drawing.Size(323, 28);
             this.txtPretraga.TabIndex = 38;
             this.txtPretraga.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackgroundImage = global::Hospital_System_Demo.Properties.Resources.lupa3;
-            this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnSearch.FlatAppearance.BorderSize = 0;
-            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSearch.Location = new System.Drawing.Point(518, 34);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(47, 40);
-            this.btnSearch.TabIndex = 39;
-            this.btnSearch.UseVisualStyleBackColor = true;
-            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            this.txtPretraga.TextChanged += new System.EventHandler(this.txtPretraga_TextChanged);
             // 
             // frmPatients
             // 
@@ -339,7 +325,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.ClientSize = new System.Drawing.Size(871, 552);
-            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtPretraga);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTrenutniDoktor);
@@ -386,6 +371,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn JMBG;
         private System.Windows.Forms.DataGridViewTextBoxColumn Spol;
         private System.Windows.Forms.TextBox txtPretraga;
-        private System.Windows.Forms.Button btnSearch;
     }
 }
