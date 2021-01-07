@@ -121,7 +121,6 @@ namespace Hospital_System_Demo
             else                 
                 OpenChildForm(new frmPatients(_nurse), sender);
         }
-
         private void btnExaminations_Click(object sender, EventArgs e)
         {
             if (doctorMode)
@@ -129,7 +128,6 @@ namespace Hospital_System_Demo
             else
                 OpenChildForm(new frmSchedule(_nurse), sender);
         }
-
         private void btnMedicineOrders_Click(object sender, EventArgs e)
         {
             if (doctorMode)
@@ -138,7 +136,6 @@ namespace Hospital_System_Demo
                 MboxHelper.PrikaziObavjestenje($"You have to be in doctor mode to view this!");
 
         }
-
         private void btnUserInfo_Click(object sender, EventArgs e)
         {
             object objekat;
