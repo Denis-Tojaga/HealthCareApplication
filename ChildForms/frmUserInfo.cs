@@ -1,4 +1,6 @@
-﻿using Hospital_System_Demo.Doctors_Nurses;
+﻿using Hospital_System_Demo.Data;
+using Hospital_System_Demo.Doctors_Nurses;
+using Hospital_System_Demo.Helpers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,10 +17,27 @@ namespace Hospital_System_Demo.ChildForms
     {
         private Doktor _doktor;
         private MedicinskaSestra _nurse;
+        private HealthCareContext baza = HealthCareDB.Base;
         public frmUserInfo()
         {
             InitializeComponent();
+            UcitajGradove();
         }
+
+        private void UcitajGradove()
+        {
+            try
+            {
+                cmbGrad.DataSource = baza.Gradovi.ToList();
+                cmbGrad.DisplayMember = "Naziv";
+                cmbGrad.ValueMember = "Id";
+            }
+            catch (Exception ex)
+            {
+                MboxHelper.PrikaziGresku(ex);
+            }
+        }
+
         public frmUserInfo(object objekat) :this()
         {
             if (objekat is Doktor)
@@ -31,12 +50,23 @@ namespace Hospital_System_Demo.ChildForms
 
         private void frmUserInfo_Load(object sender, EventArgs e)
         {
-
+            if (_doktor != null)
+                LoadUser(_doktor);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void LoadUser(Doktor doktor)
         {
-
+            tIme.Text = doktor.Ime;
+            txtPrezime.Text = doktor.Prezime;
+            txtDatumRodjenja.Text = doktor.DatumRodjenja;
+            txtEmail.Text = doktor.Email;
+            txtJMBG.Text = doktor.JMBG;
+            txtKorisnickoIme.Text = doktor.KorisnickoIme;
+            txtPassword.Text = doktor.Lozinka;
+            cmbGrad.SelectedItem = doktor.Grad;
+            txtTitula.Text = doktor.Titula.ToString();
         }
+
+        
     }
 }
