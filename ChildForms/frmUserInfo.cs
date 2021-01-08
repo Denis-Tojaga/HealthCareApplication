@@ -51,7 +51,24 @@ namespace Hospital_System_Demo.ChildForms
         private void frmUserInfo_Load(object sender, EventArgs e)
         {
             if (_doktor != null)
+            {
+                btnCancel.Hide();
+                lblCancel.Hide();
                 LoadUser(_doktor);
+                LockControls();
+            }
+        }
+
+        private void LockControls()
+        {
+            tIme.Enabled = false;
+            lblUcitajSliku.Enabled = false;
+            pbProfilna.Enabled = false;
+            txtPrezime.Enabled = false;
+            txtJMBG.Enabled = false;
+            txtKorisnickoIme.Enabled = false;
+            txtPassword.Enabled = false;
+            cmbGrad.Enabled = false;
         }
 
         private void LoadUser(Doktor doktor)
@@ -71,6 +88,53 @@ namespace Hospital_System_Demo.ChildForms
                 pbProfilna.Image = null;
         }
 
-        
+        private void lblUcitajSliku_TextChanged(object sender, EventArgs e)
+        {
+            lblUcitajSliku.Hide();
+            if (ofdUcitaj.ShowDialog() == DialogResult.OK)
+                pbProfilna.Image = Image.FromFile(ofdUcitaj.FileName);
+        }
+        private void pbProfilna_Click(object sender, EventArgs e)
+        {
+            lblUcitajSliku.Hide();
+            if (ofdUcitaj.ShowDialog() == DialogResult.OK)
+                pbProfilna.Image = Image.FromFile(ofdUcitaj.FileName);
+        }
+
+        private void btnEditDetails_Click(object sender, EventArgs e)
+        {
+            if (btnEditDetails.Text == "Edit details")
+            {
+                UnlockControls();
+                btnEditDetails.Text = "Save changes";
+                btnCancel.Show();
+                lblCancel.Show();
+            }
+            else
+            {
+                LockControls();
+                SpasiIzmjene();
+                btnCancel.Hide();
+                lblCancel.Hide();
+                btnEditDetails.Text = "Edit details";
+            }
+        }
+
+        private void SpasiIzmjene()
+        {
+            _doktor.Ime = tIme.Text;
+        }
+
+        private void UnlockControls()
+        {
+            tIme.Enabled = true;
+            lblUcitajSliku.Enabled = true;
+            pbProfilna.Enabled = true;
+            txtPrezime.Enabled = true;
+            txtJMBG.Enabled = true;
+            txtKorisnickoIme.Enabled = true;
+            txtPassword.Enabled = true;
+            cmbGrad.Enabled = true;
+        }
     }
 }
