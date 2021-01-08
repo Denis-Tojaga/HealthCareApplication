@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -50,13 +51,31 @@ namespace Hospital_System_Demo.ChildForms
 
         private void frmUserInfo_Load(object sender, EventArgs e)
         {
+            LockTextBoxove();
             if (_doktor != null)
             {
+                txtEmail.Enabled = false;
+                txtDatumRodjenja.Enabled = false;
+                txtTitula.Enabled = false;
                 btnCancel.Hide();
                 lblCancel.Hide();
                 LoadUser(_doktor);
                 LockControls();
             }
+        }
+
+        private void LockTextBoxove()
+        {
+            lblUcitajSliku.Enabled = false;
+            txtIme.Enabled = false;
+            textBox3.Enabled = false;
+            textBox5.Enabled = false;
+            textBox9.Enabled = false;
+            textBox10.Enabled = false;
+            textBox11.Enabled = false;
+            textBox13.Enabled = false;
+            textBox15.Enabled = false;
+            textBox16.Enabled = false;
         }
 
         private void LockControls()
@@ -69,41 +88,46 @@ namespace Hospital_System_Demo.ChildForms
             txtKorisnickoIme.Enabled = false;
             txtPassword.Enabled = false;
             cmbGrad.Enabled = false;
+            txtDatumRodjenja.Enabled = false;
         }
 
         private void LoadUser(Doktor doktor)
         {
             tIme.Text = doktor.Ime;
             txtPrezime.Text = doktor.Prezime;
-            txtDatumRodjenja.Text = doktor.DatumRodjenja;
             txtEmail.Text = doktor.Email;
-            txtJMBG.Text = doktor.JMBG;
+            if(doktor.JMBG!=null)
+                txtJMBG.Text = doktor.JMBG;
+            if(doktor.DatumRodjenja!=null)
+                 txtDatumRodjenja.Text = doktor.DatumRodjenja;
             txtKorisnickoIme.Text = doktor.KorisnickoIme;
             txtPassword.Text = doktor.Lozinka;
             cmbGrad.SelectedItem = doktor.Grad;
             txtTitula.Text = doktor.Titula.ToString();
-            if (doktor.Slika.Length != 0)
+            if (doktor.Slika != null)
+            {
+                lblUcitajSliku.Hide();
                 pbProfilna.Image = ImageHelper.FromByteToImage(doktor.Slika);
+            }
             else
+            {
                 pbProfilna.Image = null;
+                lblUcitajSliku.Show();
+            }
         }
 
-        private void lblUcitajSliku_TextChanged(object sender, EventArgs e)
-        {
-            lblUcitajSliku.Hide();
-            if (ofdUcitaj.ShowDialog() == DialogResult.OK)
-                pbProfilna.Image = Image.FromFile(ofdUcitaj.FileName);
-        }
         private void pbProfilna_Click(object sender, EventArgs e)
         {
-            lblUcitajSliku.Hide();
             if (ofdUcitaj.ShowDialog() == DialogResult.OK)
+            {
+                lblUcitajSliku.Hide();
                 pbProfilna.Image = Image.FromFile(ofdUcitaj.FileName);
+            }
         }
 
         private void btnEditDetails_Click(object sender, EventArgs e)
         {
-            if (btnEditDetails.Text == "Edit details")
+            if (btnEditDetails.Text == "Edit info")
             {
                 UnlockControls();
                 btnEditDetails.Text = "Save changes";
@@ -116,7 +140,7 @@ namespace Hospital_System_Demo.ChildForms
                 SpasiIzmjene();
                 btnCancel.Hide();
                 lblCancel.Hide();
-                btnEditDetails.Text = "Edit details";
+                btnEditDetails.Text = "Edit info";
             }
         }
 
@@ -128,8 +152,13 @@ namespace Hospital_System_Demo.ChildForms
             _doktor.Lozinka = txtPassword.Text;
             _doktor.Grad = cmbGrad.SelectedItem as Grad;
             _doktor.JMBG = txtJMBG.Text;
+            _doktor.DatumRodjenja = txtDatumRodjenja.Text;
             if(pbProfilna.Image!=null)
                _doktor.Slika = ImageHelper.FromImageToByte(pbProfilna.Image);
+
+            baza.Entry(_doktor).State = EntityState.Modified;
+            baza.SaveChanges();
+            MboxHelper.PrikaziObavjestenje("User info is up to date!");
         }
 
         private void UnlockControls()
@@ -142,13 +171,18 @@ namespace Hospital_System_Demo.ChildForms
             txtKorisnickoIme.Enabled = true;
             txtPassword.Enabled = true;
             cmbGrad.Enabled = true;
+            if (txtDatumRodjenja.Text == "")
+            {
+                txtDatumRodjenja.ReadOnly = false;
+                txtDatumRodjenja.Enabled = true;
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             lblCancel.Hide();
             btnCancel.Hide();
-            btnEditDetails.Text = "Edit details";
+            btnEditDetails.Text = "Edit info";
             LoadUser(_doktor);
             LockControls();
         }

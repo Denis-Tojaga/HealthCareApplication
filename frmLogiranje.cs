@@ -321,6 +321,10 @@ namespace Hospital_System_Demo
                     doctorUser.KorisnickoIme = txtIme.Text.ToLower();
                     doctorUser.Lozinka = txtLozinka.Text;
                     doctorUser.Email = txtEmail.Text;
+                    var grad = data.Gradovi.Find(1);
+                    var titula = data.Titule.Find(1);
+                    doctorUser.Grad = grad;
+                    doctorUser.Titula = titula;
                     data.Doktori.Add(doctorUser);
                     data.SaveChanges();
                     MessageBox.Show($"Your signing successfully done!","Sign up result",MessageBoxButtons.OK,MessageBoxIcon.Information);

@@ -411,7 +411,6 @@
             this.lblUcitajSliku.Size = new System.Drawing.Size(220, 32);
             this.lblUcitajSliku.TabIndex = 75;
             this.lblUcitajSliku.Text = "Click to add picture";
-            this.lblUcitajSliku.TextChanged += new System.EventHandler(this.lblUcitajSliku_TextChanged);
             // 
             // ofdUcitaj
             // 
