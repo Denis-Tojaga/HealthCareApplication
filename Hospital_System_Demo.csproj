@@ -17,7 +17,7 @@
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -124,10 +124,10 @@
       <DependentUpon>dsStanje.xsd</DependentUpon>
     </Compile>
     <Compile Include="Data\dtoTransfer.cs" />
-    <Compile Include="Doctors_Nurses\frmDailyReview.cs">
+    <Compile Include="Data\frmDailyReview.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Doctors_Nurses\frmDailyReview.Designer.cs">
+    <Compile Include="Data\frmDailyReview.Designer.cs">
       <DependentUpon>frmDailyReview.cs</DependentUpon>
     </Compile>
     <Compile Include="Doctors_Nurses\MedicinskaSestra.cs" />
@@ -199,7 +199,7 @@
     <EmbeddedResource Include="ChildForms\frmUserInfo.resx">
       <DependentUpon>frmUserInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Doctors_Nurses\frmDailyReview.resx">
+    <EmbeddedResource Include="Data\frmDailyReview.resx">
       <DependentUpon>frmDailyReview.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Data\rptIzvjestaj.rdlc" />
