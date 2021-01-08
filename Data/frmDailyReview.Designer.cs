@@ -34,21 +34,22 @@
             // rptViewer
             // 
             this.rptViewer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rptViewer.LocalReport.ReportEmbeddedResource = "Hospital_System_Demo.Doctors_Nurses.rptIzvjestaj.rdlc";
+            this.rptViewer.LocalReport.ReportEmbeddedResource = "Hospital_System_Demo.Data.rptIzvjestaj.rdlc";
             this.rptViewer.Location = new System.Drawing.Point(0, 0);
             this.rptViewer.Name = "rptViewer";
             this.rptViewer.ServerReport.BearerToken = null;
-            this.rptViewer.Size = new System.Drawing.Size(700, 669);
+            this.rptViewer.Size = new System.Drawing.Size(784, 669);
             this.rptViewer.TabIndex = 0;
             // 
             // frmDailyReview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 669);
+            this.ClientSize = new System.Drawing.Size(784, 669);
             this.Controls.Add(this.rptViewer);
             this.Name = "frmDailyReview";
-            this.Text = "frmDailyReview";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Daily report";
             this.Load += new System.EventHandler(this.frmDailyReview_Load);
             this.ResumeLayout(false);
 

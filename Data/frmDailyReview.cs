@@ -42,12 +42,6 @@ namespace Hospital_System_Demo.Doctors_Nurses
 
         private void frmDailyReview_Load(object sender, EventArgs e)
         {
-            ReportParameterCollection rpc = new ReportParameterCollection();
-            rpc.Add(new ReportParameter("ImePrezime", objekat.ImePrezime));
-            rpc.Add(new ReportParameter("BrojPacijenata", objekat.BrojPacijenata.ToString()));
-            rpc.Add(new ReportParameter("BrojOsobljaNaSmjeni", objekat.BrojOsobljaNaSmjeni.ToString()));
-            rptViewer.LocalReport.SetParameters(rpc);
-
             dsStanje.tblDanasnjeStanjeDataTable tbl = new dsStanje.tblDanasnjeStanjeDataTable();
             for (int i = 0; i < objekat.ListaPregledaZaDanas.Count(); i++)
             {
