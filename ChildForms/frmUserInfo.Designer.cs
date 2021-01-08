@@ -446,6 +446,7 @@
             this.btnCancel.TabIndex = 77;
             this.btnCancel.Text = "X";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // lblCancel
             // 

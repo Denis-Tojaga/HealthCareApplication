@@ -123,6 +123,13 @@ namespace Hospital_System_Demo.ChildForms
         private void SpasiIzmjene()
         {
             _doktor.Ime = tIme.Text;
+            _doktor.Prezime = txtPrezime.Text;
+            _doktor.KorisnickoIme = txtKorisnickoIme.Text;
+            _doktor.Lozinka = txtPassword.Text;
+            _doktor.Grad = cmbGrad.SelectedItem as Grad;
+            _doktor.JMBG = txtJMBG.Text;
+            if(pbProfilna.Image!=null)
+               _doktor.Slika = ImageHelper.FromImageToByte(pbProfilna.Image);
         }
 
         private void UnlockControls()
@@ -135,6 +142,15 @@ namespace Hospital_System_Demo.ChildForms
             txtKorisnickoIme.Enabled = true;
             txtPassword.Enabled = true;
             cmbGrad.Enabled = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            lblCancel.Hide();
+            btnCancel.Hide();
+            btnEditDetails.Text = "Edit details";
+            LoadUser(_doktor);
+            LockControls();
         }
     }
 }
