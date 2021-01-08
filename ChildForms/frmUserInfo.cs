@@ -74,8 +74,11 @@ namespace Hospital_System_Demo.ChildForms
             txtTitula.Text = doktor.Titula.ToString();
             if (doktor.Slika != null)
             {
-                lblUcitajSliku.Hide();
-                pbProfilna.Image = ImageHelper.FromByteToImage(doktor.Slika);
+                if (doktor.Slika.Length != 0)
+                {
+                    lblUcitajSliku.Hide();
+                    pbProfilna.Image = ImageHelper.FromByteToImage(doktor.Slika);
+                }
             }
             else
             {
