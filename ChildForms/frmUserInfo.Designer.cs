@@ -396,6 +396,7 @@
             this.pbProfilna.Location = new System.Drawing.Point(127, 99);
             this.pbProfilna.Name = "pbProfilna";
             this.pbProfilna.Size = new System.Drawing.Size(269, 266);
+            this.pbProfilna.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbProfilna.TabIndex = 74;
             this.pbProfilna.TabStop = false;
             this.pbProfilna.Click += new System.EventHandler(this.pbProfilna_Click);

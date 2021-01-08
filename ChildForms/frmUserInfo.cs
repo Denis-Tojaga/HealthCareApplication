@@ -24,7 +24,6 @@ namespace Hospital_System_Demo.ChildForms
             InitializeComponent();
             UcitajGradove();
         }
-
         private void UcitajGradove()
         {
             try
@@ -38,7 +37,6 @@ namespace Hospital_System_Demo.ChildForms
                 MboxHelper.PrikaziGresku(ex);
             }
         }
-
         public frmUserInfo(object objekat) :this()
         {
             if (objekat is Doktor)
@@ -46,9 +44,6 @@ namespace Hospital_System_Demo.ChildForms
             else
                 _nurse = objekat as MedicinskaSestra;
         }
-
-        
-
         private void frmUserInfo_Load(object sender, EventArgs e)
         {
             LockTextBoxove();
@@ -63,34 +58,7 @@ namespace Hospital_System_Demo.ChildForms
                 LockControls();
             }
         }
-
-        private void LockTextBoxove()
-        {
-            lblUcitajSliku.Enabled = false;
-            txtIme.Enabled = false;
-            textBox3.Enabled = false;
-            textBox5.Enabled = false;
-            textBox9.Enabled = false;
-            textBox10.Enabled = false;
-            textBox11.Enabled = false;
-            textBox13.Enabled = false;
-            textBox15.Enabled = false;
-            textBox16.Enabled = false;
-        }
-
-        private void LockControls()
-        {
-            tIme.Enabled = false;
-            lblUcitajSliku.Enabled = false;
-            pbProfilna.Enabled = false;
-            txtPrezime.Enabled = false;
-            txtJMBG.Enabled = false;
-            txtKorisnickoIme.Enabled = false;
-            txtPassword.Enabled = false;
-            cmbGrad.Enabled = false;
-            txtDatumRodjenja.Enabled = false;
-        }
-
+        //Loads user with all its data
         private void LoadUser(Doktor doktor)
         {
             tIme.Text = doktor.Ime;
@@ -116,6 +84,67 @@ namespace Hospital_System_Demo.ChildForms
             }
         }
 
+
+
+
+
+        /// <summary>
+        /// Locks all textboxes and controls
+        /// </summary>
+        private void LockTextBoxove()
+        {
+            lblUcitajSliku.Enabled = false;
+            txtIme.Enabled = false;
+            textBox3.Enabled = false;
+            textBox5.Enabled = false;
+            textBox9.Enabled = false;
+            textBox10.Enabled = false;
+            textBox11.Enabled = false;
+            textBox13.Enabled = false;
+            textBox15.Enabled = false;
+            textBox16.Enabled = false;
+        }
+        private void LockControls()
+        {
+            tIme.Enabled = false;
+            lblUcitajSliku.Enabled = false;
+            pbProfilna.Enabled = false;
+            txtPrezime.Enabled = false;
+            txtJMBG.Enabled = false;
+            txtKorisnickoIme.Enabled = false;
+            txtPassword.Enabled = false;
+            cmbGrad.Enabled = false;
+            txtDatumRodjenja.Enabled = false;
+        }
+
+
+
+
+        /// <summary>
+        /// Unlocks all controls that need to be filled
+        /// </summary>
+        private void UnlockControls()
+        {
+            tIme.Enabled = true;
+            lblUcitajSliku.Enabled = true;
+            pbProfilna.Enabled = true;
+            txtPrezime.Enabled = true;
+            txtJMBG.Enabled = true;
+            txtKorisnickoIme.Enabled = true;
+            txtPassword.Enabled = true;
+            cmbGrad.Enabled = true;
+            if (txtDatumRodjenja.Text == "")
+            {
+                txtDatumRodjenja.ReadOnly = false;
+                txtDatumRodjenja.Enabled = true;
+            }
+        }
+
+
+
+        /// <summary>
+        /// Allows user to add its profile picture
+        /// </summary>
         private void pbProfilna_Click(object sender, EventArgs e)
         {
             if (ofdUcitaj.ShowDialog() == DialogResult.OK)
@@ -125,6 +154,11 @@ namespace Hospital_System_Demo.ChildForms
             }
         }
 
+
+
+        /// <summary>
+        /// Edit mode and canceling, also saving changes if not in edit mode
+        /// </summary>
         private void btnEditDetails_Click(object sender, EventArgs e)
         {
             if (btnEditDetails.Text == "Edit info")
@@ -143,7 +177,14 @@ namespace Hospital_System_Demo.ChildForms
                 btnEditDetails.Text = "Edit info";
             }
         }
-
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            lblCancel.Hide();
+            btnCancel.Hide();
+            btnEditDetails.Text = "Edit info";
+            LoadUser(_doktor);
+            LockControls();
+        }
         private void SpasiIzmjene()
         {
             _doktor.Ime = tIme.Text;
@@ -159,32 +200,6 @@ namespace Hospital_System_Demo.ChildForms
             baza.Entry(_doktor).State = EntityState.Modified;
             baza.SaveChanges();
             MboxHelper.PrikaziObavjestenje("User info is up to date!");
-        }
-
-        private void UnlockControls()
-        {
-            tIme.Enabled = true;
-            lblUcitajSliku.Enabled = true;
-            pbProfilna.Enabled = true;
-            txtPrezime.Enabled = true;
-            txtJMBG.Enabled = true;
-            txtKorisnickoIme.Enabled = true;
-            txtPassword.Enabled = true;
-            cmbGrad.Enabled = true;
-            if (txtDatumRodjenja.Text == "")
-            {
-                txtDatumRodjenja.ReadOnly = false;
-                txtDatumRodjenja.Enabled = true;
-            }
-        }
-
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            lblCancel.Hide();
-            btnCancel.Hide();
-            btnEditDetails.Text = "Edit info";
-            LoadUser(_doktor);
-            LockControls();
         }
     }
 }
