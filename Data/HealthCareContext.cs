@@ -31,6 +31,11 @@ namespace Hospital_System_Demo
 
         }
 
+
+
+        /// <summary>
+        /// Prevents the pluralization naming standard defined by SQLite 
+        /// </summary>
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
