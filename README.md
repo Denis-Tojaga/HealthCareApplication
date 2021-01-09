@@ -17,15 +17,20 @@ From the navbar on the left user can open all main forms of the app.
 # Login form
 
 Login form with modern UI, containing the sign in form which  is shown by the transition on clicking SignUp button.
+![](AppImages/slika1.png)
+
+![](AppImages/slika2.png)
 
 
 # Hospital 
 
 Here the doctor can edit main description of the hospital, including its place on Maps, name and email
+![](AppImages/slika3.png)
 
 # Patients
 
 Lets a doctor to have a clear view of all patients currently in the hospital, user can either add new ones, view existing ones and release patients after their health is improved.
+![](AppImages/slika4.png)
 
 # Schedule
 
