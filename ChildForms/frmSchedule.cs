@@ -483,9 +483,6 @@ namespace Hospital_System_Demo.ChildForms
             var rezultat = _loggedDoctor.RasporediDoktora.Where(raspored => raspored.DatumRasporeda == lblTrenutniDatum.Text).FirstOrDefault();
             var listaPregleda = rezultat.Raspored.ListaPregleda;
             dtoTransfer transferObjekat = new dtoTransfer();
-            transferObjekat.BrojOsobljaNaSmjeni = 2;
-            transferObjekat.BrojPacijenata = baza.Pacijenti.Count();
-            transferObjekat.ImePrezime = _loggedDoctor.Ime + " " + _loggedDoctor.Prezime;
             transferObjekat.ListaPregledaZaDanas = listaPregleda;
             frmDailyReview izvjestaj = new frmDailyReview(transferObjekat);
             izvjestaj.Show();
