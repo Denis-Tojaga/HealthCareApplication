@@ -21,16 +21,16 @@ Login form with modern UI, containing the sign in form which  is shown by the tr
 
 ![](AppImages/slika2.png)
 
+![](AppImages/slika3.png)
 
 # Hospital 
 
 Here the doctor can edit main description of the hospital, including its place on Maps, name and email
-![](AppImages/slika3.png)
+![](AppImages/slika4.png)
 
 # Patients
 
 Lets a doctor to have a clear view of all patients currently in the hospital, user can either add new ones, view existing ones and release patients after their health is improved.
-![](AppImages/slika4.png)
 
 # Schedule
 
