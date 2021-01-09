@@ -312,20 +312,23 @@ namespace Hospital_System_Demo.ChildForms
                     ListaPregledaDanas = rezultat.Raspored.ListaPregleda;
                     button1.Enabled = true;
                     if (ListaPregledaDanas.Count() > 0)
-                        LoadExaminations(ListaPregledaDanas, rezultat.Raspored.ListaPregleda.Count());
+                    {
+                        OcistiLabels();
+                        if (ListaPregledaDanas.Count() > 4)
+                        {
+                            for (int i = 0; i < 4; i++)
+                                ListaBoxovaExamination[i].Text += " of " + ListaPregledaDanas[i].Pacijent.ToString();
+                        }else
+                        {
+                            for (int i = 0; i < ListaPregledaDanas.Count()-1; i++)
+                                ListaBoxovaExamination[i].Text += " of " + ListaPregledaDanas[i].Pacijent.ToString();
+                        }
+                    }
                 }
             }else
                 OcistiLabels();
         }
-        private void LoadExaminations(List<Pregled> ListaPregleda, int numberOfExaminations)
-        {
-            OcistiLabels();
-            for (int i = 0; i < numberOfExaminations; i++)
-            {
-                if(i<4)
-                  ListaBoxovaExamination[i].Text += " of " + ListaPregleda[i].Pacijent.ToString();
-            }
-        }
+        
 
 
 
