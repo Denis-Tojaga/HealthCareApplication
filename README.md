@@ -9,7 +9,7 @@
 
 
 
-#About HealthCareApp
+&About HealthCareApp
 
 Represents work of one hospital in real life. User can work in two mods - doctor and nurse -, where they have their own manipulation restrictions.
 From the navbar on the left user can open all main forms of the app.
