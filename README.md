@@ -49,8 +49,7 @@ There is also an option for him to order new set of it by maximum of 20 pieces.
 ![](AppImages/slika8.png)
 
 # User info
-![](AppImages/slika9.png)
-
-
 
 Shows all details about currently logged user where he can update and edit all of his data.
+
+![](AppImages/slika9.png)
