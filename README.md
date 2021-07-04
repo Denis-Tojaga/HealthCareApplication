@@ -1,10 +1,10 @@
 # HealthCare_System_Demo
  
 
-### Tools for this app
+### Technologies used
 
 - C#
-- SQLite Database
+- SQLite
 
 
 
